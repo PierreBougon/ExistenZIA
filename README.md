@@ -1,2 +1,2 @@
 # ExistanZIA
-This API will change your existance?
+This API will change your existence
