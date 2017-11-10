@@ -2,8 +2,8 @@
 // Created by Pierre Bougon on 31/10/17.
 //
 
-#ifndef CLIENTAI_ICORE_HPP_
-#define CLIENTAI_ICORE_HPP_
+#ifndef XZIA_ICORE_HPP_
+#define XZIA_ICORE_HPP_
 
 namespace xzia
 {
@@ -13,4 +13,4 @@ namespace xzia
     };
 }
 
-#endif // !CLIENTAI_ICORE_HPP_
+#endif // !XZIA_ICORE_HPP_
