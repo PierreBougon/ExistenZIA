@@ -7,6 +7,11 @@
 
 namespace xzia
 {
+    enum Step {
+        CONTINUE,
+        STOP,
+        ERROR
+    };
     class ICore
     {
         virtual void run() = 0;
