@@ -22,6 +22,7 @@
 namespace xzia {
     class IHeader {
     public:
+        virtual void setField(std::string const & field, std::string const & value) = 0;
 
         /**
          *

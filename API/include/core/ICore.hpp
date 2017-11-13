@@ -19,8 +19,8 @@
  * \class ICore ICore.hpp ICore.hpp
  */
 namespace xzia {
-    enum Step {
-        CONTINUE,
+    enum class Step : unsigned char {
+        CONTINUE = 0,
         STOP,
         ERROR
     };
