@@ -7,11 +7,12 @@
 
 #include "AModule.hpp"
 
-class AHTTPModule : AModule {
-public:
-    xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) override = 0;
+namespace xzia {
+    class AHTTPModule : AModule {
+    public:
+        xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) override = 0;
 
-    xzia::Step process() final;
-};
-
+        xzia::Step process() final;
+    };
+}
 #endif //EXISTENZIA_AHTTPMODULE_HPP
