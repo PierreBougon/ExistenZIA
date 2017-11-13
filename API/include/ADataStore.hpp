@@ -10,7 +10,7 @@
 
 namespace xzia {
     namespace data {
-        enum DataType {
+        enum class DataType : unsigned char{
             CHAR,
             INT,
             FLOAT,
@@ -37,18 +37,18 @@ namespace xzia {
         protected:
             std::vector<Data> datas;
         public:
-            void addInt(int i);
-            void addChar(char c);
-            void addLong(long l);
-            void addStr(std::string const &s);
-            void addFloat(float f);
-            void addDouble(double d);
-            int getInt() const;
-            char getChar() const;
-            long getLong() const;
+            void        addInt(int i);
+            void        addChar(char c);
+            void        addLong(long l);
+            void        addStr(std::string const &s);
+            void        addFloat(float f);
+            void        addDouble(double d);
+            int         getInt() const;
+            char        getChar() const;
+            long        getLong() const;
             std::string &getStr() const;
-            float getFloat() const;
-            double getDouble() const;
+            float       getFloat() const;
+            double      getDouble() const;
         };
     }
 }

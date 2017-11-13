@@ -7,9 +7,9 @@
 
 namespace xzia
 {
-    enum Step
+    enum class Step : unsigned char
     {
-        CONTINUE,
+        CONTINUE = 0,
         STOP,
         ERROR
     };

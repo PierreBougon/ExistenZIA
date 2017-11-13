@@ -5,13 +5,18 @@
 #ifndef EXISTENZIA_ACLIENT_HPP
 #define EXISTENZIA_ACLIENT_HPP
 
+#include <vector>
 #include "IClient.hpp"
+#include "IResponse.hpp"
 
 namespace xzia
 {
     class AClient : IClient
     {
-
+    protected:
+        int                     socket;
+        std::vector<IRequest &> listRequest;
+        IResponse               response;
     };
 }
 

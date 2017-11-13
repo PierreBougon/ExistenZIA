@@ -10,10 +10,10 @@ namespace xzia {
     class IResponse;
 
     class IClient {
-        virtual void pushRequest(IRequest &req) = 0;
-        virtual IRequest &getRequest() = 0;
-        virtual IResponse &getResponse() = 0;
-        virtual void popRequest() = 0;
+        virtual void        pushRequest(IRequest &req) = 0;
+        virtual IRequest    &getRequest() = 0;
+        virtual IResponse   &getResponse() = 0;
+        virtual void        popRequest() = 0;
     };
 }
 

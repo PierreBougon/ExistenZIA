@@ -5,4 +5,14 @@
 #ifndef ZIA_ITASK_HPP_
 #define ZIA_ITASK_HPP_
 
+#include <memory>
+
+namespace xzia
+{
+    class ITask
+    {
+        virtual std::unique_ptr<ITask> clone() = 0;
+    };
+}
+
 #endif // !ZIA_ITASK_HPP_
