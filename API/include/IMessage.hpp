@@ -13,9 +13,9 @@ namespace xzia {
     class IMessage {
     public:
         virtual bool hasBody() = 0;
-        virtual std::string &getBody() = 0;
+        virtual std::string &getBody() const = 0;
         virtual void setBody(std::string const&) = 0;
-        virtual IHeader &getHeader() = 0;
+        virtual IHeader &getHeader() const = 0;
     };
 }
 
