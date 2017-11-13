@@ -7,8 +7,12 @@
 
 #include "IClient.hpp"
 
-class AClient : IClient {
+namespace xzia
+{
+    class AClient : IClient
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ACLIENT_HPP

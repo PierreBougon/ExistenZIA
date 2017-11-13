@@ -14,12 +14,13 @@ namespace xzia {
     class ATask;
     class ILoader;
     class IModuleFactory;
+
     class IModule {
     public:
-        virtual xzia::Step process(IMessage &, IMessage &, ATask &) = 0;
-        virtual xzia::Step process() = 0;
-        virtual std::unique_ptr<IModule> clone() = 0;
-        virtual void config(ILoader &, IModuleFactory &) = 0;
+        virtual xzia::Step                  process(IMessage &req, IMessage &rep, ATask &task) = 0;
+        virtual xzia::Step                  process() = 0;
+        virtual std::unique_ptr<IModule>    clone() = 0;
+        virtual void                        config(ILoader &loader, IModuleFactory &moduleFactory) = 0;
     };
 }
 
