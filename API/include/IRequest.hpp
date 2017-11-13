@@ -5,8 +5,12 @@
 #ifndef EXISTENZIA_IREQUEST_HPP
 #define EXISTENZIA_IREQUEST_HPP
 
-class IRequest : IMessage {
+namespace xzia
+{
+    class IRequest : IMessage
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_IREQUEST_HPP

@@ -5,8 +5,11 @@
 #ifndef EXISTENZIA_ILOADER_HPP
 #define EXISTENZIA_ILOADER_HPP
 
-class ILoader {
+namespace xzia
+{
+    class ILoader {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ILOADER_HPP

@@ -13,12 +13,16 @@
 #include "IModuleFactory.hpp"
 #include "ILoader.hpp"
 
-class IModule {
-public:
-    virtual xzia::Step process(IMessage &, IMessage &, ATask &) = 0;
-    virtual xzia::Step process() = 0;
-    virtual std::unique_ptr<IModule> clone() = 0;
-    virtual void config(ILoader &, IModuleFactory &) = 0;
-};
+namespace xzia
+{
+    class IModule
+    {
+    public:
+        virtual xzia::Step process(IMessage &, IMessage &, ATask &) = 0;
+        virtual xzia::Step process() = 0;
+        virtual std::unique_ptr<IModule> clone() = 0;
+        virtual void config(ILoader &, IModuleFactory &) = 0;
+    };
+}
 
 #endif //EXISTENZIA_IMODULE_HPP

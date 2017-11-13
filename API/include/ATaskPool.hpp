@@ -7,8 +7,12 @@
 
 #include "ITaskPool.hpp"
 
-class ATaskPool : ITaskPool {
+namespace xzia
+{
+    class ATaskPool : ITaskPool
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ATASKPOOL_HPP

@@ -5,8 +5,12 @@
 #ifndef EXISTENZIA_ADATASTORE_HPP
 #define EXISTENZIA_ADATASTORE_HPP
 
-class ADataScore {
+namespace xzia
+{
+    class ADataScore
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ADATASTORE_HPP
