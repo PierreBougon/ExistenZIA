@@ -5,8 +5,12 @@
 #ifndef EXISTENZIA_ATASK_HPP
 #define EXISTENZIA_ATASK_HPP
 
-class ATask {
+namespace xzia
+{
+    class ATask
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ATASK_HPP

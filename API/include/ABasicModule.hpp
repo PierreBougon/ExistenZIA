@@ -7,10 +7,11 @@
 
 #include "AModule.hpp"
 
-class ABasicModule : AModule {
-public:
-    xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) final;
-    xzia::Step process() override = 0;
-};
+namespace xzia {
+    class ABasicModule : AModule {
+    public:
+        xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) final;
+    };
+}
 
 #endif //EXISTENZIA_ABASICMODULE_HPP

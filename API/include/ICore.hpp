@@ -2,12 +2,13 @@
 // Created by Pierre Bougon on 31/10/17.
 //
 
-#ifndef XZIA_ICORE_HPP_
-#define XZIA_ICORE_HPP_
+#ifndef EXISTENZIA_ICORE_HPP_
+#define EXISTENZIA_ICORE_HPP_
 
 namespace xzia
 {
-    enum Step {
+    enum Step
+    {
         CONTINUE,
         STOP,
         ERROR
@@ -18,4 +19,4 @@ namespace xzia
     };
 }
 
-#endif // !XZIA_ICORE_HPP_
+#endif // !EXISTENZIA_ICORE_HPP_

@@ -7,8 +7,12 @@
 
 #include "ICore.hpp"
 
-class ACore : xzia::ICore {
+namespace xzia
+{
+    class ACore : xzia::ICore
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ACORE_HPP

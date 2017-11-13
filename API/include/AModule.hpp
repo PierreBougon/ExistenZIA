@@ -6,10 +6,13 @@
 #define EXISTENZIA_AMODULE_HPP
 
 #include <mutex>
+#include <memory>
 #include "IModule.hpp"
 #include "ADataStore.hpp"
 
-class AModule : IModule {
+namespace xzia {
+
+    class AModule : IModule {
 
     protected:
         ADataScore dataScore;
@@ -21,14 +24,15 @@ class AModule : IModule {
 
     public:
         AModule();
-        AModule(std::string const& name, std::mutex *mutex = nullptr);
+
+        AModule(std::string const &name, std::mutex *mutex = nullptr);
 
         xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) override = 0;
 
-        xzia::Step process() override = 0;
 
         std::unique_ptr<IModule> clone() override;
 
         void config(ILoader &loader, IModuleFactory &factory) override;
-};
+    };
+}
 #endif //EXISTENZIA_AMODULE_HPP
