@@ -7,9 +7,9 @@
 
 #include <string>
 #include <vector>
-#include "IModule.hpp"
+#include "modules/IModule.hpp"
 #include "ITask.hpp"
-#include "UID.hpp"
+#include "tools/UID.hpp"
 
 namespace xzia
 {

@@ -7,7 +7,7 @@
 
 #include <vector>
 #include "IClient.hpp"
-#include "IResponse.hpp"
+#include "HTTPMessages/IResponse.hpp"
 
 namespace xzia
 {

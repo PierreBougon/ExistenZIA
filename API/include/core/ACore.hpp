@@ -6,11 +6,11 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
-#include "ICore.hpp"
-#include "ILoader.hpp"
-#include "IModuleFactory.hpp"
-#include "ITaskPool.hpp"
-#include "TaskBoard.hpp"
+#include "core/ICore.hpp"
+#include "loader/ILoader.hpp"
+#include "modules/IModuleFactory.hpp"
+#include "task/ITaskPool.hpp"
+#include "task/TaskBoard.hpp"
 
 namespace xzia
 {
