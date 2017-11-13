@@ -14,6 +14,7 @@ namespace xzia {
     class ATask;
     class ILoader;
     class IModuleFactory;
+
     class IModule {
     public:
         virtual xzia::Step process(IMessage &, IMessage &, ATask &) = 0;
