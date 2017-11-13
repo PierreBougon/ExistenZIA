@@ -5,15 +5,18 @@
 #ifndef EXISTENZIA_ITASKPOOL_HPP
 #define EXISTENZIA_ITASKPOOL_HPP
 
-#include "ATask.hpp"
+#include <iostream>
+#include <vector>
 
-namespace xzia
-{
-    class ITaskPool
-    {
-    protected:
-        std::vector<ATask>                  listTaskModel;
-        std::vector<std::unique_ptr<ATask>> listTaskCloned;
+namespace xzia {
+    class ATask;
+    class ITaskPool {
+    public:
+        virtual void addModel(std::string const &model, std::string const &ressource,
+                              std::vector<std::string> &moduleNames) = 0;
+        virtual void deleteModel(std::string const &name) = 0;
+        virtual ATask &getTask(std::string const &name) = 0;
+        virtual void deleteTask(int id) = 0;
     };
 }
 
