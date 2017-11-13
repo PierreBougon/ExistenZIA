@@ -12,11 +12,11 @@ namespace xzia {
     class ATask;
     class ITaskPool {
     public:
-        virtual void addModel(std::string const &model, std::string const &ressource,
-                              std::vector<std::string> &moduleNames) = 0;
-        virtual void deleteModel(std::string const &name) = 0;
-        virtual ATask &getTask(std::string const &name) const = 0;
-        virtual void deleteTask(int id) = 0;
+        virtual void    addModel(std::string const &model, std::string const &ressource,
+                                 std::vector<std::string> &moduleNames) = 0;
+        virtual void    deleteModel(std::string const &name) = 0;
+        virtual ATask   &getTask(std::string const &name) const = 0;
+        virtual void    deleteTask(int id) = 0;
     };
 }
 

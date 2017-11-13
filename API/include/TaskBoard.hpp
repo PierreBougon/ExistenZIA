@@ -11,9 +11,9 @@
 
 namespace xzia {
     struct TaskBoard {
-        std::thread thread;
-        IClient client;
-        ATaskPool &taskPool;
+        std::thread     thread;
+        IClient         client;
+        ATaskPool       &taskPool;
     };
 }
 

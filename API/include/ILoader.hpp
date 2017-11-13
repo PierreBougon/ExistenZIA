@@ -9,7 +9,6 @@
 
 namespace xzia {
     class ILoader {
-        virtual explicit ILoader(std::string const &file) = 0;
         virtual void reload() = 0;
         virtual std::string &getCoreField(std::string const &field) const = 0;
         virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;

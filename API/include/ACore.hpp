@@ -9,20 +9,24 @@
 #include "ICore.hpp"
 #include "ILoader.hpp"
 #include "IModuleFactory.hpp"
-#include "ATaskPool.hpp"
+#include "ITaskPool.hpp"
 #include "TaskBoard.hpp"
 
-namespace xzia {
-    class ACore : xzia::ICore {
-    protected:
-        ILoader loader;
-        IModuleFactory moduleFactory;
-        ITaskPool taskPool;
-        std::vector<TaskBoard> taskBoards;
-
+namespace xzia
+{
+    class ACore : xzia::ICore
+    {
     public:
-        ACore(std::string const &config);
-        void run() override;
+        ACore(std::string config);
+
+    protected:
+        ILoader                 loader;
+        IModuleFactory          moduleFactory;
+        ITaskPool               taskPool;
+        std::vector<TaskBoard>  listTaskBoard;
+
+    private:
+        std::string configFile;
     };
 }
 

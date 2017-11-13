@@ -8,8 +8,11 @@
 #include "ITaskPool.hpp"
 
 namespace xzia {
-    class ATaskPool : ITaskPool {
-
+    class ATaskPool : ITaskPool
+    {
+    protected:
+        std::vector<ATask>                  listTaskModel;
+        std::vector<std::unique_ptr<ATask>> listTaskCloned;
     };
 }
 #endif //EXISTENZIA_ATASKPOOL_HPP
