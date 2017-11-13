@@ -6,7 +6,7 @@
 #define EXISTENZIA_TASKBOARD_HPP
 
 #include <thread>
-#include "IClient.hpp"
+#include "client/IClient.hpp"
 #include "ATaskPool.hpp"
 
 namespace xzia {

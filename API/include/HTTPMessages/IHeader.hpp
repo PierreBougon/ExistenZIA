@@ -5,7 +5,11 @@
 #ifndef EXISTENZIA_IHEADER_HPP
 #define EXISTENZIA_IHEADER_HPP
 
+<<<<<<< HEAD:API/include/IHeader.hpp
 #include <iostream>
+=======
+#include <string>
+>>>>>>> 995db77302bbd0ea2fcb3fd8f1c7207b5aafec47:API/include/HTTPMessages/IHeader.hpp
 
 namespace xzia {
     class IHeader {
