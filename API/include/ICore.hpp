@@ -13,6 +13,7 @@ namespace xzia
         STOP,
         ERROR
     };
+
     class ICore
     {
         virtual void run() = 0;
