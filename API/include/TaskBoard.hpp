@@ -5,11 +5,15 @@
 #ifndef EXISTENZIA_TASKBOARD_HPP
 #define EXISTENZIA_TASKBOARD_HPP
 
-namespace xzia
-{
-    class TaskBoard
-    {
+#include <thread>
+#include "IClient.hpp"
+#include "ATaskPool.hpp"
 
+namespace xzia {
+    struct TaskBoard {
+        std::thread thread;
+        IClient client;
+        ATaskPool &taskPool;
     };
 }
 
