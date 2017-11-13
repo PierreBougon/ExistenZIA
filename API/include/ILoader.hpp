@@ -6,7 +6,6 @@
 #define EXISTENZIA_ILOADER_HPP
 
 namespace xzia {
-
     class ILoader {
 
     };

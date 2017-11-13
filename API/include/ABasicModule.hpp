@@ -11,8 +11,6 @@ namespace xzia {
     class ABasicModule : AModule {
     public:
         xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) final;
-
-        xzia::Step process() override = 0;
     };
 }
 

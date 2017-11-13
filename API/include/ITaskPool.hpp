@@ -5,8 +5,12 @@
 #ifndef EXISTENZIA_ITASKPOOL_HPP
 #define EXISTENZIA_ITASKPOOL_HPP
 
-class ITaskPool {
+namespace xzia
+{
+    class ITaskPool
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_ITASKPOOL_HPP

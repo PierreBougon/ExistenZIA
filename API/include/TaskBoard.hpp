@@ -5,8 +5,12 @@
 #ifndef EXISTENZIA_TASKBOARD_HPP
 #define EXISTENZIA_TASKBOARD_HPP
 
-class TaskBoard {
+namespace xzia
+{
+    class TaskBoard
+    {
 
-};
+    };
+}
 
 #endif //EXISTENZIA_TASKBOARD_HPP

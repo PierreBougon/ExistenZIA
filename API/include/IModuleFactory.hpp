@@ -9,7 +9,6 @@
 #include <memory>
 
 namespace xzia {
-
     class IModule;
 
     class IModuleFactory {
@@ -21,4 +20,5 @@ namespace xzia {
         virtual std::unique_ptr<IModule> getInstance(std::string const &) = 0;
     };
 }
+
 #endif //EXISTENZIA_IMODULEFACTORY_HPP

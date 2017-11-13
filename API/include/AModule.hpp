@@ -29,7 +29,6 @@ namespace xzia {
 
         xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) override = 0;
 
-        xzia::Step process() override = 0;
 
         std::unique_ptr<IModule> clone() override;
 
