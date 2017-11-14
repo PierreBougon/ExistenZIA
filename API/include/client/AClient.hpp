@@ -16,7 +16,7 @@ namespace xzia
     protected:
         int                     socket;
         std::vector<IRequest &> listRequest;
-        IResponse               response;
+        IResponse               &response;
     };
 }
 

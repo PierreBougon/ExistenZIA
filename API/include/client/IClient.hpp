@@ -42,7 +42,7 @@ namespace xzia {
          * @return Return a request of type IRequest
          *
          */
-        virtual IRequest &getRequest() = 0;
+        virtual IRequest &getRequest() const = 0;
 
         /**
          *
@@ -51,7 +51,7 @@ namespace xzia {
          * @return Return a response of type IResponse
          *
          */
-        virtual IResponse &getResponse() = 0;
+        virtual IResponse &getResponse() const = 0;
 
         /**
          * \fn popRequest

@@ -12,7 +12,7 @@
 namespace xzia {
     struct TaskBoard {
         std::thread     thread;
-        IClient         client;
+        IClient         &client;
         ATaskPool       &taskPool;
     };
 }

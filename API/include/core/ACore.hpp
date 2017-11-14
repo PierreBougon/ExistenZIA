@@ -20,9 +20,9 @@ namespace xzia
         ACore(std::string config);
 
     protected:
-        ILoader                 loader;
-        IModuleFactory          moduleFactory;
-        ITaskPool               taskPool;
+        ILoader                 &loader;
+        IModuleFactory          &moduleFactory;
+        ITaskPool               &taskPool;
         std::vector<TaskBoard>  listTaskBoard;
 
     private:
