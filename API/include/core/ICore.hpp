@@ -30,7 +30,7 @@ namespace xzia {
         /**
          *
          * \fn run
-         * \brief Here, core is ran
+         * \brief Main logic of the server, loop while the server is up
          *
          */
         virtual void run() = 0;
