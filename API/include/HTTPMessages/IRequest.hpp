@@ -12,10 +12,10 @@ class IHeader;
 namespace xzia {
 
     class IRequest : IMessage {
-      virtual bool hasBody() override = 0;
-      virtual std::string &getBody() const override = 0;
-      virtual void setBody(std::string const &string) override = 0;
-      virtual IHeader &getHeader() const override = 0;
+      bool hasBody() override = 0;
+      std::string &getBody() const override = 0;
+      void setBody(std::string const &string) override = 0;
+      IHeader &getHeader() const override = 0;
       virtual std::string & getMethod() const = 0;
       virtual std::string & pathtVersion() const = 0;
       virtual std::string & getURLHost() const = 0;
