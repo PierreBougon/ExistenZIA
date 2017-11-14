@@ -17,7 +17,7 @@
  * \namespace xzia
  * \class IClient IClient.hpp IClient.hpp
  * \class IRequest IRequest.hpp IRequest.hpp
- * \class IResponse IResponse.hpp IRespons.hpp
+ * \class IResponse IResponse.hpp IResponse.hpp
  *
  */
 namespace xzia {

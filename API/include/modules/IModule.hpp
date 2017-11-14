@@ -35,30 +35,23 @@ namespace xzia {
     public:
 
         /**
-         *
-         * \fn process
-         * \brief
-         * @param req Request received
-         * @param res Response received
-         * @param task Current task
-         * @return Return the state after processing the task
-         *
-         */
+        *
+        * \fn processHTTP
+        * \brief This function is called on the execution list,
+        * it will automatically call the right process method
+        *
+        * @param req Request received
+        * @param res Response to send to client
+        * @param task Current task
+        * @return Return the state after processing the task
+        *
+        */
         virtual xzia::Step process(IMessage &req, IMessage &res, ATask &task) = 0;
 
         /**
          *
-         * \fn process
-         * \brief
-         * @return Return the state after processing
-         *
-         */
-        virtual xzia::Step process() = 0;
-
-        /**
-         *
          * \fn clone
-         * \brief
+         * \brief Return a clone of this module which is useful for models in the ModuleFactory
          * @return Return an unique_ptr copy instance of the current IModule
          *
          */
@@ -67,12 +60,38 @@ namespace xzia {
         /**
          *
          * \fn config
-         * \brief
-         * @param loader //TODO Describe this param here
-         * @param moduleFactory //TODO Describe this param here
+         * \brief Tell the module te refresh itself its configuration from loader
+         * @param loader reference to a loader to be able to get his own module config
+         * @param moduleFactory reference to module factory to change module model
          *
          */
         virtual void config(ILoader &loader, IModuleFactory &moduleFactory) = 0;
+
+    protected:
+        /**
+        *
+        * \fn processHTTP
+        * \brief This function is called by process,
+        * you have to implement module logic here for any HTTPModule
+        *
+        * @param req Request received
+        * @param res Response to send to client
+        * @param task Current task
+        * @return Return the state after processing the task
+        *
+        */
+        virtual xzia::Step processHTTP(IMessage &req, IMessage &res, ATask &task) = 0;
+
+        /**
+         *
+         * \fn processBasic
+         * \brief This function is called by process,
+         * you have to implement module logic here for any BasicModule
+         *
+         * @return Return the state after processing
+         *
+         */
+        virtual xzia::Step processBasic() = 0;
     };
 }
 
