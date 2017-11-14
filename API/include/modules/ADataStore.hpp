@@ -33,7 +33,7 @@ namespace xzia {
             DataValue   value;
         };
 
-        class ADataScore {
+        class ADataStore {
         protected:
             std::vector<Data> datas;
         public:

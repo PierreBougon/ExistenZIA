@@ -10,7 +10,7 @@
 namespace xzia {
     class ABasicModule : AModule {
     public:
-        xzia::Step process(IMessage &message, IMessage &iMessage, ATask &task) final;
+        Step processHTTP(IMessage &req, IMessage &res, ATask &task) override;
     };
 }
 

@@ -15,21 +15,27 @@ namespace xzia
 
     class AModule : IModule
     {
+        enum class Type : unsigned char
+        {
+            basic = 0,
+            http
+        };
+
+    public:
+        AModule() = delete;
+        AModule(AModule::Type moduleType, std::string const &name, std::mutex &mutex);
+
+    private:
+        Step process(IMessage &req, IMessage &res, ATask &task) override final;
 
     protected:
         data::ADataStore dataStore;
 
     private:
+        Type        type;
         bool        threaded;
-        std::mutex  mutex;
+        std::mutex  &mutex;
         std::string name;
-
-    public:
-        AModule();
-        AModule(std::string const &name, std::mutex *mutex = nullptr);
-
-        void config(ILoader &loader, IModuleFactory &factory) override;
-        std::unique_ptr<IModule> clone() override;
     };
 }
 #endif //EXISTENZIA_AMODULE_HPP

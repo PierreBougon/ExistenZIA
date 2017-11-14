@@ -10,7 +10,7 @@
 namespace xzia {
     class AHTTPModule : AModule {
     public:
-        xzia::Step process() final;
+        Step processBasic() override;
     };
 }
 

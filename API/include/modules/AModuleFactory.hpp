@@ -14,11 +14,11 @@
 
 namespace xzia {
     class AModuleFactory : IModuleFactory {
-    protected:
-        std::vector<AModule> listModuleModel;
-
     public:
         std::map<std::string, std::mutex> mutexMap;
+
+    protected:
+        std::vector<AModule> listModuleModel;
     };
 }
 #endif //EXISTENZIA_AMODULEFACTORY_HPP
