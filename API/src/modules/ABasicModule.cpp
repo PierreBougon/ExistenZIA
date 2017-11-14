@@ -5,6 +5,6 @@
 #include <core/ICore.hpp>
 #include "modules/ABasicModule.hpp"
 
-xzia::Step xzia::ABasicModule::process(xzia::IMessage &message, xzia::IMessage &iMessage, xzia::ATask &task) {
+xzia::Step xzia::ABasicModule::processHTTP(xzia::IMessage &req, xzia::IMessage &res, xzia::ATask &task) {
     return xzia::Step::CONTINUE;
 }
