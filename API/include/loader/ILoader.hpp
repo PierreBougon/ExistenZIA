@@ -38,7 +38,7 @@ namespace xzia {
          * @return Return the name of the corresponding CoreField
          *
          */
-        virtual std::string &getCoreField(std::string const &field) = 0;
+        virtual std::string &getCoreField(std::string const &field) const = 0;
 
         /**
          *
@@ -49,7 +49,7 @@ namespace xzia {
          * @return Return the name of the corresponding ModuleField
          *
          */
-        virtual std::string &getModuleField(std::string const &module, std::string const &field) = 0;
+        virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;
     };
 }
 #endif //EXISTENZIA_ILOADER_HPP

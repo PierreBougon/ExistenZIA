@@ -43,7 +43,7 @@ namespace xzia {
          * @return Return a string representing the current body of the message
          *
          */
-        virtual std::string &getBody() = 0;
+        virtual std::string &getBody() const = 0;
 
         /**
          *
@@ -61,7 +61,7 @@ namespace xzia {
          * @return Return the current header of type IHeader
          *
          */
-        virtual IHeader &getHeader() = 0;
+        virtual IHeader &getHeader() const = 0;
     };
 }
 

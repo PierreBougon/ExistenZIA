@@ -52,6 +52,9 @@ namespace xzia {
          *
          */
         virtual void addField(std::string const & field) = 0;
+<<<<<<< HEAD
+        virtual void deleteField(std::string const & field) = 0;
+=======
 
         /**
          *
@@ -61,6 +64,7 @@ namespace xzia {
          *
          */
         virtual void setField(std::string const & field) = 0;
+>>>>>>> 5da95a53d4e6a54fee682fe84a604f885dce5892
     };
 }
 

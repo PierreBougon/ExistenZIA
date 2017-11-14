@@ -55,7 +55,7 @@ namespace xzia {
          * @return Return the specific ATask
          *
          */
-        virtual ATask &getTask(std::string const &name) = 0;
+        virtual ATask &getTask(std::string const &name) const = 0;
 
         /**
          *

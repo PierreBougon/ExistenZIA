@@ -6,6 +6,7 @@
 #define EXISTENZIA_IREQUEST_HPP
 
 #include <iostream>
+#include "IMessage.hpp"
 
 /**
  * \file IRequest.hpp
@@ -20,8 +21,8 @@
  * \class IMessage IMessage.hpp IMessage.hpp
  * \class IRequest IRequest.hpp IRequest/hpp
  */
+
 namespace xzia {
-    class IMessage;
 
     class IRequest : IMessage {
 
@@ -41,7 +42,7 @@ namespace xzia {
          * @return Return a string representing the current body of the request
          *
          */
-        virtual std::string &getBody() = 0;
+        virtual std::string &getBody() const = 0;
 
         /**
          *
@@ -59,7 +60,7 @@ namespace xzia {
          * @return Return a string representing the header.
          *
          */
-        virtual std::string &getHeader() = 0;
+        virtual IHeader &getHeader() const = 0;
 
         /**
          *

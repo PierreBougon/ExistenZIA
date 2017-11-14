@@ -49,7 +49,7 @@ namespace xzia {
          * @param name //TODO Describe this param here
          * @return Return an unique_ptr IModule of the specific Instance
          */
-        virtual std::unique_ptr<IModule> getInstance(std::string const &name) = 0;
+        virtual std::unique_ptr<IModule> getInstance(std::string const &name) const = 0;
     };
 }
 
