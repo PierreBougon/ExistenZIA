@@ -15,7 +15,7 @@
 namespace xzia {
     class AModuleFactory : IModuleFactory {
     protected:
-        std::vector<AModule> modules;
+        std::vector<AModule> listModuleModel;
 
     public:
         std::map<std::string, std::mutex> mutexMap;
