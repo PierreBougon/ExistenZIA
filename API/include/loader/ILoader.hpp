@@ -6,6 +6,8 @@
 #define EXISTENZIA_ILOADER_HPP
 
 #include <iostream>
+#include <map>
+#include <vector>
 
 /**
  * \file ILoader.hpp
@@ -50,6 +52,26 @@ namespace xzia {
          *
          */
         virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;
+
+
+        /**
+         * \fn getMapField
+         * \brief
+         * @param module
+         * @return
+         *
+         */
+        virtual std::map<std::string, std::string> getMapField(std::string module) = 0;
+
+        /**
+         *
+         * \fn getTaskList
+         * @return Return a vector containing all task represented by a string
+         *
+         */
+        virtual std::vector<std::string> getTaskList() = 0;
+
+        // getMyCore
     };
 }
 #endif //EXISTENZIA_ILOADER_HPP

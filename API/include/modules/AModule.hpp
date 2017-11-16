@@ -9,16 +9,16 @@
 #include <memory>
 #include "IModule.hpp"
 #include "ADataStore.hpp"
+#include "ModuleManager.hpp"
 
-namespace xzia
-{
+namespace xzia {
+    class AModule : IModule {
 
-    class AModule : IModule
-    {
         enum class Type : unsigned char
         {
-            basic = 0,
-            http
+            http = 0,
+            shared,
+            selfProtect
         };
 
     public:
@@ -36,6 +36,7 @@ namespace xzia
         bool        threaded;
         std::mutex  &mutex;
         std::string name;
+        ModuleManager &moduleManager;
     };
 }
 #endif //EXISTENZIA_AMODULE_HPP
