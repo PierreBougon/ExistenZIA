@@ -25,6 +25,7 @@
 namespace xzia {
     class ILoader {
 
+    public:
         /**
          *
          * \fn reload
@@ -32,46 +33,6 @@ namespace xzia {
          *
          */
         virtual void reload() = 0;
-
-        /**
-         * \fn getCoreField
-         * \brief
-         * @param field //TODO Describe this param here
-         * @return Return the name of the corresponding CoreField
-         *
-         */
-        virtual std::string &getCoreField(std::string const &field) const = 0;
-
-        /**
-         *
-         * \fn getModule
-         * \brief
-         * @param module //TODO Describe this param here
-         * @param field //TODO Describe this param here
-         * @return Return the name of the corresponding ModuleField
-         *
-         */
-        virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;
-
-
-        /**
-         * \fn getMapField
-         * \brief
-         * @param module
-         * @return
-         *
-         */
-        virtual std::map<std::string, std::string> getMapField(std::string module) = 0;
-
-        /**
-         *
-         * \fn getTaskList
-         * @return Return a vector containing all task represented by a string
-         *
-         */
-        virtual std::vector<std::string> getTaskList() = 0;
-
-        // getMyCore
     };
 }
 #endif //EXISTENZIA_ILOADER_HPP

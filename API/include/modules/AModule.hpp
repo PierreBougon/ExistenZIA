@@ -9,7 +9,7 @@
 #include <memory>
 #include "IModule.hpp"
 #include "ADataStore.hpp"
-#include "ModuleManager.hpp"
+#include "AModuleManager.hpp"
 
 namespace xzia {
     class AModule : IModule {
@@ -28,15 +28,17 @@ namespace xzia {
     private:
         Step process(IMessage &req, IMessage &res, ATask &task) override final;
 
+    public:
+        Type getType() const;
+
+        const std::string &getName() const;
+
     protected:
-        data::ADataStore dataStore;
+        AModuleManager  &moduleManager;
 
     private:
         Type        type;
-        bool        threaded;
-        std::mutex  &mutex;
         std::string name;
-        ModuleManager &moduleManager;
     };
 }
 #endif //EXISTENZIA_AMODULE_HPP

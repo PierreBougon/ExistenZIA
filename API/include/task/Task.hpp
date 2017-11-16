@@ -7,8 +7,8 @@
 
 #include <memory>
 #include <vector>
-#include "IRequest.hpp"
-#include "IResponse.hpp"
+#include "../http/Request.hpp"
+#include "../http/Response.hpp"
 #include "AHTTPModule.hpp"
 #include "IClient.hpp"
 
