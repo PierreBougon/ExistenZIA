@@ -7,34 +7,81 @@
 
 #include <mutex>
 #include <memory>
-#include "IModule.hpp"
 #include "ADataStore.hpp"
+#include "AModuleManager.hpp"
 
-namespace xzia
-{
+/**
+ * \file AModule.hpp
+ * \brief
+ * \author Robin.U
+ * \version 0.1
+ * \date 17 novembre 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class AModule AModule.hpp AModule.hpp
+ *
+ */
+namespace xzia {
+    class AModule {
 
-    class AModule : IModule
-    {
+        /**
+         * \enum Type
+         */
         enum class Type : unsigned char
         {
-            basic = 0,
-            http
+            Http = 0,
+            Shared,
+            SelfProtect
         };
 
     public:
+        /**
+         * \fn AModule
+         * \brief Default constructor deleted
+         */
         AModule() = delete;
-        AModule(AModule::Type moduleType, std::string const &name, std::mutex &mutex);
 
-    private:
-        Step process(IMessage &req, IMessage &res, ATask &task) override final;
+        /**
+         * \fn AModule
+         * \brief Constructor of AModule where we set the name of the module
+         * @param name Name of the module
+         */
+        AModule(std::string const &name);
+
+        /**
+         *
+         * \fn getType
+         * \brief Get the type of the module
+         * @return Return the type of the module
+         *
+         */
+        Type getType() const;
+
+        /**
+         *
+         * \fn getName
+         * \brief Get the name of the module
+         * @return Return the name of the module
+         *
+         */
+        const std::string &getName() const;
 
     protected:
-        data::ADataStore dataStore;
+        AModuleManager  &moduleManager;
+
+        /**
+         * \enum Step
+         */
+        enum class Step : unsigned char {
+            Continue = 0,
+            Stop,
+            Error
+        };
 
     private:
         Type        type;
-        bool        threaded;
-        std::mutex  &mutex;
         std::string name;
     };
 }

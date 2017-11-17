@@ -17,9 +17,6 @@ namespace xzia
 {
     class ATask : ITask
     {
-    private:
-        IRequest    request;
-        IResponse   response;
     public:
         virtual IRequest    &getRequest() const = 0;
         virtual IResponse   &getResponse() const = 0;
@@ -30,6 +27,8 @@ namespace xzia
         std::string resource;
         xzia::uid   uid;
         std::vector<std::unique_ptr<IModule>> executionList;
+        IRequest    request;
+        IResponse   response;
     };
 }
 

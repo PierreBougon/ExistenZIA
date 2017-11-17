@@ -6,27 +6,50 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
-#include "core/ICore.hpp"
+#include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
-#include "modules/IModuleFactory.hpp"
-#include "task/ITaskPool.hpp"
-#include "task/TaskBoard.hpp"
+#include "AThreadManager.hpp"
+#include "client/Client.hpp"
 
-namespace xzia
-{
-    class ACore : xzia::ICore
-    {
+
+/**
+ * \file ACore.hpp
+ * \brief
+ * \author Pierre.B
+ * \version 0.1
+ * \date 17 novembre 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class ACore ACore.hpp ACore.hpp
+ */
+namespace xzia {
+    class ACore {
     public:
+
+        /**
+         *
+         * \fn ACore
+         * \brief Constructor of the class ACore. We set a configuration representing by a string
+         * @param config Configuration of the core
+         *
+         */
         ACore(std::string config);
+
+        /**
+         *
+         * \fn run
+         * \brief
+         *
+         */
+        void run();
 
     protected:
         ILoader                 &loader;
-        IModuleFactory          &moduleFactory;
-        ITaskPool               &taskPool;
-        std::vector<TaskBoard>  listTaskBoard;
-
-    private:
-        std::string configFile;
+        AModuleManager          modules;
+        AThreadManager          manager;
+        std::vector<Client>     cli;
     };
 }
 

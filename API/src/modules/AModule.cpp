@@ -15,3 +15,11 @@ xzia::Step xzia::AModule::process(xzia::IMessage &req, xzia::IMessage &res, xzia
     else
         return processBasic();
 }
+
+xzia::AModule::Type xzia::AModule::getType() const {
+    return type;
+}
+
+const std::string &xzia::AModule::getName() const {
+    return name;
+}
