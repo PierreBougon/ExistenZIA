@@ -6,10 +6,10 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
-#include "AModuleManager.hpp"
-#include "ILoader.hpp"
+#include "modules/AModuleManager.hpp"
+#include "loader/ILoader.hpp"
 #include "AThreadManager.hpp"
-#include "Client.hpp"
+#include "client/Client.hpp"
 
 
 /**

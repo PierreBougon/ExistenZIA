@@ -21,7 +21,7 @@
  *
  */
 namespace xzia {
-    class ADLLLoader {
+    class IDLLLoader {
     public:
 
         /**

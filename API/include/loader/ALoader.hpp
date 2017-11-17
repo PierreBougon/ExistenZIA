@@ -7,7 +7,7 @@
 
 #include "ILoader.hpp"
 #include "IConfigLoader.hpp"
-#include "ADLLLoader.hpp"
+#include "IDLLLoader.hpp"
 
 /**
  * \file ALoader.hpp
@@ -26,7 +26,7 @@ namespace xzia {
     class ALoader : ILoader {
     private:
         IConfigLoader   config;
-        ADLLLoader      dll;
+        IDLLLoader      dll;
 
     public:
 

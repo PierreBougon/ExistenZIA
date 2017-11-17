@@ -24,7 +24,7 @@
  */
 namespace xzia {
     class ASharedModule : AModule {
-    protected:
+    private:
         std::mutex  mutex;
     public:
 

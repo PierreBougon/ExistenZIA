@@ -37,17 +37,6 @@ namespace xzia {
          *
          */
         Step process(ADataStore &dataStore);
-
-
-        /**
-         *
-         * \fn processData
-         * \brief
-         * @param dataStore
-         * @return
-         *
-         */
-        Step processData(ADataStore &dataStore);
     };
 }
 

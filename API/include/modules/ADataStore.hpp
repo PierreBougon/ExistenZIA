@@ -54,7 +54,7 @@ namespace xzia {
          */
         struct Data {
             DataType    type;
-            DataValue   value;
+            variant   value;
         };
 
         class ADataStore {

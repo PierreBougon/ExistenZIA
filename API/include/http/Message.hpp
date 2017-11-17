@@ -6,7 +6,7 @@
 #define EXISTENZIA_MESSAGE_HPP
 
 #include <iostream>
-#include "Header.hpp"
+#include <map>
 
 /**
  * \file Message.hpp
@@ -24,10 +24,10 @@
 namespace xzia {
 
     class Message {
-    private:
-        Header      head;
+    protected:
         std::string body;
         std::string version;
+        std::map<std::string, std::string>  header;
 
     public:
 
@@ -65,7 +65,7 @@ namespace xzia {
          * @return Return the current header of type IHeader
          *
          */
-        Header &getHeader() const;
+        std::map<std::string, std::string> &getHeader() const;
 
         /**
          *
@@ -83,7 +83,7 @@ namespace xzia {
          * @param head
          *
          */
-        void setHeader(Header const &head);
+        void setHeader(std::map<std::string, std::string> const &head);
 
         /**
          *

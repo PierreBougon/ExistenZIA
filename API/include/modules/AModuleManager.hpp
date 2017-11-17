@@ -5,12 +5,14 @@
 #ifndef EXISTENZIA_AMODULEMANAGER_HPP
 #define EXISTENZIA_AMODULEMANAGER_HPP
 
+#include <vector>
 #include <mutex>
-#include "AModule.hpp"
-#include "AHTTPModule.hpp"
 
 namespace xzia {
 
+    class ALoader;
+    class AModule;
+    class ABasicModule;
     class AModuleManager {
     private:
         std::mutex              reloadMutex;
@@ -26,7 +28,7 @@ namespace xzia {
          * @param load Set the loader in the class
          *
          */
-        AModuleManager(ILoader &load);
+        AModuleManager(ALoader &load);
 
         /**
          *
@@ -40,13 +42,13 @@ namespace xzia {
 
         /**
          *
-         * \fn getSharedModule
+         * \fn getBasicModule
          * \brief
          * @param module
          * @return
          *
          */
-        std::unique_ptr<AHTTPModule> getHTTPModule(std::string module);
+        std::unique_ptr<ABasicModule> getBasicModule(std::string module);
 
         /**
          *
@@ -63,7 +65,7 @@ namespace xzia {
          * @return
          *
          */
-        std::vector<AHTTPModule> getTaskModules();
+        std::vector<ABasicModule> getTaskModules();
    };
 }
 #endif //EXISTENZIA_AMODULEMANAGER_HPP
