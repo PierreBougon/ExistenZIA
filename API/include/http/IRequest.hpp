@@ -24,7 +24,7 @@
 
 namespace xzia {
 
-    class IRequest : IMessage {
+    class IRequest : public IMessage {
 
         /**
          *

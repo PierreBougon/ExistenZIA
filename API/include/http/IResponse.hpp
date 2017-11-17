@@ -21,7 +21,7 @@
  * \class IResponse IResponse.hpp IResponse.hpp
  */
 namespace xzia {
-    class IResponse : IMessage {
+    class IResponse : public IMessage {
     public:
 
         /**
