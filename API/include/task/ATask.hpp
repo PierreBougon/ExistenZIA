@@ -7,6 +7,8 @@
 
 #include <string>
 #include <vector>
+#include <http/IRequest.hpp>
+#include <http/IResponse.hpp>
 #include "modules/IModule.hpp"
 #include "ITask.hpp"
 #include "tools/UID.hpp"
@@ -15,6 +17,14 @@ namespace xzia
 {
     class ATask : ITask
     {
+    private:
+        IRequest    request;
+        IResponse   response;
+    public:
+        virtual IRequest    &getRequest() const = 0;
+        virtual IResponse   &getResponse() const = 0;
+
+    private:
         std::string name;
         std::string method;
         std::string resource;

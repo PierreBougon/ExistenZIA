@@ -6,12 +6,16 @@
 #define ZIA_ITASK_HPP_
 
 #include <memory>
+#include <vector>
+#include "modules/IModule.hpp"
 
 namespace xzia
 {
     class ITask
     {
+    public:
         virtual std::unique_ptr<ITask> clone() = 0;
+        virtual std::vector<std::unique_ptr<IModule>> getExecutionList() = 0;
     };
 }
 
