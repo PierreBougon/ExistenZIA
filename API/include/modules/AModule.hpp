@@ -9,16 +9,16 @@
 #include <memory>
 #include "IModule.hpp"
 #include "ADataStore.hpp"
+#include "AModuleManager.hpp"
 
-namespace xzia
-{
+namespace xzia {
+    class AModule : IModule {
 
-    class AModule : IModule
-    {
         enum class Type : unsigned char
         {
-            basic = 0,
-            http
+            http = 0,
+            shared,
+            selfProtect
         };
 
     public:
@@ -28,13 +28,16 @@ namespace xzia
     private:
         Step process(IMessage &req, IMessage &res, ATask &task) override final;
 
+    public:
+        Type getType() const;
+
+        const std::string &getName() const;
+
     protected:
-        data::ADataStore dataStore;
+        AModuleManager  &moduleManager;
 
     private:
         Type        type;
-        bool        threaded;
-        std::mutex  &mutex;
         std::string name;
     };
 }

@@ -2,13 +2,14 @@
 // Created by duhieub on 11/9/17.
 //
 
-#ifndef EXISTENZIA_IMESSAGE_HPP
-#define EXISTENZIA_IMESSAGE_HPP
+#ifndef EXISTENZIA_MESSAGE_HPP
+#define EXISTENZIA_MESSAGE_HPP
 
 #include <iostream>
+#include "Header.hpp"
 
 /**
- * \file IMessage.hpp
+ * \file Message.hpp
  * \brief
  * \author Robin.U
  * \version 0.1
@@ -17,14 +18,17 @@
  * add comment here
  *
  * \namespace xzia
- * \class IHeader IHeader.hpp IHeader.hpp
- * \class IMessage IMessage.hpp IMessage.hpp
+ * \class Message Message.hpp Message.hpp
  *
  */
 namespace xzia {
 
-    class IHeader;
-    class IMessage {
+    class Message {
+    private:
+        Header      head;
+        std::string body;
+        std::string version;
+
     public:
 
         /**
@@ -52,7 +56,7 @@ namespace xzia {
          * @param body New body we want to set to the current message
          *
          */
-        virtual void setBody(std::string const &body) = 0;
+        void setBody(std::string const &body);
 
         /**
          *
@@ -61,8 +65,35 @@ namespace xzia {
          * @return Return the current header of type IHeader
          *
          */
-        virtual IHeader &getHeader() const = 0;
+        Header &getHeader() const;
+
+        /**
+         *
+         * \fn getVersion
+         * \brief
+         * @return
+         *
+         */
+        std::string getVersion() const;
+
+        /**
+         *
+         * \fn setHeader
+         * \brief
+         * @param head
+         *
+         */
+        void setHeader(Header const &head);
+
+        /**
+         *
+         * \fn setVersion
+         * \brief
+         * @param version
+         *
+         */
+        void setVersion(std::string const &version);
     };
 }
 
-#endif //EXISTENZIA_IMESSAGE_HPP
+#endif //EXISTENZIA_MESSAGE_HPP

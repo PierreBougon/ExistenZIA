@@ -22,7 +22,7 @@
  */
 namespace xzia {
     class IRequest;
-    class IResponse;
+    class Response;
 
     class IClient {
 
@@ -51,7 +51,7 @@ namespace xzia {
          * @return Return a response of type IResponse
          *
          */
-        virtual IResponse &getResponse() const = 0;
+        virtual Response &getResponse() const = 0;
 
         /**
          * \fn popRequest
