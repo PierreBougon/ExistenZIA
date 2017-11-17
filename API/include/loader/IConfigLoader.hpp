@@ -10,20 +10,20 @@
 #include <vector>
 
 /**
- * \file ConfigLoader.hpp
+ * \file IConfigLoader.hpp
  * \brief
  * \author Pierre.B
  * \version 0.1
- * \date 13 novembre 2017
+ * \date 17 novembre 2017
  *
  * add comment here
  *
  * \namespace xzia
- * \class ConfigLoader ConfigLoader.hpp ConfigLoader.hpp
+ * \class IConfigLoader IConfigLoader.hpp IConfigLoader.hpp
  *
  */
 namespace xzia {
-    class AConfigLoader {
+    class IConfigLoader {
             /**
         * \fn getCoreField
         * \brief
@@ -31,7 +31,7 @@ namespace xzia {
         * @return Return the name of the corresponding CoreField
          *
         */
-        std::string &getCoreField(std::string const &field) const;
+        virtual std::string &getCoreField(std::string const &field) const = 0;
 
         /**
          *
@@ -42,7 +42,7 @@ namespace xzia {
          * @return Return the name of the corresponding ModuleField
          *
          */
-        std::string &getModuleField(std::string const &module, std::string const &field) const;
+        virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;
 
 
         /**
@@ -52,7 +52,7 @@ namespace xzia {
          * @return
          *
          */
-        std::map<std::string, std::string> getModuleMap(std::string module);
+        virtual std::map<std::string, std::string> getModuleMap(std::string module) = 0;
 
         /**
          *
@@ -61,7 +61,7 @@ namespace xzia {
          * @return Return a vector containing all task represented by a string
          *
          */
-        std::vector<std::string> getTaskList();
+        virtual std::vector<std::string> getTaskList() = 0;
 
         /**
          *
@@ -70,7 +70,7 @@ namespace xzia {
          * @return
          *
          */
-        std::map<std::string, std::string> getCoreMap();
+        virtual std::map<std::string, std::string> getCoreMap() = 0;
     };
 }
 

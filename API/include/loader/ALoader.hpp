@@ -6,7 +6,7 @@
 #define EXISTENZIA_ALOADER_HPP
 
 #include "ILoader.hpp"
-#include "AConfigLoader.hpp"
+#include "IConfigLoader.hpp"
 #include "ADLLLoader.hpp"
 
 /**
@@ -25,7 +25,7 @@
 namespace xzia {
     class ALoader : ILoader {
     private:
-        AConfigLoader   config;
+        IConfigLoader   config;
         ADLLLoader      dll;
 
     public:

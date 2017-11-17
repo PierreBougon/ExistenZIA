@@ -7,17 +7,30 @@
 
 #include <memory>
 #include <vector>
-#include "../http/Request.hpp"
-#include "../http/Response.hpp"
-#include "AHTTPModule.hpp"
-#include "IClient.hpp"
+#include "Request.hpp"
+#include "Response.hpp"
+#include "ABasicModule.hpp"
+#include "Client.hpp"
 
+/**
+ * \file Task.hpp
+ * \brief
+ * \author Benjamin.D
+ * \version 0.1
+ * \date 17 novembre 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \struct Task Task.hpp Task.hpp
+ *
+ */
 namespace xzia {
     struct Task {
-        std::unique_ptr<IRequest> req;
-        IResponse rep;
-        IClient &client;
-        std::vector<AHTTPModule> modules;
+        std::unique_ptr<Request> req;
+        Response rep;
+        Client &client;
+        std::vector<ABasicModule> modules;
     };
 }
 

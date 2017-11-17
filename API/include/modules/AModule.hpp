@@ -7,34 +7,78 @@
 
 #include <mutex>
 #include <memory>
-#include "IModule.hpp"
 #include "ADataStore.hpp"
 #include "AModuleManager.hpp"
 
+/**
+ * \file AModule.hpp
+ * \brief
+ * \author Robin.U
+ * \version 0.1
+ * \date 17 novembre 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class AModule AModule.hpp AModule.hpp
+ *
+ */
 namespace xzia {
-    class AModule : IModule {
+    class AModule {
 
+        /**
+         * \enum Type
+         */
         enum class Type : unsigned char
         {
-            http = 0,
-            shared,
-            selfProtect
+            Http = 0,
+            Shared,
+            SelfProtect
         };
 
     public:
+        /**
+         * \fn AModule
+         * \brief Default constructor deleted
+         */
         AModule() = delete;
-        AModule(AModule::Type moduleType, std::string const &name, std::mutex &mutex);
 
-    private:
-        Step process(IMessage &req, IMessage &res, ATask &task) override final;
+        /**
+         * \fn AModule
+         * \brief Constructor of AModule where we set the name of the module
+         * @param name Name of the module
+         */
+        AModule(std::string const &name);
 
-    public:
+        /**
+         *
+         * \fn getType
+         * \brief Get the type of the module
+         * @return Return the type of the module
+         *
+         */
         Type getType() const;
 
+        /**
+         *
+         * \fn getName
+         * \brief Get the name of the module
+         * @return Return the name of the module
+         *
+         */
         const std::string &getName() const;
 
     protected:
         AModuleManager  &moduleManager;
+
+        /**
+         * \enum Step
+         */
+        enum class Step : unsigned char {
+            Continue = 0,
+            Stop,
+            Error
+        };
 
     private:
         Type        type;

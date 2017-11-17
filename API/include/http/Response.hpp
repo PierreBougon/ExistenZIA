@@ -25,7 +25,14 @@ namespace xzia {
         int     code;
 
     public:
-        Response(std::string);
+
+        /**
+         *
+         * \fn Response
+         * \brief Constructor of the class Response, where we set the code with the message
+         * @param message
+         */
+        Response(std::string const& message);
     };
 }
 

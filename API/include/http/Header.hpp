@@ -13,12 +13,12 @@
  * \brief
  * \author Marc.B
  * \version 0.1
- * \date 13 novembre 2017
+ * \date 17 novembre 2017
  *
  * add comment here
  *
  * \namespace xzia
- * \class Header Header.hpp Header.hpp
+ * \struct Header
  */
 namespace xzia {
     struct Header {

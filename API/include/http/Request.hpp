@@ -13,12 +13,12 @@
  * \brief
  * \author Benjamin.D
  * \version 0.1
- * \date 13 novembre 2017
+ * \date 17 novembre 2017
  *
  * add comment here
  *
  * \namespace xzia
- * \class Request Request.hpp Request/hpp
+ * \class Request Request.hpp Request.hpp
  */
 
 namespace xzia {
@@ -32,6 +32,14 @@ namespace xzia {
         std::string                             path;
         std::map<std::string, std::string>      query;
     public:
+
+        /**
+         *
+         * \fn Request
+         * \brief Constructor of the class Request, where we set all attributes with the string message
+         * @param message
+         *
+         */
         Request(std::string message);
 
     };
