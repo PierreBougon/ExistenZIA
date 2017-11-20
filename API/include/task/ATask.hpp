@@ -7,28 +7,30 @@
 
 #include <string>
 #include <vector>
-#include <http/IRequest.hpp>
-#include <http/IResponse.hpp>
-#include "modules/IModule.hpp"
+#include <client/Client.hpp>
+#include <modules/AHTTPModule.hpp>
+#include "http/Request.hpp"
+#include "http/Response.hpp"
+#include "modules/Step.hpp"
 #include "ITask.hpp"
-#include "tools/UID.hpp"
 
 namespace xzia
 {
-    class ATask : ITask
+    class ATask : public ITask
     {
     public:
-        virtual IRequest    &getRequest() const = 0;
-        virtual IResponse   &getResponse() const = 0;
+        ATask() = delete;
+        ATask(std::string name, Client &client,
+              std::vector<std::unique_ptr<AHTTPModule>> executionList);
 
-    private:
-        std::string name;
-        std::string method;
-        std::string resource;
-        xzia::uid   uid;
-        std::vector<std::unique_ptr<IModule>> executionList;
-        IRequest    request;
-        IResponse   response;
+    protected:
+        std::string     name;
+
+        std::unique_ptr<Request>    req;
+        Response                    res;
+        Client                      &client;
+
+        std::vector<std::unique_ptr<AHTTPModule>> executionList;
     };
 }
 

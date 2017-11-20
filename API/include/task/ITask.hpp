@@ -7,15 +7,16 @@
 
 #include <memory>
 #include <vector>
-#include "modules/IModule.hpp"
+#include "modules/Step.hpp"
 
 namespace xzia
 {
     class ITask
     {
     public:
-        virtual std::unique_ptr<ITask> clone() = 0;
-        virtual std::vector<std::unique_ptr<IModule>> getExecutionList() = 0;
+        virtual std::unique_ptr<ITask>              clone() = 0;
+        virtual std::vector<std::unique_ptr<Step>>  getExecutionList() = 0;
+        virtual void                                setRequest(std::unique_ptr<Request>) = 0;
     };
 }
 

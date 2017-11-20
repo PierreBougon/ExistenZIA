@@ -7,10 +7,9 @@
 
 #include <memory>
 #include <vector>
-#include "Request.hpp"
-#include "Response.hpp"
-#include "ABasicModule.hpp"
-#include "Client.hpp"
+#include "http/Request.hpp"
+#include "http/Response.hpp"
+#include "client/Client.hpp"
 
 /**
  * \file Task.hpp
@@ -25,12 +24,10 @@
  * \struct Task Task.hpp Task.hpp
  *
  */
-namespace xzia {
-    struct Task {
-        std::unique_ptr<Request> req;
-        Response rep;
-        Client &client;
-        std::vector<ABasicModule> modules;
+namespace xzia
+{
+    struct Task
+    {
     };
 }
 
