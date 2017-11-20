@@ -7,7 +7,8 @@
 
 #include "AModule.hpp"
 #include "ADataStore.hpp"
-#include "Task.hpp"
+#include "Step.hpp"
+#include "task/Task.hpp"
 
 /**
  * \file ABasicModule.hpp
@@ -22,10 +23,10 @@
  * \class ABasicModule ABasicModule.hpp ABasicModule.hpp
  *
  */
-namespace xzia {
-    class ABasicModule : AModule {
-    protected:
-        ADataStore  dataStore;
+namespace xzia
+{
+    class AHTTPModule : public AModule
+    {
     public:
 
         /**
@@ -36,7 +37,7 @@ namespace xzia {
          * @return
          *
          */
-        Step process(Task &task);
+        virtual Step process(Task &task) = 0;
 
         /**
          *
@@ -44,7 +45,10 @@ namespace xzia {
          * \brief
          *
          */
-        void addData(data::Data data);
+        virtual void addData(Data data) = 0;
+
+    protected:
+        ADataStore  dataStore;
     };
 }
 

@@ -23,8 +23,10 @@
  * \class AModule AModule.hpp AModule.hpp
  *
  */
-namespace xzia {
-    class AModule {
+namespace xzia
+{
+    class AModule
+    {
 
         /**
          * \enum Type
@@ -48,16 +50,20 @@ namespace xzia {
          * \brief Constructor of AModule where we set the name of the module
          * @param name Name of the module
          */
-        AModule(std::string const &name);
+        AModule(std::string const &name, AModuleManager &moduleManager);
 
-        /**
+/*
+        */
+/**
          *
          * \fn getType
          * \brief Get the type of the module
          * @return Return the type of the module
          *
-         */
+         *//*
+
         Type getType() const;
+*/
 
         /**
          *
@@ -70,18 +76,10 @@ namespace xzia {
 
     protected:
         AModuleManager  &moduleManager;
+        Type            type;
 
-        /**
-         * \enum Step
-         */
-        enum class Step : unsigned char {
-            Continue = 0,
-            Stop,
-            Error
-        };
 
     private:
-        Type        type;
         std::string name;
     };
 }
