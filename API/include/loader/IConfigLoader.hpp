@@ -22,8 +22,10 @@
  * \class IConfigLoader IConfigLoader.hpp IConfigLoader.hpp
  *
  */
-namespace xzia {
-    class IConfigLoader {
+namespace xzia
+{
+    class IConfigLoader
+    {
             /**
         * \fn getCoreField
         * \brief

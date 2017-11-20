@@ -20,8 +20,10 @@
  * \class ADLLLoader ADLLLoader.hpp ADLLLoader.hpp
  *
  */
-namespace xzia {
-    class IDLLLoader {
+namespace xzia
+{
+    class IDLLLoader
+    {
     public:
 
         /**
@@ -31,7 +33,7 @@ namespace xzia {
          * @param module
          *
          */
-        void loadModule(std::string const& module);
+        virtual void loadModule(std::string const& module) = 0;
     };
 }
 

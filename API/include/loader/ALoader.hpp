@@ -22,21 +22,13 @@
  * \class ALoader ALoader.hpp ALoader.hpp
  *
  */
-namespace xzia {
-    class ALoader : ILoader {
+namespace xzia
+{
+    class ALoader : ILoader
+    {
     private:
         IConfigLoader   config;
         IDLLLoader      dll;
-
-    public:
-
-        /**
-         *
-         * \fn reload
-         * \brief
-         *
-         */
-        void reload() override;
     };
 }
 
