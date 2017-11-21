@@ -19,20 +19,12 @@
  * \namespace xzia
  * \class Response Response.hpp Response.hpp
  */
-namespace xzia {
-    class Response : Message {
-    private:
-        int     code;
-
+namespace xzia
+{
+    struct Response : Message
+    {
     public:
-
-        /**
-         *
-         * \fn Response
-         * \brief Constructor of the class Response, where we set the code with the message
-         * @param message
-         */
-        Response(std::string const& message);
+        int     code;
     };
 }
 

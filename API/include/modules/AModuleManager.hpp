@@ -5,67 +5,34 @@
 #ifndef EXISTENZIA_AMODULEMANAGER_HPP
 #define EXISTENZIA_AMODULEMANAGER_HPP
 
-#include <vector>
 #include <mutex>
+#include "IModuleManager.hpp"
 
-namespace xzia {
-
+namespace xzia
+{
     class ALoader;
     class AModule;
-    class ABasicModule;
-    class AModuleManager {
+    class ASharedModule;
+    class AHTTPModule;
+
+    class AModuleManager : public IModuleManager
+    {
+
+    /**
+     *
+     * \fn AModuleManager
+     * \brief Constructor of the class AModuleManager
+     * @param load Set the loader in the class
+     *
+     */
+    AModuleManager(ALoader &load);
+
     private:
-        std::mutex              reloadMutex;
-        std::vector<AModule>    modules;
-        ALoader                 &loader;
-
-    public:
-
-        /**
-         *
-         * \fn AModuleManager
-         * \brief Constructor of the class AModuleManager
-         * @param load Set the loader in the class
-         *
-         */
-        AModuleManager(ALoader &load);
-
-        /**
-         *
-         * \fn getSharedModule
-         * \brief
-         * @param module
-         * @return
-         *
-         */
-        AModule &getSharedModule(std::string module);
-
-        /**
-         *
-         * \fn getBasicModule
-         * \brief
-         * @param module
-         * @return
-         *
-         */
-        std::unique_ptr<ABasicModule> getBasicModule(std::string module);
-
-        /**
-         *
-         * \fn reload
-         * \brief
-         *
-         */
-        void reload();
-
-        /**
-         *
-         * \fn getTaskModules
-         * \brief
-         * @return
-         *
-         */
-        std::vector<ABasicModule> getTaskModules();
+        std::mutex                      reloadMutex;
+        std::vector<ASharedModule>      sharedModules;
+        std::vector<AHTTPModule>        httpModules;
+        ALoader                         &loader;
    };
+
 }
 #endif //EXISTENZIA_AMODULEMANAGER_HPP

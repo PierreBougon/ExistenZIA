@@ -7,10 +7,10 @@
 
 #include "AModule.hpp"
 #include "ADataStore.hpp"
-#include "Task.hpp"
+#include "Step.hpp"
 
 /**
- * \file ASharedModule.hpp
+ * \file AProtectedModule.hpp
  * \brief
  * \author Benjamin.D
  * \version 0.1
@@ -19,13 +19,13 @@
  * add comment here
  *
  * \namespace xzia
- * \class ASharedModule ASharedModule.hpp ASharedModule.hpp
+ * \class AProtectedModule AProtectedModule.hpp AProtectedModule.hpp
  *
  */
-namespace xzia {
-    class ASharedModule : AModule {
-    private:
-        std::mutex  mutex;
+namespace xzia
+{
+    class ASharedModule : public AModule
+    {
     public:
 
         /**
@@ -36,18 +36,7 @@ namespace xzia {
          * @return
          *
          */
-        Step process(ADataStore &dataStore);
-
-
-         /**
-          *
-          * \fn processData
-          * \brief
-          * @param dataStore
-          * @return
-          *
-          */
-        Step processData(ADataStore &dataStore);
+        virtual Step process(ADataStore &dataStore) = 0;
     };
 }
 

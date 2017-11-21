@@ -6,28 +6,17 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
+#include <thread/AThreadPool.hpp>
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
-#include "AThreadManager.hpp"
 #include "client/Client.hpp"
+#include "ICore.hpp"
 
-
-/**
- * \file ACore.hpp
- * \brief
- * \author Pierre.B
- * \version 0.1
- * \date 17 novembre 2017
- *
- * add comment here
- *
- * \namespace xzia
- * \class ACore ACore.hpp ACore.hpp
- */
-namespace xzia {
-    class ACore {
+namespace xzia
+{
+    class ACore : public ICore
+    {
     public:
-
         /**
          *
          * \fn ACore
@@ -37,18 +26,10 @@ namespace xzia {
          */
         ACore(std::string config);
 
-        /**
-         *
-         * \fn run
-         * \brief
-         *
-         */
-        void run();
-
     protected:
         ILoader                 &loader;
         AModuleManager          modules;
-        AThreadManager          manager;
+        AThreadPool             threadPool;
         std::vector<Client>     cli;
     };
 }

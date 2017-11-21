@@ -22,8 +22,10 @@
  * \class ILoader ILoader.hpp ILoader.hpp
  *
  */
-namespace xzia {
-    class ILoader {
+namespace xzia
+{
+    class ILoader
+    {
 
     public:
         /**

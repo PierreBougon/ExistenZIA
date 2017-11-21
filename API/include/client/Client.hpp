@@ -17,10 +17,11 @@
  * \namespace xzia
  * \struct Client
  */
-namespace xzia {
+namespace xzia
+{
 
-    struct Client {
-    protected:
+    struct Client
+    {
         int socket;
     };
 }

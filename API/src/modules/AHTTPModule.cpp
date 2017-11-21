@@ -5,6 +5,6 @@
 #include <core/ICore.hpp>
 #include "modules/AHTTPModule.hpp"
 
-xzia::Step xzia::AHTTPModule::processBasic() {
+xzia::Step xzia::AHTTPModule::processHTTP(xzia::IMessage &req, xzia::IMessage &res, xzia::ATask &task) {
     return xzia::Step::CONTINUE;
 }

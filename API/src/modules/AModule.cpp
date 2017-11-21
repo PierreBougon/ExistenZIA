@@ -4,22 +4,13 @@
 
 #include "modules/AModule.hpp"
 
-xzia::AModule::AModule(AModule::Type moduleType, const std::string &name, std::mutex &mutex)
-        : type(moduleType), name(name), mutex(mutex)
+xzia::AModule::AModule(std::string const &name, AModuleManager &moduleManager)
+        : name(name), moduleManager(moduleManager)
 {
 }
 
-xzia::Step xzia::AModule::process(xzia::IMessage &req, xzia::IMessage &res, xzia::ATask &task) {
-    if (type == Type::http)
-        return processHTTP(req, res, task);
-    else
-        return processBasic();
-}
-
-xzia::AModule::Type xzia::AModule::getType() const {
-    return type;
-}
-
-const std::string &xzia::AModule::getName() const {
+const std::string &xzia::AModule::getName() const
+{
     return name;
 }
+

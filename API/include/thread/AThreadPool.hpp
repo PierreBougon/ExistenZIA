@@ -11,26 +11,18 @@
 #include <atomic>
 #include <condition_variable>
 #include "task/ATask.hpp"
+#include "IThreadPool.hpp"
+#include "ThreadState.hpp"
 
 namespace xzia
 {
-    class AThreadPool
+    class AThreadPool : public IThreadPool
     {
-        enum class ThreadState : unsigned char
-        {
-            working,
-            sleeping
-        };
-
     public:
         AThreadPool() = delete;
         AThreadPool(unsigned int nbThreads);
 
-        bool    addTask(std::unique_ptr<ATask> task);
-        void    stop();
-        ATask   &getTaskDone();
-
-    private:
+    protected:
         std::vector<std::thread>            threads;
         std::queue<std::unique_ptr<ATask>>  todoTasks;
         std::queue<std::unique_ptr<ATask>>  doneTasks;
@@ -39,7 +31,7 @@ namespace xzia
         std::condition_variable             condvar;
         std::mutex                          mutex;
 
-        void threadWorkflow(unsigned int id);
+        virtual void threadWorkflow(unsigned int id) = 0;
     };
 }
 
