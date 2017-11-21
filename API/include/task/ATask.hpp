@@ -7,8 +7,8 @@
 
 #include <string>
 #include <vector>
-#include <client/Client.hpp>
-#include <modules/AHTTPModule.hpp>
+#include "client/Client.hpp"
+#include "modules/AHTTPModule.hpp"
 #include "http/Request.hpp"
 #include "http/Response.hpp"
 #include "modules/Step.hpp"
