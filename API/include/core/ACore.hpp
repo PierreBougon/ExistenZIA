@@ -10,6 +10,7 @@
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
 #include "client/Client.hpp"
+#include "ICore.hpp"
 
 /**
  * \file ACore.hpp
@@ -23,8 +24,10 @@
  * \namespace xzia
  * \class ACore ACore.hpp ACore.hpp
  */
-namespace xzia {
-    class ACore {
+namespace xzia
+{
+    class ACore : public ICore
+    {
     public:
         /**
          *
