@@ -5,6 +5,7 @@
 #ifndef EXISTENZIA_ALOADER_HPP
 #define EXISTENZIA_ALOADER_HPP
 
+#include <bits/unique_ptr.h>
 #include "ILoader.hpp"
 #include "IConfigLoader.hpp"
 #include "IDLLLoader.hpp"
@@ -27,8 +28,8 @@ namespace xzia
     class ALoader : ILoader
     {
     private:
-        IConfigLoader   config;
-        IDLLLoader      dll;
+        std::unique_ptr<IConfigLoader>   config;
+        std::unique_ptr<IDLLLoader>      dll;
     };
 }
 

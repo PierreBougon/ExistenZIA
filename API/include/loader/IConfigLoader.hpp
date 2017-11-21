@@ -26,27 +26,6 @@ namespace xzia
 {
     class IConfigLoader
     {
-            /**
-        * \fn getCoreField
-        * \brief
-        * @param field //TODO Describe this param here
-        * @return Return the name of the corresponding CoreField
-         *
-        */
-        virtual std::string &getCoreField(std::string const &field) const = 0;
-
-        /**
-         *
-         * \fn getModule
-         * \brief
-         * @param module //TODO Describe this param here
-         * @param field //TODO Describe this param here
-         * @return Return the name of the corresponding ModuleField
-         *
-         */
-        virtual std::string &getModuleField(std::string const &module, std::string const &field) const = 0;
-
-
         /**
          * \fn getModuleMap
          * \brief
