@@ -14,10 +14,12 @@ namespace xzia
     class ITask
     {
     public:
-        virtual std::unique_ptr<ITask>                      clone() = 0;
+        virtual std::unique_ptr<ITask>                      clone() const = 0;
         virtual std::vector<std::unique_ptr<AHTTPModule>>   &getExecutionList() = 0;
-        virtual void                                        setRequest(std::unique_ptr<Request> req) = 0;
-        virtual size_t                                      getModulePosition(AHTTPModule const &module) = 0;
+        virtual Request const                               &getRequest() const = 0;
+        virtual Response                                    &getResponse() = 0;
+        virtual Client const                                &getClient() const = 0;
+        virtual size_t                                      getModulePosition(AHTTPModule const &module) const = 0;
         virtual void                                        pushModuleNext(std::unique_ptr<AHTTPModule> module) = 0;
         virtual void                                        pushModuleBack(std::unique_ptr<AHTTPModule> module) = 0;
         virtual void                                        pushModuleAtPosition(std::unique_ptr<AHTTPModule> module, size_t pos) = 0;

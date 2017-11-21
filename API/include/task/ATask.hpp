@@ -20,14 +20,13 @@ namespace xzia
     {
     public:
         ATask() = delete;
-        ATask(std::string name, Client &client,
+        ATask(std::unique_ptr<Request> req, Client &client,
               std::vector<std::unique_ptr<AHTTPModule>> executionList);
 
     protected:
-        std::string                 name;
         std::unique_ptr<Request>    req;
         Response                    res;
-        Client                      &client;
+        Client const                &client;
 
         std::vector<std::unique_ptr<AHTTPModule>> executionList;
     };

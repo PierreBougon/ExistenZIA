@@ -12,18 +12,6 @@
 #include "client/Client.hpp"
 #include "ICore.hpp"
 
-/**
- * \file ACore.hpp
- * \brief
- * \author Pierre.B
- * \version 0.1
- * \date 17 novembre 2017
- *
- * add comment here
- *
- * \namespace xzia
- * \class ACore ACore.hpp ACore.hpp
- */
 namespace xzia
 {
     class ACore : public ICore
