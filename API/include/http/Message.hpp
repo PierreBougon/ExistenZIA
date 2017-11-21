@@ -21,9 +21,10 @@
  * \class Message Message.hpp Message.hpp
  *
  */
-namespace xzia {
-
-    struct Message {
+namespace xzia
+{
+    struct Message
+    {
     public:
         std::string                             body;
         std::string                             version;

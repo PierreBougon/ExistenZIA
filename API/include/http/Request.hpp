@@ -23,7 +23,6 @@
 
 namespace xzia
 {
-
     struct Request : Message
     {
         std::string                             method;

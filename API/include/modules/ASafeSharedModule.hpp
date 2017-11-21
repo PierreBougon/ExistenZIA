@@ -36,7 +36,6 @@ namespace xzia
          * @return
          *
          */
-    private:
         Step process(ADataStore &dataStore) override;
 
 

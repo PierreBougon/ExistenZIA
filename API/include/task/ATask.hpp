@@ -24,8 +24,7 @@ namespace xzia
               std::vector<std::unique_ptr<AHTTPModule>> executionList);
 
     protected:
-        std::string     name;
-
+        std::string                 name;
         std::unique_ptr<Request>    req;
         Response                    res;
         Client                      &client;

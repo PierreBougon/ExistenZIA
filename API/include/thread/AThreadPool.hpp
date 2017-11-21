@@ -12,6 +12,7 @@
 #include <condition_variable>
 #include "task/ATask.hpp"
 #include "IThreadPool.hpp"
+#include "ThreadState.hpp"
 
 namespace xzia
 {

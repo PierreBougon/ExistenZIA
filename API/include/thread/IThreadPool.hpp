@@ -9,12 +9,6 @@
 
 namespace xzia
 {
-    enum class ThreadState : unsigned char
-    {
-        working,
-        sleeping
-    };
-
     class IThreadPool
     {
         virtual bool    addTask(std::unique_ptr<ATask> task) = 0;

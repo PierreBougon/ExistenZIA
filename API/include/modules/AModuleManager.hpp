@@ -6,13 +6,13 @@
 #define EXISTENZIA_AMODULEMANAGER_HPP
 
 #include <mutex>
-#include "ASharedModule.hpp"
 #include "IModuleManager.hpp"
 
 namespace xzia
 {
     class ALoader;
     class AModule;
+    class ASharedModule;
     class AHTTPModule;
 
     class AModuleManager : public IModuleManager
