@@ -6,11 +6,12 @@
 #define ZIA_IMODULEMANAGER_HPP_
 
 #include <vector>
-#include "ASharedModule.hpp"
-
 
 namespace xzia
 {
+    class ASharedModule;
+    class AHTTPModule;
+
     class IModuleManager
     {
         /**
@@ -31,7 +32,7 @@ namespace xzia
          * @return
          *
          */
-        virtual std::unique_ptr<AHTTPModule> getBasicModule(std::string module) = 0;
+        virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string module) = 0;
 
         /**
          *
@@ -48,7 +49,7 @@ namespace xzia
          * @return
          *
          */
-        virtual std::vector<AHTTPModule> getTaskModules() = 0;
+        virtual std::vector<AHTTPModule> getExecutionListModel() = 0;
     };
 }
 
