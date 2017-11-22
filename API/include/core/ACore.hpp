@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <thread/AThreadPool.hpp>
+#include <network/INetwork.hpp>
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
 #include "client/Client.hpp"
@@ -30,6 +31,7 @@ namespace xzia
         std::unique_ptr<ILoader>            loader;
         std::unique_ptr<AModuleManager>     modules;
         std::unique_ptr<AThreadPool>        threadPool;
+        std::unique_ptr<INetwork>           network;
         std::string                         configFile;
     };
 }
