@@ -19,11 +19,7 @@
  */
 namespace xzia
 {
-
-    struct Client
-    {
-        int socket;
-    };
+    using Client = int;
 }
 
 #endif //EXISTENZIA_CLIENT_HPP
