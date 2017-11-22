@@ -6,8 +6,8 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
-#include <thread/AThreadPool.hpp>
-#include <network/INetwork.hpp>
+#include "thread/AThreadPool.hpp"
+#include "network/INetwork.hpp"
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
 #include "client/Client.hpp"
