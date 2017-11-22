@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <map>
+#include <client/Client.hpp>
 
 /**
  * \file Message.hpp
@@ -29,6 +30,7 @@ namespace xzia
         std::string                             body;
         std::string                             version;
         std::map<std::string, std::string>      header;
+        Client const                            &client;
 
         /**
          *
