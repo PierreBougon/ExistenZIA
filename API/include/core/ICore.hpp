@@ -18,6 +18,7 @@ namespace xzia
 {
     class ICore
     {
+    public:
         virtual void run() = 0;
     };
 }

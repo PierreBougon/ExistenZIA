@@ -27,10 +27,10 @@ namespace xzia
         ACore(std::string config);
 
     protected:
-        ILoader                 &loader;
-        AModuleManager          modules;
-        AThreadPool             threadPool;
-        std::vector<Client>     cli;
+        std::unique_ptr<ILoader>            loader;
+        std::unique_ptr<AModuleManager>     modules;
+        std::unique_ptr<AThreadPool>        threadPool;
+        std::string                         configFile;
     };
 }
 
