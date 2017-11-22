@@ -6,9 +6,8 @@
 #define EXISTENZIA_ABASICMODULE_HPP
 
 #include "AModule.hpp"
-#include "ADataStore.hpp"
+#include "DataStore.hpp"
 #include "Step.hpp"
-#include "task/Task.hpp"
 
 /**
  * \file ABasicModule.hpp
@@ -25,9 +24,12 @@
  */
 namespace xzia
 {
+    class ATask;
+
     class AHTTPModule : public AModule
     {
     public:
+        AHTTPModule() = default;
 
         /**
          *
@@ -37,7 +39,7 @@ namespace xzia
          * @return
          *
          */
-        virtual Step process(Task &task) = 0;
+        virtual Step process(ATask &task) = 0;
 
         /**
          *
@@ -45,10 +47,14 @@ namespace xzia
          * \brief
          *
          */
-        virtual void addData(Data data) = 0;
+        template <typename T>
+        void        addData(T data, std::string const& key)
+        {
+            dataStore.addData<T>(data, key);
+        }
 
     protected:
-        ADataStore  dataStore;
+        DataStore  dataStore;
     };
 }
 

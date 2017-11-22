@@ -6,7 +6,8 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
-#include <thread/AThreadPool.hpp>
+#include "thread/AThreadPool.hpp"
+#include "network/INetwork.hpp"
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
 #include "client/Client.hpp"
@@ -27,10 +28,11 @@ namespace xzia
         ACore(std::string config);
 
     protected:
-        ILoader                 &loader;
-        AModuleManager          modules;
-        AThreadPool             threadPool;
-        std::vector<Client>     cli;
+        std::unique_ptr<ILoader>            loader;
+        std::unique_ptr<AModuleManager>     modules;
+        std::unique_ptr<AThreadPool>        threadPool;
+        std::unique_ptr<INetwork>           network;
+        std::string                         configFile;
     };
 }
 

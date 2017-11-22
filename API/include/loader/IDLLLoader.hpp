@@ -25,7 +25,6 @@ namespace xzia
     class IDLLLoader
     {
     public:
-
         /**
          *
          * \fn loadModule

@@ -6,7 +6,7 @@
 #define EXISTENZIA_ASAFESHAREDMODULE_HPP
 
 #include "AModule.hpp"
-#include "ADataStore.hpp"
+#include "DataStore.hpp"
 #include "Step.hpp"
 #include "ASharedModule.hpp"
 
@@ -36,7 +36,7 @@ namespace xzia
          * @return
          *
          */
-        Step process(ADataStore &dataStore) override;
+        Step process(DataStore &dataStore) override;
 
 
     protected:
@@ -48,7 +48,7 @@ namespace xzia
          * @return
          *
          */
-        virtual Step safeProcess(ADataStore &dataStore) = 0;
+        virtual Step safeProcess(DataStore &dataStore) = 0;
 
     private:
         std::mutex  mutex;

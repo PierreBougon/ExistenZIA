@@ -8,6 +8,7 @@
 #include <memory>
 #include <vector>
 #include "modules/Step.hpp"
+#include "modules/AHTTPModule.hpp"
 
 namespace xzia
 {

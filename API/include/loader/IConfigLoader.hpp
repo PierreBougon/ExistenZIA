@@ -26,6 +26,7 @@ namespace xzia
 {
     class IConfigLoader
     {
+    public:
         /**
          * \fn getModuleMap
          * \brief

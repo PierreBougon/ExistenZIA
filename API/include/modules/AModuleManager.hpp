@@ -17,7 +17,7 @@ namespace xzia
 
     class AModuleManager : public IModuleManager
     {
-
+    public:
     /**
      *
      * \fn AModuleManager

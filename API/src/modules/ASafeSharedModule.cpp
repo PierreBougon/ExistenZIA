@@ -4,7 +4,7 @@
 
 #include "modules/ASafeSharedModule.hpp"
 
-xzia::Step xzia::ASafeSharedModule::process(xzia::ADataStore &dataStore)
+xzia::Step xzia::ASafeSharedModule::process(xzia::DataStore &dataStore)
 {
     Step ret;
 
