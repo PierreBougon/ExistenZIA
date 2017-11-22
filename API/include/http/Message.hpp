@@ -26,7 +26,6 @@ namespace xzia
 {
     struct Message
     {
-    public:
         std::string                             body;
         std::string                             version;
         std::map<std::string, std::string>      header;

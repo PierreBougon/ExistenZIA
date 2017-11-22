@@ -23,7 +23,6 @@ namespace xzia
 {
     struct Response : Message
     {
-    public:
         int     code;
     };
 }
