@@ -7,8 +7,7 @@
 
 #include <mutex>
 #include <memory>
-#include "ADataStore.hpp"
-#include "AModuleManager.hpp"
+#include "DataStore.hpp"
 
 /**
  * \file AModule.hpp
@@ -25,6 +24,8 @@
  */
 namespace xzia
 {
+    class AModuleManager;
+
     class AModule
     {
 

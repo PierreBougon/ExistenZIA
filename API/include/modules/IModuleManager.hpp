@@ -5,15 +5,16 @@
 #ifndef ZIA_IMODULEMANAGER_HPP_
 #define ZIA_IMODULEMANAGER_HPP_
 
+#include <bits/unique_ptr.h>
 #include <vector>
+#include "AHTTPModule.hpp"
+#include "ASharedModule.hpp"
 
 namespace xzia
 {
-    class ASharedModule;
-    class AHTTPModule;
-
     class IModuleManager
     {
+    public:
         /**
          *
          * \fn getSharedModule
@@ -22,7 +23,7 @@ namespace xzia
          * @return
          *
          */
-        virtual ASharedModule &getSharedModule(std::string module) = 0;
+        virtual ASharedModule &getSharedModule(std::string const &module) = 0;
 
         /**
          *
@@ -32,7 +33,7 @@ namespace xzia
          * @return
          *
          */
-        virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string module) = 0;
+        virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string const &module) = 0;
 
         /**
          *

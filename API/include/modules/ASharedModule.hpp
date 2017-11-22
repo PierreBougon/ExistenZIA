@@ -6,7 +6,7 @@
 #define EXISTENZIA_ASHAREDMODULE_HPP
 
 #include "AModule.hpp"
-#include "ADataStore.hpp"
+#include "DataStore.hpp"
 #include "Step.hpp"
 
 /**
@@ -36,7 +36,7 @@ namespace xzia
          * @return
          *
          */
-        virtual Step process(ADataStore &dataStore) = 0;
+        virtual Step process(DataStore &dataStore) = 0;
     };
 }
 
