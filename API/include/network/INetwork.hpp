@@ -14,6 +14,7 @@ namespace xzia
 {
     class INetwork
     {
+    public:
         virtual void start() = 0;
 
         virtual std::unique_ptr<Request> popRequest() = 0;
