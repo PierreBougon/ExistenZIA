@@ -1,6 +1,11 @@
-//
-// Created by duhieub on 11/16/17.
-//
+/**
+ * \file ALoader.hpp
+ * \brief
+ * \author Edouard.P
+ * \version 0.1
+ * \date 16 novembre 2017
+ *
+ */
 
 #ifndef EXISTENZIA_ALOADER_HPP
 #define EXISTENZIA_ALOADER_HPP
@@ -11,12 +16,6 @@
 #include "IDLLLoader.hpp"
 
 /**
- * \file ALoader.hpp
- * \brief
- * \author Edouard.P
- * \version 0.1
- * \date 16 novembre 2017
- *
  * add comment here
  *
  * \namespace xzia

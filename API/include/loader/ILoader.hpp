@@ -26,7 +26,6 @@ namespace xzia
 {
     class ILoader
     {
-
     public:
         /**
          *
