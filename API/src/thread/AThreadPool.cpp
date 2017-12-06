@@ -8,7 +8,7 @@ xzia::AThreadPool::AThreadPool(unsigned int nbThreads)
 {
     for (unsigned int i = 0; i < nbThreads; ++i)
     {
-        threads.push_back(std::thread(threadWorkflow(i)));
+        threads.push_back(std::thread(&AThreadPool::threadWorkflow, this, i));
         state.push_back(ThreadState::sleeping);
     }
 }
