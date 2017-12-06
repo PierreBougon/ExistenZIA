@@ -2,7 +2,7 @@
 // Created by Pierre Bougon on 20/11/17.
 //
 
-#include <thread/AThreadPool.hpp>
+#include "thread/AThreadPool.hpp"
 
 xzia::AThreadPool::AThreadPool(unsigned int nbThreads)
 {

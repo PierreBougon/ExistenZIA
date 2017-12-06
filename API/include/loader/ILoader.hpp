@@ -30,7 +30,8 @@ namespace xzia
         /**
          *
          * \fn reload
-         * \brief
+         * \brief This method allows the loader to reload the configuration, updating the list of available modules,
+         * and their corresponding configuration
          *
          */
         virtual void reload() = 0;

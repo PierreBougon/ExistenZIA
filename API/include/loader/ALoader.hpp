@@ -10,16 +10,17 @@
 #ifndef EXISTENZIA_ALOADER_HPP
 #define EXISTENZIA_ALOADER_HPP
 
-#include <bits/unique_ptr.h>
+#include <memory>
 #include "ILoader.hpp"
 #include "IConfigLoader.hpp"
 #include "IDLLLoader.hpp"
 
 /**
- * add comment here
+ * \brief ALoader manages the dynamic loading of the modules and the configuration of those
+ * according to the configuration loader
  *
  * \namespace xzia
- * \class ALoader ALoader.hpp ALoader.hpp
+ * \class ALoader
  *
  */
 namespace xzia
@@ -27,8 +28,8 @@ namespace xzia
     class ALoader : ILoader
     {
     private:
-        std::unique_ptr<IConfigLoader>   config;
-        std::unique_ptr<IDLLLoader>      dll;
+        std::unique_ptr<IDLLLoader>      dllLoader;
+        std::unique_ptr<IConfigLoader>   configLoader;
     };
 }
 
