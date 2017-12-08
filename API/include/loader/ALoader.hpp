@@ -27,7 +27,7 @@ namespace xzia
 {
     class ALoader : ILoader
     {
-    private:
+    protected:
         std::unique_ptr<IDLLLoader>      dllLoader;
         std::unique_ptr<IConfigLoader>   configLoader;
     };

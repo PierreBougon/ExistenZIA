@@ -36,7 +36,7 @@ namespace xzia
          * @return
          *
          */
-        Step process(DataStore &dataStore) override;
+        Step process(DataStore &dataStore);
 
 
     protected:
