@@ -12,13 +12,10 @@
 
 /**
  * \file IModuleManager.hpp
- * \brief
+ * \brief Interface of the module manager
  * \author Benjamin.D
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class IModuleManager IModuleManager.hpp IModuleManager.hpp
  *

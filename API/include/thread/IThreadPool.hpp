@@ -25,10 +25,10 @@ namespace xzia
         *
         * \fn addTask
         * \brief Add a task to the workFlow thread
-        * @param task
-        *
+        * @param task Task to process
+        * 
         */
-        virtual bool    addTask(std::unique_ptr<ATask> task) = 0;
+        virtual void    addTask(std::unique_ptr<ATask> task) = 0;
 
         /**
         *
@@ -42,10 +42,10 @@ namespace xzia
         *
         * \fn getTaskDone
         * \brief Get the task done, when it's finished
-        * @return Return an ATask instance
+        * @return Return all task done or an empty vector if no task was finished
         *
         */
-        virtual ATask   &getTaskDone() = 0;
+        virtual std::vector<std::unique_ptr<ATask>>   getAllTaskDone() = 0;
     };
 }
 

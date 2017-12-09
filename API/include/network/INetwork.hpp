@@ -68,7 +68,7 @@ namespace xzia
         * @param listRes Contain respectively all the response codes from the queue of request
         *
         */
-        virtual void sendAllResponses(std::vector<std::unique_ptr<Response>> listRes) = 0;
+        virtual void sendAllResponses(std::vector<std::unique_ptr<Response>> &&listRes) = 0;
     };
 }
 
