@@ -33,14 +33,14 @@ namespace xzia
     public:
         /**
          *
-         * \fn addInt
-         * \brief Add data of type int
-         * @param i Data of type int
+         * \fn addData
+         * \brief Add data of any type
+         * @param data Data to be added
          * @param key Key associated to the data adding
          *
          */
         template <typename T>
-        void        addData(T data, std::string const& key)
+        void        addData(std::string const& key, T data)
         {
             datas[key] = variant(data);
         }

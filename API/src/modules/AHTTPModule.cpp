@@ -7,3 +7,9 @@ xzia::AHTTPModule::AHTTPModule(const std::string &name, AModuleManager &manager)
 {
 
 }
+
+xzia::AHTTPModule::AHTTPModule(const xzia::AHTTPModule &ahttpModule) :
+    AModule(ahttpModule.name, ahttpModule.moduleManager, ahttpModule.type),
+    dataStore(ahttpModule.dataStore)
+{
+}

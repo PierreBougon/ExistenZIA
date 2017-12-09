@@ -20,6 +20,12 @@
  */
 namespace xzia
 {
+    /**
+     * \enum Step
+     *  Continue :proceed to next module or send back response if the end of the ATask execution list is reached
+     *  Stop : stop here and send back response
+     *  Error : error occurred, send server error response
+     */
     enum class Step : unsigned char
     {
         Continue = 0,

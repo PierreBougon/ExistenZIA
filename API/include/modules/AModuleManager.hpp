@@ -10,13 +10,11 @@
 
 /**
  * \file AModuleManager.hpp
- * \brief
+ * \brief The module manager has ownership of all modules and is responsible for reloading them.
+ * It creates copies of basic modules and pass references to shared ones.
  * \author Marc.B
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class AModuleManager AModuleManager.hpp AModuleManager.hpp
  *

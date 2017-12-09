@@ -31,9 +31,9 @@ namespace xzia
         /**
          *
          * \fn getSharedModule
-         * \brief
-         * @param module
-         * @return
+         * \brief Shared module getter
+         * @param module name to lookup
+         * @return A reference to the shared module
          *
          */
         virtual ASharedModule &getSharedModule(std::string const &module) = 0;
@@ -41,9 +41,9 @@ namespace xzia
         /**
          *
          * \fn getBasicModule
-         * \brief
-         * @param module
-         * @return
+         * \brief HTTP module getter
+         * @param module name to lookup
+         * @return a HTTP module copy
          *
          */
         virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string const &module) = 0;
@@ -51,7 +51,7 @@ namespace xzia
         /**
          *
          * \fn reload
-         * \brief
+         * \brief Notify the module manager that modules must be reloaded
          *
          */
         virtual void reload() = 0;
@@ -59,8 +59,8 @@ namespace xzia
         /**
          *
          * \fn getTaskModules
-         * \brief
-         * @return
+         * \brief Execution list copier
+         * @return The execution list model
          *
          */
         virtual std::vector<AHTTPModule> getExecutionListModel() = 0;

@@ -35,7 +35,8 @@ namespace xzia
         /**
          *
          * \fn process
-         * \brief
+         * \brief This method can be called by any module that require an access to it, it passes data through the
+         * DataStore class. This Module is NOT thread safe, it is at the developer charge to protect it.
          * @param dataStore
          * @return
          *
@@ -44,6 +45,13 @@ namespace xzia
 
     protected:
         std::mutex mutex;
+
+        // Deleted Constructors and Operators
+    public:
+        ASharedModule(ASharedModule const &) = delete;
+        ASharedModule(ASharedModule &&) = delete;
+        ASharedModule &operator=(ASharedModule const &) = delete;
+        ASharedModule &operator=(ASharedModule &&) = delete;
     };
 }
 

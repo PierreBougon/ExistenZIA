@@ -84,6 +84,14 @@ namespace xzia
         virtual size_t                                      getModulePosition(AHTTPModule const &module) const = 0;
 
         /**
+         * \fn getNextModule
+         * \brief Execution list module getter
+         * @param moduleName Module name
+         * @return A reference to the next module searched
+         */
+        virtual AHTTPModule                                 &getNextModule(std::string const &moduleName) const = 0;
+
+        /**
         *
         * \fn pushModuleNext
         * \brief
