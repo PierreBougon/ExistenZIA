@@ -4,7 +4,6 @@
 #include <memory>
 #include "ILoader.hpp"
 #include "IConfigLoader.hpp"
-#include "IDLLLoader.hpp"
 
 /**
  * \file ALoader.hpp
@@ -23,7 +22,6 @@ namespace xzia
     class ALoader : ILoader
     {
     protected:
-        std::unique_ptr<IDLLLoader>      dllLoader;
         std::unique_ptr<IConfigLoader>   configLoader;
     };
 }

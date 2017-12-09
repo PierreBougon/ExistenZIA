@@ -29,7 +29,7 @@ namespace xzia
     class AHTTPModule : public AModule
     {
     public:
-        AHTTPModule() = default;
+        AHTTPModule(std::string const &name, AModuleManager &manager);
 
         /**
          *

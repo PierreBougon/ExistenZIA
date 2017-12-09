@@ -5,7 +5,7 @@
 #ifndef ZIA_IMODULEMANAGER_HPP_
 #define ZIA_IMODULEMANAGER_HPP_
 
-#include <bits/unique_ptr.h>
+#include <memory>
 #include <vector>
 #include "AHTTPModule.hpp"
 #include "ASharedModule.hpp"
