@@ -28,6 +28,7 @@ namespace xzia
     class IConfigLoader
     {
     public:
+
         /**
          * \fn getModuleConfig
          * \brief Retrieve the configuration of a module from the loader

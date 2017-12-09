@@ -13,6 +13,15 @@
 #include "client/Client.hpp"
 #include "ICore.hpp"
 
+/**
+ * \file ACore.hpp
+ * \brief Kernel of the API, ACore is the class linked to all other classes
+ * \author Edouard.P
+ * \version 0.1
+ * \date 17 novembre 2017
+ * \namespace xzia
+ * \struct ACore ACore.hpp ACore.hpp
+ */
 namespace xzia
 {
     class ACore : public ICore

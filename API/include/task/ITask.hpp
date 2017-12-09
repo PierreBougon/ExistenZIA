@@ -12,7 +12,8 @@
 
 /**
  * \file ITask.hpp
- * \brief
+ * \brief The ITask Interface manage the communication between request and client.
+ * It also links all the different module specific to the request.
  * \author Pierre.B
  * \version 0.2
  * \date 10 December 2017
@@ -32,8 +33,8 @@ namespace xzia
         /**
         *
         * \fn clone
-        * \brief
-        * @return
+        * \brief Clone the current task
+        * @return Return a pointer of a clone from the current task.
         *
         */
         virtual std::unique_ptr<ITask>                      clone() const = 0;
@@ -41,8 +42,8 @@ namespace xzia
         /**
         *
         * \fn getExecutionList
-        * \brief
-        * @return
+        * \brief Get the current list of module
+        * @return Return a vector containing the modules
         *
         */
         virtual std::vector<std::unique_ptr<AHTTPModule>>   &getExecutionList() = 0;
@@ -50,8 +51,8 @@ namespace xzia
         /**
         *
         * \fn getRequest
-        * \brief
-        * @return
+        * \brief Get the current Request
+        * @return Return a reference on the the current Request
         *
         */
         virtual Request const                               &getRequest() const = 0;
@@ -59,8 +60,8 @@ namespace xzia
         /**
         *
         * \fn getResponse
-        * \brief
-        * @return
+        * \brief Get the current Response
+        * @return Return a reference on the current Response
         *
         */
         virtual Response                                    &getResponse() = 0;
@@ -68,8 +69,8 @@ namespace xzia
         /**
         *
         * \fn getClient
-        * \brief
-        * @return
+        * \brief Get the current client
+        * @return Return the current Client id
         *
         */
         virtual Client const                                &getClient() const = 0;
@@ -77,9 +78,9 @@ namespace xzia
         /**
         *
         * \fn getModulePosition
-        * \brief
-        * @param module
-        *
+        * \brief Get a module at a specific position with the module passed in parameter
+        * @param module Reference of the module we want to get
+        * @return Return the position of the module asked in parameter in the module list
         */
         virtual size_t                                      getModulePosition(AHTTPModule const &module) const = 0;
 
@@ -94,8 +95,8 @@ namespace xzia
         /**
         *
         * \fn pushModuleNext
-        * \brief
-        * @param module
+        * \brief Push a module in the module list after the current Position
+        * @param module Module which going to be set in the module list
         *
         */
         virtual void                                        pushModuleNext(std::unique_ptr<AHTTPModule> module) = 0;
@@ -103,8 +104,8 @@ namespace xzia
         /**
         *
         * \fn pushModuleBack
-        * \brief
-        * @param module
+        * \brief Push a module at the end of the module list
+        * @param module Module which going to be set in the module list
         *
         */
         virtual void                                        pushModuleBack(std::unique_ptr<AHTTPModule> module) = 0;
@@ -112,8 +113,9 @@ namespace xzia
         /**
         *
         * \fn pushModuleAtPosition
-        * \brief
-        * @param module pos
+        * \brief Push a module int the module at a specific position
+        * @param module Module which going to be set in the module list
+        * @param pos Position where the module is going to be set
         *
         */
         virtual void                                        pushModuleAtPosition(std::unique_ptr<AHTTPModule> module, size_t pos) = 0;

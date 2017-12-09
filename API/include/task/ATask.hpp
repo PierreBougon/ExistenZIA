@@ -16,13 +16,10 @@
 
 /**
  * \file ATask.hpp
- * \brief
+ * \brief ATask represent the module list defined by the Request passed in the Constructor
  * \author Robin.U
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class ATask ATask.hpp ATask.hpp
  *
