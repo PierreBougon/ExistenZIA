@@ -19,7 +19,7 @@
  * add comment here
  *
  * \namespace xzia
- * \class ABasicModule ABasicModule.hpp ABasicModule.hpp
+ * \class AHTTPModule AHTTPModule.hpp AHTTPModule.hpp
  *
  */
 namespace xzia
@@ -45,6 +45,7 @@ namespace xzia
          *
          * \fn addData
          * \brief
+         * @param data key
          *
          */
         template <typename T>

@@ -54,8 +54,6 @@ namespace xzia
         AModule(std::string const &name, AModuleManager &moduleManager);
 
 /*
-        */
-/**
          *
          * \fn getType
          * \brief Get the type of the module

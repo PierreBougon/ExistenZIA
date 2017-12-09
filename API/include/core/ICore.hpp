@@ -1,3 +1,6 @@
+#ifndef ZIA_ICORE_HPP_
+#define ZIA_ICORE_HPP_
+
 /**
  * \file ACore.hpp
  * \brief
@@ -10,10 +13,6 @@
  * \namespace xzia
  * \class ACore ACore.hpp ACore.hpp
  */
-
-#ifndef ZIA_ICORE_HPP_
-#define ZIA_ICORE_HPP_
-
 namespace xzia
 {
     class ICore

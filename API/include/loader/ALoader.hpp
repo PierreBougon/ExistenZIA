@@ -1,12 +1,3 @@
-/**
- * \file ALoader.hpp
- * \brief
- * \author Edouard.P
- * \version 0.1
- * \date 16 novembre 2017
- *
- */
-
 #ifndef EXISTENZIA_ALOADER_HPP
 #define EXISTENZIA_ALOADER_HPP
 
@@ -16,11 +7,15 @@
 #include "IDLLLoader.hpp"
 
 /**
+ * \file ALoader.hpp
+ * \author Edouard.P
  * \brief ALoader manages the dynamic loading of the modules and the configuration of those
  * according to the configuration loader
+ * \version 0.1
+ * \date 16 novembre 2017
  *
  * \namespace xzia
- * \class ALoader
+ * \class ALoader ALoader.hpp ALoader.hpp
  *
  */
 namespace xzia

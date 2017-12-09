@@ -17,7 +17,7 @@
  * add comment here
  *
  * \namespace xzia
- * \class ADLLLoader
+ * \class ADLLLoader ADLLLoader.hpp ADLLLoader.hpp
  *
  */
 namespace xzia

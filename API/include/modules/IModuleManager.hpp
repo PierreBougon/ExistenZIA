@@ -10,6 +10,19 @@
 #include "AHTTPModule.hpp"
 #include "ASharedModule.hpp"
 
+/**
+ * \file IModuleManager.hpp
+ * \brief
+ * \author Benjamin.D
+ * \version 0.2
+ * \date 10 December 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class IModuleManager IModuleManager.hpp IModuleManager.hpp
+ *
+ */
 namespace xzia
 {
     class IModuleManager

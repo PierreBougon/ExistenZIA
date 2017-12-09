@@ -14,6 +14,19 @@
 #include "modules/Step.hpp"
 #include "ITask.hpp"
 
+/**
+ * \file ATask.hpp
+ * \brief
+ * \author Robin.U
+ * \version 0.2
+ * \date 10 December 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class ATask ATask.hpp ATask.hpp
+ *
+ */
 namespace xzia
 {
     class ATask : public ITask

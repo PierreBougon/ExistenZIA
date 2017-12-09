@@ -8,6 +8,19 @@
 #include <mutex>
 #include "IModuleManager.hpp"
 
+/**
+ * \file AModuleManager.hpp
+ * \brief
+ * \author Marc.B
+ * \version 0.2
+ * \date 10 December 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \class AModuleManager AModuleManager.hpp AModuleManager.hpp
+ *
+ */
 namespace xzia
 {
     class ALoader;
@@ -18,6 +31,7 @@ namespace xzia
     class AModuleManager : public IModuleManager
     {
     public:
+
     /**
      *
      * \fn AModuleManager
