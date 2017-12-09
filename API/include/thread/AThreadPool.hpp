@@ -16,13 +16,10 @@
 
 /**
  * \file AThreadPool.hpp
- * \brief
+ * \brief AThreadPool is our manager of all the thread we are going to use during the process of a task
  * \author Marc.B
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class AThreadPool AThreadPool.hpp AThreadPool.hpp
  *
@@ -48,8 +45,8 @@ namespace xzia
         /**
         *
         * \fn threadWorkflow
-        * \brief
-        * @param id
+        * \brief Method which launch a thread with a given id
+        * @param id Id given to the thread
         *
         */
         virtual void threadWorkflow(unsigned int id) = 0;

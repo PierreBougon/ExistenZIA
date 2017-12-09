@@ -7,13 +7,10 @@
 
 /**
  * \file Client.hpp
- * \brief
+ * \brief Typedef the socket Client as an int
  * \author Edouard.P
  * \version 0.1
  * \date 17 novembre 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \struct Client
  */

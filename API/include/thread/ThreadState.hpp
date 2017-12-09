@@ -7,13 +7,10 @@
 
 /**
  * \file ThreadState.hpp
- * \brief
+ * \brief Enum class representing the thread's workState
  * \author Benjamin.D
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \enum ThreadState ThreadState.hpp ThreadState.hpp
  *

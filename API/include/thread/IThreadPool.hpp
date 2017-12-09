@@ -9,13 +9,10 @@
 
 /**
  * \file IThreadPool.hpp
- * \brief
+ * \brief Interface of our manager of threads
  * \author Edouard.E
  * \version 0.2
  * \date 10 December 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class IThreadPool IThreadPool.hpp IThreadPool.hpp
  *
@@ -26,8 +23,8 @@ namespace xzia
     {
         /**
         *
-        * \fn threadWorkflow
-        * \brief
+        * \fn addTask
+        * \brief Add a task to the workFlow thread
         * @param task
         *
         */
@@ -35,17 +32,17 @@ namespace xzia
 
         /**
         *
-        * \fn threadWorkflow
-        * \brief
+        * \fn stop
+        * \brief Stop the thread
         *
         */
         virtual void    stop()= 0;
 
         /**
         *
-        * \fn threadWorkflow
-        * \brief
-        * @return
+        * \fn getTaskDone
+        * \brief Get the task done, when it's finished
+        * @return Return an ATask instance
         *
         */
         virtual ATask   &getTaskDone() = 0;
