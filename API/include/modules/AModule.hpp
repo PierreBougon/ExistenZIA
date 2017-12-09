@@ -28,18 +28,17 @@ namespace xzia
 
     class AModule
     {
-
+    public:
         /**
          * \enum Type
          */
         enum class Type : unsigned char
         {
-            Http = 0,
-            Shared,
-            SelfProtect
+            HTTP = 0,
+            SHARED,
+            PROTECTED
         };
 
-    public:
         /**
          * \fn AModule
          * \brief Default constructor deleted
@@ -51,18 +50,16 @@ namespace xzia
          * \brief Constructor of AModule where we set the name of the module
          * @param name Name of the module
          */
-        AModule(std::string const &name, AModuleManager &moduleManager);
+        AModule(std::string const &name, AModuleManager &moduleManager, AModule::Type type);
 
-/*
+        /**
          *
          * \fn getType
          * \brief Get the type of the module
          * @return Return the type of the module
          *
-         *//*
-
+         */
         Type getType() const;
-*/
 
         /**
          *
@@ -76,7 +73,6 @@ namespace xzia
     protected:
         AModuleManager  &moduleManager;
         Type            type;
-
 
     private:
         std::string name;

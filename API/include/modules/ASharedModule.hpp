@@ -24,9 +24,13 @@
  */
 namespace xzia
 {
+    class AModuleManager;
+
     class ASharedModule : public AModule
     {
     public:
+        ASharedModule(std::string const &name, AModuleManager &manager);
+        ASharedModule(std::string const &name, AModuleManager &manager, AModule::Type type);
 
         /**
          *
@@ -37,6 +41,9 @@ namespace xzia
          *
          */
         virtual Step process(DataStore &dataStore) = 0;
+
+    protected:
+        std::mutex mutex;
     };
 }
 

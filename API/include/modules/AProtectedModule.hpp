@@ -25,9 +25,17 @@
  */
 namespace xzia
 {
-    class ASafeSharedModule : public ASharedModule
+    class AProtectedModule : public ASharedModule
     {
     public:
+        /**
+         * \fn
+         * \brief
+         * @param name
+         * @param moduleManager
+         */
+        AProtectedModule(std::string const &name, AModuleManager &moduleManager);
+
         /**
          *
          * \fn process
@@ -36,8 +44,7 @@ namespace xzia
          * @return
          *
          */
-        Step process(DataStore &dataStore);
-
+        Step process(DataStore &dataStore) final;
 
     protected:
         /**
@@ -49,10 +56,7 @@ namespace xzia
          *
          */
         virtual Step safeProcess(DataStore &dataStore) = 0;
-
-    private:
-        std::mutex  mutex;
     };
 }
 
-#endif //EXISTENZIA_ASAFESHAREDMODULE_HPP
+#endif // EXISTENZIA_ASAFESHAREDMODULE_HPP

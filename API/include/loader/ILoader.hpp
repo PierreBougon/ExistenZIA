@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include "modules/AModule.hpp"
 
 /**
  * \file ILoader.hpp
@@ -35,6 +36,15 @@ namespace xzia
          *
          */
         virtual void reload() = 0;
+
+        /**
+        *
+        * \fn loadModule
+        * \brief This method loads a module
+        * @param module
+        *
+        */
+        virtual std::unique_ptr<AModule> loadModule(std::string const& module) = 0;
     };
 }
 #endif //EXISTENZIA_ILOADER_HPP
