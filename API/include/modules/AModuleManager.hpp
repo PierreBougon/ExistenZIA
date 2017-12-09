@@ -22,7 +22,6 @@
 namespace xzia
 {
     class ALoader;
-    class AModule;
     class ASharedModule;
     class AHTTPModule;
 
