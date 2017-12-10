@@ -1,0 +1,52 @@
+{
+  "modules" : [
+    {
+      "name" : "boringModuleName",
+      "location" : "./",
+      "type" : "http"
+    },
+    {
+      "name" : "lameModule",
+      "location" : "./",
+      "type" : "http"
+    },
+    {
+      "name" : "cypher",
+      "location" : "./",
+      "type" : "http",
+      "config" : {
+        "encapsulation": "sha1"
+      }
+    },
+    {
+      "name" : "logger",
+      "location" : "./",
+      "type" : "shared",
+      "config" : {
+        "level" : "debug",
+        "file" : "./logs/log.out",
+        "console" : true
+      }
+    },
+    {
+      "name" : "dataProvider",
+      "location" : "./dataProviders/",
+      "type" : "protected",
+      "config" : {
+        "host" : "127.0.0.1",
+        "port" : 4242
+      }
+    }
+  ],
+  "core": {
+    "threads" : 4,
+    "max_clients" : 1500,
+    "port" : 5312,
+    "executionList" : [
+      "cypher",
+      "boringModuleName",
+      "lameModule",
+      "cypher"
+    ]
+  }
+}
