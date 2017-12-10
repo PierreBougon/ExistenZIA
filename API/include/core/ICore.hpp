@@ -15,7 +15,7 @@ namespace xzia
     class ICore
     {
     public:
-
+        virtual ~ICore() {};
         /**
         *
         * \fn run

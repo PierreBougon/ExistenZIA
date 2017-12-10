@@ -6,6 +6,8 @@
 #define EXISTENZIA_ACORE_HPP
 
 #include <vector>
+#include "task/ATaskFactory.hpp"
+#include "task/ITaskFactory.hpp"
 #include "thread/AThreadPool.hpp"
 #include "network/INetwork.hpp"
 #include "modules/AModuleManager.hpp"
@@ -27,6 +29,7 @@ namespace xzia
     class ACore : public ICore
     {
     public:
+        virtual ~ACore() = default;
         /**
          *
          * \fn ACore
@@ -34,13 +37,14 @@ namespace xzia
          * @param config Configuration of the core
          *
          */
-        ACore(std::string config);
+        explicit ACore(std::string const &config);
 
     protected:
         std::unique_ptr<ILoader>            loader;
-        std::unique_ptr<AModuleManager>     modules;
+        std::unique_ptr<AModuleManager>     moduleManager;
         std::unique_ptr<AThreadPool>        threadPool;
         std::unique_ptr<INetwork>           network;
+        std::unique_ptr<ATaskFactory>       taskFactory;
         std::string                         configFile;
     };
 }
