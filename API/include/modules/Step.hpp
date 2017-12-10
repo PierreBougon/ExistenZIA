@@ -7,7 +7,7 @@
 
 /**
  * \file Step.hpp
- * \brief
+ * \brief Used to see the step of ATask
  * \author Mathieu.S
  * \version 0.2
  * \date 10 December 2017

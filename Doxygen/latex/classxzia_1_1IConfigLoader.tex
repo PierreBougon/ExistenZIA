@@ -1,0 +1,63 @@
+\hypertarget{classxzia_1_1IConfigLoader}{}\section{xzia\+:\+:I\+Config\+Loader Class Reference}
+\label{classxzia_1_1IConfigLoader}\index{xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classxzia_1_1IConfigLoader_acc495c84824d91f3baf1bfdbce2d4f60}{get\+Module\+Config}} (std\+::string const \&module)=0
+\begin{DoxyCompactList}\small\item\em Retrieve the configuration of a module from the loader. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxzia_1_1IConfigLoader_a978f88a37cacd8ad84bd3ae995e5a7ba}{get\+Execution\+List\+Model}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve the task list of modules that will processes the request received by the server. \end{DoxyCompactList}\item 
+virtual std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classxzia_1_1IConfigLoader_a343df444ba504f635e7204445105bbef}{get\+Core\+Config}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieve the configuration of the core from the loader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1IConfigLoader_a343df444ba504f635e7204445105bbef}\label{classxzia_1_1IConfigLoader_a343df444ba504f635e7204445105bbef}} 
+\index{xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}!get\+Core\+Config@{get\+Core\+Config}}
+\index{get\+Core\+Config@{get\+Core\+Config}!xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}}
+\subsubsection{\texorpdfstring{get\+Core\+Config()}{getCoreConfig()}}
+{\footnotesize\ttfamily I\+Config\+Loader\+::get\+Core\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve the configuration of the core from the loader. 
+
+\begin{DoxyReturn}{Returns}
+the configuration of the core as a map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1IConfigLoader_a978f88a37cacd8ad84bd3ae995e5a7ba}\label{classxzia_1_1IConfigLoader_a978f88a37cacd8ad84bd3ae995e5a7ba}} 
+\index{xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}!get\+Execution\+List\+Model@{get\+Execution\+List\+Model}}
+\index{get\+Execution\+List\+Model@{get\+Execution\+List\+Model}!xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}}
+\subsubsection{\texorpdfstring{get\+Execution\+List\+Model()}{getExecutionListModel()}}
+{\footnotesize\ttfamily I\+Config\+Loader\+::get\+Execution\+List\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve the task list of modules that will processes the request received by the server. 
+
+\begin{DoxyReturn}{Returns}
+Return the name of all the modules in a vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1IConfigLoader_acc495c84824d91f3baf1bfdbce2d4f60}\label{classxzia_1_1IConfigLoader_acc495c84824d91f3baf1bfdbce2d4f60}} 
+\index{xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}!get\+Module\+Config@{get\+Module\+Config}}
+\index{get\+Module\+Config@{get\+Module\+Config}!xzia\+::\+I\+Config\+Loader@{xzia\+::\+I\+Config\+Loader}}
+\subsubsection{\texorpdfstring{get\+Module\+Config()}{getModuleConfig()}}
+{\footnotesize\ttfamily I\+Config\+Loader\+::get\+Module\+Config (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieve the configuration of a module from the loader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the configuration of the module as a map 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/loader/\mbox{\hyperlink{IConfigLoader_8hpp}{I\+Config\+Loader.\+hpp}}\end{DoxyCompactItemize}

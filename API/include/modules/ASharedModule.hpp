@@ -10,8 +10,8 @@
 #include "Step.hpp"
 
 /**
- * \file AProtectedModule.hpp
- * \brief
+ * \file ASharedModule.hpp
+ * \brief This module is shared between threads (thus clients)
  * \author Benjamin.D
  * \version 0.1
  * \date 17 novembre 2017
@@ -19,7 +19,7 @@
  * add comment here
  *
  * \namespace xzia
- * \class AProtectedModule AProtectedModule.hpp AProtectedModule.hpp
+ * \class ASharedModule ASharedModule.hpp
  *
  */
 namespace xzia

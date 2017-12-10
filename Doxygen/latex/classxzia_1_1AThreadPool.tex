@@ -1,0 +1,67 @@
+\hypertarget{classxzia_1_1AThreadPool}{}\section{xzia\+:\+:A\+Thread\+Pool Class Reference}
+\label{classxzia_1_1AThreadPool}\index{xzia\+::\+A\+Thread\+Pool@{xzia\+::\+A\+Thread\+Pool}}
+Inheritance diagram for xzia\+:\+:A\+Thread\+Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classxzia_1_1AThreadPool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_ab35fcbd9ff967ca953140c1f69d3ff02}\label{classxzia_1_1AThreadPool_ab35fcbd9ff967ca953140c1f69d3ff02}} 
+{\bfseries A\+Thread\+Pool} (unsigned int nb\+Threads)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classxzia_1_1AThreadPool_a6c5378fecadb2043b50091f3995dc785}{thread\+Workflow}} (unsigned int id)=0
+\begin{DoxyCompactList}\small\item\em Method which launch a thread with a given id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_ab73a7a7d0a1530157c318122c8a819fa}\label{classxzia_1_1AThreadPool_ab73a7a7d0a1530157c318122c8a819fa}} 
+std\+::vector$<$ std\+::thread $>$ {\bfseries threads}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_a01d8dc990cd888ded9e951c0e667d2e0}\label{classxzia_1_1AThreadPool_a01d8dc990cd888ded9e951c0e667d2e0}} 
+std\+::queue$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1ATask}{A\+Task}} $>$ $>$ {\bfseries todo\+Tasks}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_ae8f8619cb333433e2f5f54f27062e55b}\label{classxzia_1_1AThreadPool_ae8f8619cb333433e2f5f54f27062e55b}} 
+std\+::queue$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1ATask}{A\+Task}} $>$ $>$ {\bfseries done\+Tasks}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_ad1c6a821ed59000b16f73216b65df2d2}\label{classxzia_1_1AThreadPool_ad1c6a821ed59000b16f73216b65df2d2}} 
+std\+::vector$<$ \mbox{\hyperlink{ThreadState_8hpp_a33f2462f9bd05760c2ce5ce111a5a97b}{Thread\+State}} $>$ {\bfseries state}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_afe629e748ba9a5e372b005a7338e1c89}\label{classxzia_1_1AThreadPool_afe629e748ba9a5e372b005a7338e1c89}} 
+std\+::atomic$<$ bool $>$ {\bfseries running}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_ac790322a9a5b838c7c7171cd2280542a}\label{classxzia_1_1AThreadPool_ac790322a9a5b838c7c7171cd2280542a}} 
+std\+::condition\+\_\+variable {\bfseries condvar}
+\item 
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_a000c60518a6828d1e74a224c0a26b2b7}\label{classxzia_1_1AThreadPool_a000c60518a6828d1e74a224c0a26b2b7}} 
+std\+::mutex {\bfseries mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1AThreadPool_a6c5378fecadb2043b50091f3995dc785}\label{classxzia_1_1AThreadPool_a6c5378fecadb2043b50091f3995dc785}} 
+\index{xzia\+::\+A\+Thread\+Pool@{xzia\+::\+A\+Thread\+Pool}!thread\+Workflow@{thread\+Workflow}}
+\index{thread\+Workflow@{thread\+Workflow}!xzia\+::\+A\+Thread\+Pool@{xzia\+::\+A\+Thread\+Pool}}
+\subsubsection{\texorpdfstring{thread\+Workflow()}{threadWorkflow()}}
+{\footnotesize\ttfamily A\+Thread\+Pool\+::thread\+Workflow (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method which launch a thread with a given id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id given to the thread \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/thread/\mbox{\hyperlink{AThreadPool_8hpp}{A\+Thread\+Pool.\+hpp}}\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/src/thread/A\+Thread\+Pool.\+cpp\end{DoxyCompactItemize}

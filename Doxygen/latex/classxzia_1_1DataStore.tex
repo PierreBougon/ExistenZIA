@@ -1,0 +1,60 @@
+\hypertarget{classxzia_1_1DataStore}{}\section{xzia\+:\+:Data\+Store Class Reference}
+\label{classxzia_1_1DataStore}\index{xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}{add\+Data}} (std\+::string const \&key, T data)
+\begin{DoxyCompactList}\small\item\em Add data of any type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}{get\+Data}} (std\+::string const \&key)
+\begin{DoxyCompactList}\small\item\em Get data of any type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1DataStore_a3bbea48eb0a1432158a016315c3d1557}\label{classxzia_1_1DataStore_a3bbea48eb0a1432158a016315c3d1557}} 
+std\+::map$<$ std\+::string, variant $>$ {\bfseries datas}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}\label{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}} 
+\index{xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}!add\+Data@{add\+Data}}
+\index{add\+Data@{add\+Data}!xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}}
+\subsubsection{\texorpdfstring{add\+Data()}{addData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Data\+Store\+::add\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key,  }\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add data of any type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be added \\
+\hline
+{\em key} & Key associated to the data adding \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}\label{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}} 
+\index{xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Data\+Store\+::get\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get data of any type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key associated to the data to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data to get 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/modules/\mbox{\hyperlink{DataStore_8hpp}{Data\+Store.\+hpp}}\end{DoxyCompactItemize}

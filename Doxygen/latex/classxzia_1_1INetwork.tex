@@ -1,0 +1,80 @@
+\hypertarget{classxzia_1_1INetwork}{}\section{xzia\+:\+:I\+Network Class Reference}
+\label{classxzia_1_1INetwork}\index{xzia\+::\+I\+Network@{xzia\+::\+I\+Network}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1INetwork_a38e0ca8cbacfa2a902cfef550168a81a}\label{classxzia_1_1INetwork_a38e0ca8cbacfa2a902cfef550168a81a}} 
+virtual void \mbox{\hyperlink{classxzia_1_1INetwork_a38e0ca8cbacfa2a902cfef550168a81a}{start}} ()=0
+\begin{DoxyCompactList}\small\item\em Launch the link between the core and the client. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Request}{Request}} $>$ \mbox{\hyperlink{classxzia_1_1INetwork_ae4dc3136855391f174daef8da2bab5d1}{pop\+Request}} ()=0
+\begin{DoxyCompactList}\small\item\em Take the first request in the queue, then prepare to apply it. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Request}{Request}} $>$ $>$ \mbox{\hyperlink{classxzia_1_1INetwork_a0a209aa9651aafb551504d6522c20809}{get\+All\+Requests}} ()=0
+\begin{DoxyCompactList}\small\item\em Take all the last request in the queue, then prepare to apply them. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classxzia_1_1INetwork_a3d2089720daf1863762e53bfda6ad08c}{send\+Response}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Response}{Response}} $>$ res)=0
+\begin{DoxyCompactList}\small\item\em Following the handling of a request , send the message response to the client. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classxzia_1_1INetwork_a96edde2fedeca124c08a31d4164a1a87}{send\+All\+Responses}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Response}{Response}} $>$$>$ \&\&list\+Res)=0
+\begin{DoxyCompactList}\small\item\em Following the handling of all the last request , send the messages response to the client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1INetwork_a0a209aa9651aafb551504d6522c20809}\label{classxzia_1_1INetwork_a0a209aa9651aafb551504d6522c20809}} 
+\index{xzia\+::\+I\+Network@{xzia\+::\+I\+Network}!get\+All\+Requests@{get\+All\+Requests}}
+\index{get\+All\+Requests@{get\+All\+Requests}!xzia\+::\+I\+Network@{xzia\+::\+I\+Network}}
+\subsubsection{\texorpdfstring{get\+All\+Requests()}{getAllRequests()}}
+{\footnotesize\ttfamily I\+Network\+::get\+All\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Take all the last request in the queue, then prepare to apply them. 
+
+\begin{DoxyReturn}{Returns}
+Return all the last request from the queue of request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1INetwork_ae4dc3136855391f174daef8da2bab5d1}\label{classxzia_1_1INetwork_ae4dc3136855391f174daef8da2bab5d1}} 
+\index{xzia\+::\+I\+Network@{xzia\+::\+I\+Network}!pop\+Request@{pop\+Request}}
+\index{pop\+Request@{pop\+Request}!xzia\+::\+I\+Network@{xzia\+::\+I\+Network}}
+\subsubsection{\texorpdfstring{pop\+Request()}{popRequest()}}
+{\footnotesize\ttfamily I\+Network\+::pop\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Take the first request in the queue, then prepare to apply it. 
+
+\begin{DoxyReturn}{Returns}
+Return a \mbox{\hyperlink{structxzia_1_1Message}{Message}} of type request from the queue of request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1INetwork_a96edde2fedeca124c08a31d4164a1a87}\label{classxzia_1_1INetwork_a96edde2fedeca124c08a31d4164a1a87}} 
+\index{xzia\+::\+I\+Network@{xzia\+::\+I\+Network}!send\+All\+Responses@{send\+All\+Responses}}
+\index{send\+All\+Responses@{send\+All\+Responses}!xzia\+::\+I\+Network@{xzia\+::\+I\+Network}}
+\subsubsection{\texorpdfstring{send\+All\+Responses()}{sendAllResponses()}}
+{\footnotesize\ttfamily I\+Network\+::send\+All\+Responses (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Response}{Response}} $>$$>$ \&\&}]{list\+Res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Following the handling of all the last request , send the messages response to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Res} & Contain respectively all the response codes from the queue of request \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classxzia_1_1INetwork_a3d2089720daf1863762e53bfda6ad08c}\label{classxzia_1_1INetwork_a3d2089720daf1863762e53bfda6ad08c}} 
+\index{xzia\+::\+I\+Network@{xzia\+::\+I\+Network}!send\+Response@{send\+Response}}
+\index{send\+Response@{send\+Response}!xzia\+::\+I\+Network@{xzia\+::\+I\+Network}}
+\subsubsection{\texorpdfstring{send\+Response()}{sendResponse()}}
+{\footnotesize\ttfamily I\+Network\+::send\+Response (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structxzia_1_1Response}{Response}} $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Following the handling of a request , send the message response to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & Contain the message code response from the last request \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/network/\mbox{\hyperlink{INetwork_8hpp}{I\+Network.\+hpp}}\end{DoxyCompactItemize}

@@ -8,6 +8,19 @@
 #include <memory>
 #include "task/ATask.hpp"
 
+/**
+ * \file ITaskFactory.hpp
+ * \brief The ITaskFactory Interface generate the task for a request from a client
+ * \author Pierre.B
+ * \version 0.2
+ * \date 10 December 2017
+ *
+ *
+ *
+ * \namespace xzia
+ * \class ITaskFactory ITaskFactory.hpp
+ *
+ */
 namespace xzia
 {
     class ITaskFactory

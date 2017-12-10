@@ -1,0 +1,187 @@
+\hypertarget{classxzia_1_1ITask}{}\section{xzia\+:\+:I\+Task Class Reference}
+\label{classxzia_1_1ITask}\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+Inheritance diagram for xzia\+:\+:I\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classxzia_1_1ITask}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1ITask}{I\+Task}} $>$ \mbox{\hyperlink{classxzia_1_1ITask_a7368f69854dd9af5af668e036560226d}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Clone the current task. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$ $>$ \& \mbox{\hyperlink{classxzia_1_1ITask_a100285f59380ad90225231734c9a29ab}{get\+Execution\+List}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the current list of module. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structxzia_1_1Request}{Request}} const  \& \mbox{\hyperlink{classxzia_1_1ITask_aeac67e104b125e2a9c03ec8a3cd80296}{get\+Request}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current \mbox{\hyperlink{structxzia_1_1Request}{Request}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structxzia_1_1Response}{Response}} \& \mbox{\hyperlink{classxzia_1_1ITask_a5bd63caed103f8bf8b6d76a9a802a927}{get\+Response}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the current \mbox{\hyperlink{structxzia_1_1Response}{Response}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structClient}{Client}} const  \& \mbox{\hyperlink{classxzia_1_1ITask_a2fa35ad0ca8d373c4efd6e928755b5e7}{get\+Client}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current client. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{classxzia_1_1ITask_a74496410e5dbd3c293082af3d5e7d84f}{get\+Module\+Position}} (\mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} const \&module) const =0
+\begin{DoxyCompactList}\small\item\em Get a module at a specific position with the module passed in parameter. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} \& \mbox{\hyperlink{classxzia_1_1ITask_aa9134b2c523aa55d5f9cfe12866ed508}{get\+Next\+Module}} (std\+::string const \&module\+Name) const =0
+\begin{DoxyCompactList}\small\item\em Execution list module getter. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classxzia_1_1ITask_a0df4e8d2b1391fe1aa7e7bed7d35175e}{push\+Module\+Next}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$ module)=0
+\begin{DoxyCompactList}\small\item\em Push a module in the module list after the current Position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classxzia_1_1ITask_a4a742a320f905285dc8fa4510090c381}{push\+Module\+Back}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$ module)=0
+\begin{DoxyCompactList}\small\item\em Push a module at the end of the module list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classxzia_1_1ITask_a10e224e38e770108abb3518c06156094}{push\+Module\+At\+Position}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$ module, size\+\_\+t pos)=0
+\begin{DoxyCompactList}\small\item\em Push a module int the module at a specific position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1ITask_a7368f69854dd9af5af668e036560226d}\label{classxzia_1_1ITask_a7368f69854dd9af5af668e036560226d}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!clone@{clone}}
+\index{clone@{clone}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily I\+Task\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clone the current task. 
+
+\begin{DoxyReturn}{Returns}
+Return a pointer of a clone from the current task. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_a2fa35ad0ca8d373c4efd6e928755b5e7}\label{classxzia_1_1ITask_a2fa35ad0ca8d373c4efd6e928755b5e7}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Client@{get\+Client}}
+\index{get\+Client@{get\+Client}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Client()}{getClient()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current client. 
+
+\begin{DoxyReturn}{Returns}
+Return the current \mbox{\hyperlink{structClient}{Client}} id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_a100285f59380ad90225231734c9a29ab}\label{classxzia_1_1ITask_a100285f59380ad90225231734c9a29ab}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Execution\+List@{get\+Execution\+List}}
+\index{get\+Execution\+List@{get\+Execution\+List}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Execution\+List()}{getExecutionList()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Execution\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current list of module. 
+
+\begin{DoxyReturn}{Returns}
+Return a vector containing the modules 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_a74496410e5dbd3c293082af3d5e7d84f}\label{classxzia_1_1ITask_a74496410e5dbd3c293082af3d5e7d84f}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Module\+Position@{get\+Module\+Position}}
+\index{get\+Module\+Position@{get\+Module\+Position}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Module\+Position()}{getModulePosition()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Module\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} const \&}]{module }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get a module at a specific position with the module passed in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Reference of the module we want to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the position of the module asked in parameter in the module list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_aa9134b2c523aa55d5f9cfe12866ed508}\label{classxzia_1_1ITask_aa9134b2c523aa55d5f9cfe12866ed508}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Next\+Module@{get\+Next\+Module}}
+\index{get\+Next\+Module@{get\+Next\+Module}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Next\+Module()}{getNextModule()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Next\+Module (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{module\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Execution list module getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module\+Name} & Module name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the next module searched 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_aeac67e104b125e2a9c03ec8a3cd80296}\label{classxzia_1_1ITask_aeac67e104b125e2a9c03ec8a3cd80296}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Request@{get\+Request}}
+\index{get\+Request@{get\+Request}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Request()}{getRequest()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current \mbox{\hyperlink{structxzia_1_1Request}{Request}}. 
+
+\begin{DoxyReturn}{Returns}
+Return a reference on the the current \mbox{\hyperlink{structxzia_1_1Request}{Request}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_a5bd63caed103f8bf8b6d76a9a802a927}\label{classxzia_1_1ITask_a5bd63caed103f8bf8b6d76a9a802a927}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!get\+Response@{get\+Response}}
+\index{get\+Response@{get\+Response}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{get\+Response()}{getResponse()}}
+{\footnotesize\ttfamily I\+Task\+::get\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current \mbox{\hyperlink{structxzia_1_1Response}{Response}}. 
+
+\begin{DoxyReturn}{Returns}
+Return a reference on the current \mbox{\hyperlink{structxzia_1_1Response}{Response}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classxzia_1_1ITask_a10e224e38e770108abb3518c06156094}\label{classxzia_1_1ITask_a10e224e38e770108abb3518c06156094}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!push\+Module\+At\+Position@{push\+Module\+At\+Position}}
+\index{push\+Module\+At\+Position@{push\+Module\+At\+Position}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{push\+Module\+At\+Position()}{pushModuleAtPosition()}}
+{\footnotesize\ttfamily I\+Task\+::push\+Module\+At\+Position (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$}]{module,  }\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Push a module int the module at a specific position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Module which going to be set in the module list \\
+\hline
+{\em pos} & Position where the module is going to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classxzia_1_1ITask_a4a742a320f905285dc8fa4510090c381}\label{classxzia_1_1ITask_a4a742a320f905285dc8fa4510090c381}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!push\+Module\+Back@{push\+Module\+Back}}
+\index{push\+Module\+Back@{push\+Module\+Back}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{push\+Module\+Back()}{pushModuleBack()}}
+{\footnotesize\ttfamily I\+Task\+::push\+Module\+Back (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Push a module at the end of the module list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Module which going to be set in the module list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classxzia_1_1ITask_a0df4e8d2b1391fe1aa7e7bed7d35175e}\label{classxzia_1_1ITask_a0df4e8d2b1391fe1aa7e7bed7d35175e}} 
+\index{xzia\+::\+I\+Task@{xzia\+::\+I\+Task}!push\+Module\+Next@{push\+Module\+Next}}
+\index{push\+Module\+Next@{push\+Module\+Next}!xzia\+::\+I\+Task@{xzia\+::\+I\+Task}}
+\subsubsection{\texorpdfstring{push\+Module\+Next()}{pushModuleNext()}}
+{\footnotesize\ttfamily I\+Task\+::push\+Module\+Next (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classxzia_1_1AHTTPModule}{A\+H\+T\+T\+P\+Module}} $>$}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Push a module in the module list after the current Position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Module which going to be set in the module list \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/task/\mbox{\hyperlink{ITask_8hpp}{I\+Task.\+hpp}}\end{DoxyCompactItemize}

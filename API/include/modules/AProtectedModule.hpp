@@ -11,7 +11,7 @@
 #include "ASharedModule.hpp"
 
 /**
- * \file ASharedModule.hpp
+ * \file AProtectedModule.hpp
  * \brief This module is protected by a mutex and can be accessed through threads. The inheriting class must implement
  * its logic in the safeProcess method instead of the process method.
  * \author Benjamin.D
@@ -21,7 +21,7 @@
  * add comment here
  *
  * \namespace xzia
- * \class ASharedModule ASharedModule.hpp ASharedModule.hpp
+ * \class AProtectedModule AProtectedModule.hpp
  *
  */
 namespace xzia
