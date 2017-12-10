@@ -25,6 +25,7 @@ namespace xzia
     class INetwork
     {
     public:
+        virtual ~INetwork() = default;
 
         /**
         *
