@@ -33,12 +33,13 @@ namespace xzia
         ATask(std::unique_ptr<Request> req, Client &client,
               std::vector<std::unique_ptr<AHTTPModule>> executionList);
 
-    protected:
-        std::unique_ptr<Request>    req;
-        Response                    res;
-        Client const                &client;
+        virtual ~ATask() = default;
 
-        std::vector<std::unique_ptr<AHTTPModule>> executionList;
+    protected:
+        std::unique_ptr<Request>                    req;
+        Client const                                client;
+        std::vector<std::unique_ptr<AHTTPModule>>   executionList;
+        Response                                    res;
     };
 }
 

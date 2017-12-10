@@ -29,6 +29,7 @@ namespace xzia
     class ITask
     {
     public:
+        virtual ~ITask() = default;
 
         /**
         *
