@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include "modules/AModule.hpp"
 
 /**
  * \file ILoader.hpp
@@ -27,13 +28,25 @@ namespace xzia
     class ILoader
     {
     public:
+        virtual ~ILoader() = default;
+
         /**
          *
          * \fn reload
-         * \brief
+         * \brief This method allows the loader to reload the configuration, updating the list of available modules,
+         * and their corresponding configuration
          *
          */
         virtual void reload() = 0;
+
+        /**
+        *
+        * \fn loadModule
+        * \brief This method loads a module
+        * @param module
+        *
+        */
+        virtual std::unique_ptr<AModule> loadModule(std::string const& module) = 0;
     };
 }
 #endif //EXISTENZIA_ILOADER_HPP

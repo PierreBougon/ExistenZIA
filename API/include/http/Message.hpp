@@ -11,16 +11,14 @@
 
 /**
  * \file Message.hpp
- * \brief
+ * \brief Message is a structure which contain all the information about the request.
+ * It can be either a request to ask information or a response for the return of a request.
+ *
  * \author Robin.U
  * \version 0.1
  * \date 13 novembre 2017
- *
- * add comment here
- *
  * \namespace xzia
- * \class Message Message.hpp Message.hpp
- *
+ * \struct Message Message.hpp Message.hpp
  */
 namespace xzia
 {
@@ -29,7 +27,12 @@ namespace xzia
         std::string                             body;
         std::string                             version;
         std::map<std::string, std::string>      header;
-        Client const                            &client;
+        Client const                            client;
+
+
+        Message() = delete;
+        explicit Message(Client client);
+        virtual ~Message() = default;
 
         /**
          *

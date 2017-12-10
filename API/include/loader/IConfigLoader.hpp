@@ -16,10 +16,11 @@
  * \version 0.1
  * \date 17 novembre 2017
  *
- * add comment here
+ * This interface ensure that we can ask the configuration of a specific module or the core.
+ * This configuration shall appear in the form of a simple map of strings [KEY,VALUE]
  *
  * \namespace xzia
- * \class IConfigLoader IConfigLoader.hpp IConfigLoader.hpp
+ * \class IConfigLoader
  *
  */
 namespace xzia
@@ -27,32 +28,34 @@ namespace xzia
     class IConfigLoader
     {
     public:
+        virtual ~IConfigLoader() = default;
+
         /**
-         * \fn getModuleMap
-         * \brief
-         * @param module
-         * @return
+         * \fn getModuleConfig
+         * \brief Retrieve the configuration of a module from the loader
+         * @param module name
+         * @return the configuration of the module as a map
          *
          */
-        virtual std::map<std::string, std::string> getModuleMap(std::string module) = 0;
+        virtual std::map<std::string, std::string> getModuleConfig(std::string const &module) = 0;
 
         /**
          *
-         * \fn getTaskList
-         * \brief
-         * @return Return a vector containing all task represented by a string
+         * \fn getExecutionListModel
+         * \brief Retrieve the task list of modules that will processes the request received by the server
+         * @return Return the name of all the modules in a vector
          *
          */
-        virtual std::vector<std::string> getTaskList() = 0;
+        virtual std::vector<std::string> getExecutionListModel() = 0;
 
         /**
          *
-         * \fn getCoreMap
-         * \brief
-         * @return
+         * \fn getCoreConfig
+         * \brief Retrieve the configuration of the core from the loader
+         * @return the configuration of the core as a map
          *
          */
-        virtual std::map<std::string, std::string> getCoreMap() = 0;
+        virtual std::map<std::string, std::string> getCoreConfig() = 0;
     };
 }
 

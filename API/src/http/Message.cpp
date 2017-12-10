@@ -4,7 +4,13 @@
 
 #include "http/Message.hpp"
 
+xzia::Message::Message(xzia::Client client) : client(client)
+{
+
+}
+
 bool xzia::Message::hasBody()
 {
     return !body.empty();
 }
+

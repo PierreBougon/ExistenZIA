@@ -5,10 +5,26 @@
 #ifndef ZIA_STEP_HPP_
 #define ZIA_STEP_HPP_
 
+/**
+ * \file Step.hpp
+ * \brief
+ * \author Mathieu.S
+ * \version 0.2
+ * \date 10 December 2017
+ *
+ * add comment here
+ *
+ * \namespace xzia
+ * \enum Step Step.hpp Step.hpp
+ *
+ */
 namespace xzia
 {
     /**
      * \enum Step
+     *  Continue :proceed to next module or send back response if the end of the ATask execution list is reached
+     *  Stop : stop here and send back response
+     *  Error : error occurred, send server error response
      */
     enum class Step : unsigned char
     {

@@ -10,21 +10,20 @@
 
 /**
  * \file Request.hpp
- * \brief
+ * \brief Request is a specific message which goal is to ask something and wait for a response.
  * \author Benjamin.D
  * \version 0.1
  * \date 17 novembre 2017
- *
- * add comment here
- *
  * \namespace xzia
- * \class Request Request.hpp Request.hpp
+ * \struct Request Request.hpp Request.hpp
  */
 
 namespace xzia
 {
     struct Request : Message
     {
+        virtual ~Request() = default;
+
         std::string                             method;
         std::string                             version;
         std::string                             host;
