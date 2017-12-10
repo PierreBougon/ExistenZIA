@@ -26,13 +26,15 @@ namespace xzia
     class AHTTPModule : public AModule
     {
     public:
+        virtual ~AHTTPModule() = default;
+
         /**
          * \fn Constructor
          * @param name Module name
          * @param manager Module manager
          */
-        AHTTPModule(std::string const &name, AModuleManager &manager);
-        AHTTPModule(AHTTPModule const &ahttpModule);
+        explicit AHTTPModule(std::string const &name, AModuleManager &manager);
+        AHTTPModule(AHTTPModule const &httpModule);
 
         /**
          *

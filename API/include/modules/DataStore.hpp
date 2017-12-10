@@ -31,6 +31,10 @@ namespace xzia
     class DataStore
     {
     public:
+        DataStore() = default;
+
+        virtual ~DataStore() = default;
+
         /**
          *
          * \fn addData

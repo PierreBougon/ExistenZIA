@@ -35,7 +35,9 @@ namespace xzia
          * @param name Module name
          * @param moduleManager Module manager reference
          */
-        AProtectedModule(std::string const &name, AModuleManager &moduleManager);
+        explicit AProtectedModule(std::string const &name, AModuleManager &moduleManager);
+
+        virtual ~AProtectedModule() = default;
 
         /**
          *
@@ -50,7 +52,7 @@ namespace xzia
     protected:
         /**
          *
-         * \fn processData
+         * \fn safeProcess
          * \brief This method is called by the process method. The logic of the module shall be coded here.
          * This method IS thread safe, but if your logic is heavy and requires only small parts to be protected,
          * consider using a ASharedModule.

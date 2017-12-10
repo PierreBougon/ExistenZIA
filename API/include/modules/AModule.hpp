@@ -27,6 +27,7 @@ namespace xzia
     class AModule
     {
     public:
+
         /**
          * \enum Type of the module
          */
@@ -42,6 +43,8 @@ namespace xzia
          * \brief Default constructor deleted
          */
         AModule() = delete;
+
+        virtual ~AModule() = default;
 
         /**
          * \fn AModule
@@ -72,14 +75,13 @@ namespace xzia
         const std::string &getName() const;
 
     protected:
+        std::string     name;
         AModuleManager  &moduleManager;
         Type            type;
 
     private:
-        std::string name;
         friend class AHTTPModule;
         friend class ASharedModule;
-        virtual ~AModule() = 0;
     };
 }
 #endif //EXISTENZIA_AMODULE_HPP

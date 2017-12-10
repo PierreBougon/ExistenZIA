@@ -25,6 +25,8 @@ namespace xzia
     class IModuleManager
     {
     public:
+        virtual ~IModuleManager() = default;
+
         /**
          *
          * \fn getSharedModule

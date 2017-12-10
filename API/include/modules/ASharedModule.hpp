@@ -29,8 +29,11 @@ namespace xzia
     class ASharedModule : public AModule
     {
     public:
-        ASharedModule(std::string const &name, AModuleManager &manager);
-        ASharedModule(std::string const &name, AModuleManager &manager, AModule::Type type);
+        explicit ASharedModule(std::string const &name, AModuleManager &manager);
+        explicit ASharedModule(std::string const &name, AModuleManager &manager, AModule::Type
+        type);
+
+        virtual ~ASharedModule() = default;
 
         /**
          *
