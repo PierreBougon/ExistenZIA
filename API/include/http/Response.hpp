@@ -21,6 +21,9 @@ namespace xzia
     struct Response : Message
     {
         int     code;
+
+        explicit Response(Client client);
+        virtual ~Response() = default;
     };
 }
 

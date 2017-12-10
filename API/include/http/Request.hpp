@@ -22,6 +22,8 @@ namespace xzia
 {
     struct Request : Message
     {
+        virtual ~Request() = default;
+
         std::string                             method;
         std::string                             version;
         std::string                             host;

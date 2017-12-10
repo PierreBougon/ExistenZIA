@@ -27,7 +27,12 @@ namespace xzia
         std::string                             body;
         std::string                             version;
         std::map<std::string, std::string>      header;
-        Client const                            &client;
+        Client const                            client;
+
+
+        Message() = delete;
+        explicit Message(Client client);
+        virtual ~Message() = default;
 
         /**
          *
