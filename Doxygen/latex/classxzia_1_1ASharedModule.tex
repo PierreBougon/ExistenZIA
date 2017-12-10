@@ -1,0 +1,69 @@
+\hypertarget{classxzia_1_1ASharedModule}{}\section{xzia\+:\+:A\+Shared\+Module Class Reference}
+\label{classxzia_1_1ASharedModule}\index{xzia\+::\+A\+Shared\+Module@{xzia\+::\+A\+Shared\+Module}}
+Inheritance diagram for xzia\+:\+:A\+Shared\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classxzia_1_1ASharedModule}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_a9bf79cf895362f8dad2075927a377311}\label{classxzia_1_1ASharedModule_a9bf79cf895362f8dad2075927a377311}} 
+{\bfseries A\+Shared\+Module} (std\+::string const \&name, \mbox{\hyperlink{classxzia_1_1AModuleManager}{A\+Module\+Manager}} \&manager)
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_ab663fdca46a4c88594be4bc397e5a978}\label{classxzia_1_1ASharedModule_ab663fdca46a4c88594be4bc397e5a978}} 
+{\bfseries A\+Shared\+Module} (std\+::string const \&name, \mbox{\hyperlink{classxzia_1_1AModuleManager}{A\+Module\+Manager}} \&manager, \mbox{\hyperlink{classxzia_1_1AModule_a73967be2c863fcfdff0eef4a701df1e0}{A\+Module\+::\+Type}} type)
+\item 
+virtual \mbox{\hyperlink{Step_8hpp_a58ad1bb906913f90b95697c49f198770}{Step}} \mbox{\hyperlink{classxzia_1_1ASharedModule_ac836fc027900a9c0dfdec35cb034a0a4}{process}} (\mbox{\hyperlink{classxzia_1_1DataStore}{Data\+Store}} \&data\+Store)=0
+\begin{DoxyCompactList}\small\item\em This method can be called by any module that require an access to it, it passes data through the \mbox{\hyperlink{classxzia_1_1DataStore}{Data\+Store}} class. This Module is N\+OT thread safe, it is at the developer charge to protect it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_a70c816fcf60d56a763d71bbfd9875738}\label{classxzia_1_1ASharedModule_a70c816fcf60d56a763d71bbfd9875738}} 
+{\bfseries A\+Shared\+Module} (\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} const \&)=delete
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_a990ee8fc1f178b160742a1d065ee65e5}\label{classxzia_1_1ASharedModule_a990ee8fc1f178b160742a1d065ee65e5}} 
+{\bfseries A\+Shared\+Module} (\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_ad928b46779ce21e4d583f8245d736560}\label{classxzia_1_1ASharedModule_ad928b46779ce21e4d583f8245d736560}} 
+\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} \& {\bfseries operator=} (\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} const \&)=delete
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_adc2fc36b022abe037846e3e854707d5b}\label{classxzia_1_1ASharedModule_adc2fc36b022abe037846e3e854707d5b}} 
+\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} \& {\bfseries operator=} (\mbox{\hyperlink{classxzia_1_1ASharedModule}{A\+Shared\+Module}} \&\&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_a72f3b1b415d80fa6fc644180815ba6ef}\label{classxzia_1_1ASharedModule_a72f3b1b415d80fa6fc644180815ba6ef}} 
+std\+::mutex {\bfseries mutex}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classxzia_1_1ASharedModule_ac836fc027900a9c0dfdec35cb034a0a4}\label{classxzia_1_1ASharedModule_ac836fc027900a9c0dfdec35cb034a0a4}} 
+\index{xzia\+::\+A\+Shared\+Module@{xzia\+::\+A\+Shared\+Module}!process@{process}}
+\index{process@{process}!xzia\+::\+A\+Shared\+Module@{xzia\+::\+A\+Shared\+Module}}
+\subsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily A\+Shared\+Module\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxzia_1_1DataStore}{Data\+Store}} \&}]{data\+Store }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method can be called by any module that require an access to it, it passes data through the \mbox{\hyperlink{classxzia_1_1DataStore}{Data\+Store}} class. This Module is N\+OT thread safe, it is at the developer charge to protect it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Store} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classxzia_1_1AProtectedModule_af8724b0d37b80ed8799c9f6b31dcdc2f}{xzia\+::\+A\+Protected\+Module}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/modules/\mbox{\hyperlink{ASharedModule_8hpp}{A\+Shared\+Module.\+hpp}}\item 
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/src/modules/A\+Shared\+Module.\+cpp\end{DoxyCompactItemize}
