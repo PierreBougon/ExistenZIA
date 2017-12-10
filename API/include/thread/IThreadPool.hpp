@@ -21,6 +21,9 @@ namespace xzia
 {
     class IThreadPool
     {
+    public:
+        virtual ~IThreadPool() = default;
+
         /**
         *
         * \fn addTask

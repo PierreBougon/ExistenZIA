@@ -30,8 +30,9 @@ namespace xzia
     {
     public:
         AThreadPool() = delete;
-        AThreadPool(unsigned int nbThreads);
+        explicit AThreadPool(unsigned int nbThreads);
 
+        virtual ~AThreadPool() {};
     protected:
 
         std::vector<std::thread>            threads;
