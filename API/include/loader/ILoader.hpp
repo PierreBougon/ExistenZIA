@@ -28,6 +28,8 @@ namespace xzia
     class ILoader
     {
     public:
+        virtual ~ILoader() = default;
+
         /**
          *
          * \fn reload

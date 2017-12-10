@@ -28,6 +28,7 @@ namespace xzia
     class IConfigLoader
     {
     public:
+        virtual ~IConfigLoader() = default;
 
         /**
          * \fn getModuleConfig
@@ -40,12 +41,12 @@ namespace xzia
 
         /**
          *
-         * \fn getTaskList
+         * \fn getExecutionListModel
          * \brief Retrieve the task list of modules that will processes the request received by the server
-         * @return Return the name of all the tasks in a vector
+         * @return Return the name of all the modules in a vector
          *
          */
-        virtual std::vector<std::string> getTaskList() = 0;
+        virtual std::vector<std::string> getExecutionListModel() = 0;
 
         /**
          *

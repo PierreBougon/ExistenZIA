@@ -21,6 +21,8 @@ namespace xzia
 {
     class ALoader : ILoader
     {
+    public:
+        virtual ~ALoader() = default;
     protected:
         std::unique_ptr<IConfigLoader>   configLoader;
     };
