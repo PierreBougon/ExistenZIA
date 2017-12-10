@@ -8,5 +8,6 @@ var searchData=
   ['aprotectedmodule_2ehpp',['AProtectedModule.hpp',['../AProtectedModule_8hpp.html',1,'']]],
   ['asharedmodule_2ehpp',['ASharedModule.hpp',['../ASharedModule_8hpp.html',1,'']]],
   ['atask_2ehpp',['ATask.hpp',['../ATask_8hpp.html',1,'']]],
+  ['ataskfactory_2ehpp',['ATaskFactory.hpp',['../ATaskFactory_8hpp.html',1,'']]],
   ['athreadpool_2ehpp',['AThreadPool.hpp',['../AThreadPool_8hpp.html',1,'']]]
 ];

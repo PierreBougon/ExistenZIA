@@ -12,7 +12,7 @@
 
 /**
  * \file ILoader.hpp
- * \brief
+ * \brief Used to load modules and their configurations
  * \author Edouard.P
  * \version 0.1
  * \date 13 novembre 2017

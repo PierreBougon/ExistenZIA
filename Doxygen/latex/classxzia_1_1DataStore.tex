@@ -3,10 +3,10 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxzia_1_1DataStore_a97301fd6dfa58a88b9903fb7fdf307a1}{add\+Data}} (std\+::string const \&key, T data)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}{add\+Data}} (std\+::string const \&key, T data)
 \begin{DoxyCompactList}\small\item\em Add data of any type. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxzia_1_1DataStore_a91fb035bfe2bebe2e21a0cf5aaad5a04}{get\+Data}} (std\+::string const \&key)
-\begin{DoxyCompactList}\small\item\em Add data of type char. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}{get\+Data}} (std\+::string const \&key)
+\begin{DoxyCompactList}\small\item\em Get data of any type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,12 +16,12 @@ std\+::map$<$ std\+::string, variant $>$ {\bfseries datas}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classxzia_1_1DataStore_a97301fd6dfa58a88b9903fb7fdf307a1}\label{classxzia_1_1DataStore_a97301fd6dfa58a88b9903fb7fdf307a1}} 
+\mbox{\Hypertarget{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}\label{classxzia_1_1DataStore_a6b33f3014ff94d124fcc3065c5884a6d}} 
 \index{xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}!add\+Data@{add\+Data}}
 \index{add\+Data@{add\+Data}!xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}}
 \subsubsection{\texorpdfstring{add\+Data()}{addData()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-xzia\+::\+Data\+Store\+::add\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key,  }\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Data\+Store\+::add\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key,  }\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -34,26 +34,27 @@ Add data of any type.
 {\em key} & Key associated to the data adding \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classxzia_1_1DataStore_a91fb035bfe2bebe2e21a0cf5aaad5a04}\label{classxzia_1_1DataStore_a91fb035bfe2bebe2e21a0cf5aaad5a04}} 
+\mbox{\Hypertarget{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}\label{classxzia_1_1DataStore_a6a25b0f50250ac2793a0ed7abcabb147}} 
 \index{xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}!get\+Data@{get\+Data}}
 \index{get\+Data@{get\+Data}!xzia\+::\+Data\+Store@{xzia\+::\+Data\+Store}}
 \subsubsection{\texorpdfstring{get\+Data()}{getData()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-T xzia\+::\+Data\+Store\+::get\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Data\+Store\+::get\+Data (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Add data of type char. 
+Get data of any type. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em c} & Data of type char \\
-\hline
-{\em key} & Key associated to the data adding \\
+{\em key} & Key associated to the data to get \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data to get 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/modules/Data\+Store.\+hpp\end{DoxyCompactItemize}
+/home/edouard/\+Documents/2017/\+Z\+I\+A/\+Existen\+Z\+I\+A/\+A\+P\+I/include/modules/\mbox{\hyperlink{DataStore_8hpp}{Data\+Store.\+hpp}}\end{DoxyCompactItemize}

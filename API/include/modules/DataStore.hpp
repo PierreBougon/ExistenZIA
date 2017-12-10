@@ -11,8 +11,8 @@
 #include "DataStore.hpp"
 
 /**
- * \file ADataStore.hpp
- * \brief
+ * \file DataStore.hpp
+ * \brief Used to store various types of data
  * \author Marc.B
  * \version 0.1
  * \date 17 novembre 2017
@@ -21,7 +21,7 @@
  *
  * \namespace xzia
  * \namespace data
- * \class ADataStore ADataStore.hpp ADataStore.hpp
+ * \class DataStore DataStore.hpp
  *
  */
 namespace xzia
@@ -51,10 +51,10 @@ namespace xzia
 
         /**
          *
-         * \addChar
-         * \brief Add data of type char
-         * @param c Data of type char
-         * @param key Key associated to the data adding
+         * \fn getData
+         * \brief Get data of any type
+         * @param key Key associated to the data to get
+         * @return The data to get
          *
          */
         template <typename T>

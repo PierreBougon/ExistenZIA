@@ -82,14 +82,19 @@ Files</h2></td></tr>
 <tr class="memdesc:AModuleManager_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The module manager has ownership of all modules and is responsible for reloading them. It creates copies of basic modules and pass references to shared ones. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:AProtectedModule_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AProtectedModule_8hpp.html">AProtectedModule.hpp</a> <a href="AProtectedModule_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:AProtectedModule_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module is protected by a mutex and can be accessed through threads. The inheriting class must implement its logic in the safeProcess method instead of the process method. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ASharedModule_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ASharedModule_8hpp.html">ASharedModule.hpp</a> <a href="ASharedModule_8hpp_source.html">[code]</a></td></tr>
-<tr class="memdesc:ASharedModule_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module is protected by a mutex and can be accessed through threads. The inheriting class must implement its logic in the safeProcess method instead of the process method. <br /></td></tr>
+<tr class="memdesc:ASharedModule_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This module is shared between threads (thus clients) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:DataStore_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataStore_8hpp.html">DataStore.hpp</a> <a href="DataStore_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:DataStore_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store various types of data. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:IModuleManager_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IModuleManager_8hpp.html">IModuleManager.hpp</a> <a href="IModuleManager_8hpp_source.html">[code]</a></td></tr>
 <tr class="memdesc:IModuleManager_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface of the module manager. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:Step_8hpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Step_8hpp.html">Step.hpp</a> <a href="Step_8hpp_source.html">[code]</a></td></tr>
+<tr class="memdesc:Step_8hpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to see the step of <a class="el" href="classATask.html">ATask</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

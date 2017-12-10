@@ -11,7 +11,7 @@
 
 /**
  * \file IConfigLoader.hpp
- * \brief
+ * \brief Use to load config from config file
  * \author Pierre.B
  * \version 0.1
  * \date 17 novembre 2017

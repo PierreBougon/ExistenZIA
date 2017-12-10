@@ -2,8 +2,7 @@ var searchData=
 [
   ['acore',['ACore',['../classxzia_1_1ACore.html',1,'xzia::ACore'],['../structACore.html',1,'ACore'],['../classxzia_1_1ACore.html#a615436a95f788dd92d545e10a1d4b2c3',1,'xzia::ACore::ACore()']]],
   ['acore_2ehpp',['ACore.hpp',['../ACore_8hpp.html',1,'']]],
-  ['adatastore',['ADataStore',['../classADataStore.html',1,'']]],
-  ['adddata',['addData',['../classxzia_1_1AHTTPModule.html#ad4a892371fa598dcda37ffd2c086e9ab',1,'xzia::AHTTPModule::addData()'],['../classxzia_1_1DataStore.html#a97301fd6dfa58a88b9903fb7fdf307a1',1,'xzia::DataStore::addData()']]],
+  ['adddata',['addData',['../classxzia_1_1AHTTPModule.html#ad4a892371fa598dcda37ffd2c086e9ab',1,'xzia::AHTTPModule::addData()'],['../classxzia_1_1DataStore.html#a6b33f3014ff94d124fcc3065c5884a6d',1,'xzia::DataStore::addData()']]],
   ['addtask',['addTask',['../classxzia_1_1IThreadPool.html#adf16985d0215c0cfafe57f3c056d2983',1,'xzia::IThreadPool']]],
   ['ahttpmodule',['AHTTPModule',['../classxzia_1_1AHTTPModule.html',1,'xzia::AHTTPModule'],['../classAHTTPModule.html',1,'AHTTPModule']]],
   ['ahttpmodule_2ehpp',['AHTTPModule.hpp',['../AHTTPModule_8hpp.html',1,'']]],
@@ -19,7 +18,8 @@ var searchData=
   ['asharedmodule_2ehpp',['ASharedModule.hpp',['../ASharedModule_8hpp.html',1,'']]],
   ['atask',['ATask',['../classxzia_1_1ATask.html',1,'xzia::ATask'],['../classATask.html',1,'ATask']]],
   ['atask_2ehpp',['ATask.hpp',['../ATask_8hpp.html',1,'']]],
-  ['ataskfactory',['ATaskFactory',['../classxzia_1_1ATaskFactory.html',1,'xzia']]],
-  ['athreadpool',['AThreadPool',['../classxzia_1_1AThreadPool.html',1,'xzia::AThreadPool'],['../classAThreadPool.html',1,'AThreadPool']]],
+  ['ataskfactory',['ATaskFactory',['../classxzia_1_1ATaskFactory.html',1,'xzia::ATaskFactory'],['../classATaskFactory.html',1,'ATaskFactory']]],
+  ['ataskfactory_2ehpp',['ATaskFactory.hpp',['../ATaskFactory_8hpp.html',1,'']]],
+  ['athreadpool',['AThreadPool',['../classAThreadPool.html',1,'AThreadPool'],['../classxzia_1_1AThreadPool.html',1,'xzia::AThreadPool']]],
   ['athreadpool_2ehpp',['AThreadPool.hpp',['../AThreadPool_8hpp.html',1,'']]]
 ];

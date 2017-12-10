@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['step_2ehpp',['Step.hpp',['../Step_8hpp.html',1,'']]]
+  ['request_2ehpp',['Request.hpp',['../Request_8hpp.html',1,'']]],
+  ['response_2ehpp',['Response.hpp',['../Response_8hpp.html',1,'']]]
 ];
