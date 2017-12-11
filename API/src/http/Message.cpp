@@ -9,7 +9,7 @@ xzia::Message::Message(xzia::Client client) : client(client)
 
 }
 
-bool xzia::Message::hasBody()
+bool xzia::Message::hasBody() const
 {
     return !body.empty();
 }
