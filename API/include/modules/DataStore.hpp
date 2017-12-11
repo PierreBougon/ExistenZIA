@@ -63,6 +63,14 @@ namespace xzia
             return boost::get<T>(datas[key]);
         }
 
+        /**
+         * \fn hasData
+         * \brief Check if a data key exists in the dataStore
+         * @param key to be searched
+         * @return true if the key exists, false otherwise
+         */
+        bool    hasData(std::string const& key) const;
+
     protected:
         std::map<std::string, variant> datas;
     };

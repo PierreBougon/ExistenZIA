@@ -12,6 +12,9 @@ namespace xzia {
     public:
         BasicModule(std::string const &name, AModuleManager &moduleManager);
         Step process(ATask &task) override;
+
+    private:
+        int do_some_operation(Message const &message);
     };
 }
 
