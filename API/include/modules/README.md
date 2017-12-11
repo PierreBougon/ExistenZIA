@@ -17,13 +17,13 @@ To be able to pass data, each [AHTTPModule] has a [DataStore] that accepts the f
 * std::string
 
 Inside a module, the [DataStore] works like a simple map with string keys. Getting data is as simple as :
-```
+```cpp
 if (dataStore.hasData("someKey"))
   outDouble = dataStore.getData<double>("someKey");
 ```
 
 While adding data is easly done like this :
-```
+```cpp
   dataStore.addData<std::string>("someOtherKey", "someValue");
 ```
 
@@ -31,7 +31,7 @@ While adding data is easly done like this :
 ### The Process Method
 The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example](https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp) of a HTTPModule implementation:
 
-```
+```cpp
 int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy)
 {
     return (std::stoi(message.body) * multiplyBy);
@@ -71,7 +71,7 @@ xzia::Step xzia::BasicModule::process(xzia::ATask &task)
 ```
 
 Let's check the data processing manipulation :
-```
+```cpp
     int multiplyBy = 100;
 
     if (dataStore.hasData("multiply_by")) // 1
@@ -96,7 +96,7 @@ last. Returning the [Step] Continue to tell the task to proceed to the next modu
 ### Modifying the [Task]'s execution list
 Each module can modify the [Task]'s execution list, to do so, you must use the [ModuleManager], that is accessible to each [AHTTPModule], to create new modules. 
 The following code snippet shows how to add a module to a [Task]'s execution list:
-```
+```cpp
     std::unique_ptr<AHTTPModule> encryptor = moduleManager.getHTTPModule("Encryptor"); // 6
     if (value_to_pass == 400) {
         encryptor->dataStore.addData<std::string>("mode", "sha1");
@@ -116,8 +116,8 @@ While [AHTTPModule] is sufficient for processing request, you may want to have m
 ### [ASharedModule]
 This class inherits directly form [AModule] and dispose of an internal mutex to block critical part of the shared module's process method. We this module you can choose precisely each part of the process method you want to protect. 
 
-Here's an example of how a [ASharedModule]'s process method could be implemented :
-```
+Here's an example of how a [basic logger](https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp)'s process method could be implemented :
+```cpp
 xzia::Step xzia::BasicLogger::process(xzia::DataStore &dataStore) 
 {
     mutex.lock();
@@ -132,7 +132,7 @@ xzia::Step xzia::BasicLogger::process(xzia::DataStore &dataStore)
 As you can see, it only takes a [DataStore] as a parameter, we believe a shared module shall __never__ need to access __nor__ modify a [Task]. 
 
 And how to call it from any other modules :
-```
+```cpp
     DataStore dataLog; 
     dataLog.addData("log", "something to log"); // 9 
     moduleManager.getSharedModule("logger").process(dataLog); // 10
@@ -145,7 +145,7 @@ But, you're probably thinking that having to use a mutex for such a trivial logg
 
 ### [AProtectedModule]
 This class inherits from [ASharedModule], but instead of implementing the `process` method, the subclass shall implement the private `safeProcess` method, this method will be called by the [AProtectedModule]'s implemented process method.
-```
+```cpp
 xzia::Step xzia::AProtectedModule::process(xzia::DataStore &dataStore)
 {
     Step ret;
@@ -158,7 +158,7 @@ xzia::Step xzia::AProtectedModule::process(xzia::DataStore &dataStore)
 ```
 
 When inheriting from [AProtectedModule], the previous logger implementation becomes :
-```
+```cpp
 xzia::Step xzia::BasicLogger::safeProcess(xzia::DataStore &dataStore) 
 {
     if (dataStore.hasData("log")) {
@@ -175,9 +175,14 @@ See? We made it simple for you :)
 A [ModuleManager] shall the class responsible for storing all the modules of the HTTP server. It shall produce copies of [AHTTPModules]
 and provide references to shared ones.
 
+It also responsible for the creation of the [Task]'s execution list model that is copied through each [Task].
+
 The [ModuleManager] is notified to reload all the modules through its `void reload()` method.
 
+For any information on how to name modules and how to create a task list model, please refer to the [config,json] file provided as an example and read the documentation of the [Loader] package.
 
+[Loader]: (https://github.com/PierreBougon/ExistenZIA/tree/refactoring_modules/API/include/loader)
+[config.json]: (https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/config.json)
 [AModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AModule.hpp
 [AHTTPModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AHTTPModule.hpp
 [ASharedModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/ASharedModule.hpp
