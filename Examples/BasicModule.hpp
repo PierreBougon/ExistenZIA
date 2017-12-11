@@ -14,7 +14,7 @@ namespace xzia {
         Step process(ATask &task) override;
 
     private:
-        int do_some_operation(Message const &message);
+        int do_some_operation(Message const &message, int multiplyBy);
     };
 }
 
