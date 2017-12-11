@@ -49,6 +49,13 @@ namespace xzia
         *
         */
         virtual std::vector<std::unique_ptr<ATask>>   getAllTaskDone() = 0;
+
+        /**
+         * \fn getVersionsOutOfUse
+         * @return a vector of modules names and their corresponding version that are not running anymore in the
+         * threadPool
+         */
+        virtual std::vector<std::pair<std::string, std::uint32_t>> getVersionsOutOfUse() = 0;
     };
 }
 

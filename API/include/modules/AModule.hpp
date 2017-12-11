@@ -74,10 +74,25 @@ namespace xzia
          */
         const std::string &getName() const;
 
+        /**
+         * \fn setVersion
+         * \brief Set the version of the module, used by the Loader to know when it can close a loaded library
+         * \param version value
+         */
+        void setVersion(std::uint32_t version);
+
+        /**
+         * \fn getVersion
+         * \brief version getter
+         * @return the module version
+         */
+        std::uint32_t getVersion() const;
+
     protected:
         std::string     name;
         AModuleManager  &moduleManager;
         Type            type;
+        std::uint32_t   version;
 
     private:
         friend class AHTTPModule;

@@ -41,12 +41,12 @@
   "core": {
     "threads" : 4,
     "max_clients" : 1500,
-    "port" : 5312,
-    "executionList" : [
-      "cypher",
-      "boringModuleName",
-      "lameModule",
-      "cypher"
-    ]
-  }
+    "port" : 5312
+  },
+  "executionList" : [
+    "cypher",
+    "boringModuleName",
+    "lameModule",
+    "cypher"
+  ]
 }

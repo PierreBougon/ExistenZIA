@@ -35,9 +35,16 @@ namespace xzia
          * \fn reload
          * \brief This method allows the loader to reload the configuration, updating the list of available modules,
          * and their corresponding configuration
-         *
+         * @return the list of the reloaded modules that need to be replaced
          */
-        virtual void reload() = 0;
+        virtual std::vector<std::string> reload() = 0;
+
+        /**
+         * \fn notifyVersionsOutOfUse
+         * @param module names from which the library is no more used and be closed
+         * @param version of the corresponding module
+         */
+        virtual void notifyVersionsOutOfUse(std::vector<std::pair<std::string, std::uint32_t>> &&versionsOutOfUse) = 0;
 
         /**
         *

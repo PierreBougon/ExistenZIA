@@ -18,3 +18,11 @@ xzia::AModule::Type xzia::AModule::getType() const {
     return type;
 }
 
+void xzia::AModule::setVersion(std::uint32_t version) {
+    this->version = version;
+}
+
+std::uint32_t xzia::AModule::getVersion() const {
+    return version;
+}
+
