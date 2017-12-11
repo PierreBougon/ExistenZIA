@@ -27,10 +27,12 @@ While adding data is easly done like this :
   dataStore.addData<std::string>("someOtherKey", "someValue");
 ```
 
+
 ### The Process Method
-The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a basic example of a HTTPModule implementation:
+The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example](https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp) of a HTTPModule implementation:
+
 ```
-int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy) 
+int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy)
 {
     return (std::stoi(message.body) * multiplyBy);
 }
@@ -44,14 +46,45 @@ xzia::Step xzia::BasicModule::process(xzia::ATask &task)
         multiplyBy = dataStore.getData<int>("multiply_by"); // 2
     }
 
+    int value_to_pass = 0;
     if (task.getRequest().hasBody()) // 3
     {
-        int value_to_pass = do_some_operation(task.getRequest(), multiplyBy); // 4
+        value_to_pass = do_some_operation(task.getRequest(), multiplyBy); // 4
         task.getNextModule("Processor").dataStore.addData<int>("value", value_to_pass); // 5
     }
 
+    std::unique_ptr<AHTTPModule> encryptor = moduleManager.getHTTPModule("Encryptor"); // 6
+    if (value_to_pass == 400) {
+        (*encryptor).dataStore.addData<std::string>("mode", "sha1");
+        task.pushModuleBack(encryptor); // 7
+    } else {
+        (*encryptor).dataStore.addData<std::string>("mode", "md5");
+        task.pushModuleNext(encryptor); // 8
+    }
+
+    DataStore dataLog;
+    dataLog.addData("log", "something to log"); // 9
+    moduleManager.getSharedModule("logger").process(dataLog); // 10
+
     return xzia::Step::Continue; // last
 }
+```
+
+Let's check the data processing manipulation :
+```
+    int multiplyBy = 100;
+
+    if (dataStore.hasData("multiply_by")) // 1
+    {
+        multiplyBy = dataStore.getData<int>("multiply_by"); // 2
+    }
+
+    int value_to_pass = 0;
+    if (task.getRequest().hasBody()) // 3
+    {
+        value_to_pass = do_some_operation(task.getRequest(), multiplyBy); // 4
+        task.getNextModule("Processor").dataStore.addData<int>("value", value_to_pass); // 5
+    }
 ```
 1. Checking if some modules passed data to our BasicModule dataStore through the key "multiply_by"
 2. Getting the actual data
