@@ -1,12 +1,10 @@
-//
-// Created by 53818 on 11/12/2017.
-//
-
+#include "modules/AModuleManager.hpp"
 #include "task/ATask.hpp"
 #include "BasicModule.hpp"
 
 
-int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy) {
+int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy)
+{
     return (std::stoi(message.body) * multiplyBy);
 }
 
@@ -16,7 +14,10 @@ int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multi
  * 3. Checking if the request has a body
  * 4. Executing the operation method that take our request, and process it
  * 5. Pushing the value into the next module called "Processor" dataStore.
- * 6. Returning Continue to tell the task to proceed to the next module in its executionList
+ * 6. Creating a new module from the module manager
+ * 7. Adding a new module at the end of the task list
+ * 8. Adding a new module just after our current module
+ * last. Returning Continue to tell the task to proceed to the next module in its executionList
  */
 xzia::Step xzia::BasicModule::process(xzia::ATask &task)
 {
@@ -27,14 +28,23 @@ xzia::Step xzia::BasicModule::process(xzia::ATask &task)
         multiplyBy = dataStore.getData<int>("multiply_by"); // 2
     }
 
-
+    int value_to_pass = 0;
     if (task.getRequest().hasBody()) // 3
     {
-        int value_to_pass = do_some_operation(task.getRequest(), multiplyBy); // 4
+        value_to_pass = do_some_operation(task.getRequest(), multiplyBy); // 4
         task.getNextModule("Processor").dataStore.addData<int>("value", value_to_pass); // 5
     }
 
-    return xzia::Step::Continue; // 6
+    std::unique_ptr<AHTTPModule> encryptor = moduleManager.getHTTPModule("Encryptor"); // 6
+    if (value_to_pass == 400) {
+        (*encryptor).dataStore.addData<std::string>("mode", "sha1");
+        task.pushModuleBack(encryptor); // 7
+    } else {
+        (*encryptor).dataStore.addData<std::string>("mode", "md5");
+        task.pushModuleNext(encryptor); // 8
+    }
+
+    return xzia::Step::Continue; // last
 }
 
 xzia::BasicModule::BasicModule(std::string const &name, xzia::AModuleManager &moduleManager) :
