@@ -29,7 +29,7 @@ While adding data is easly done like this :
 
 
 ### The Process Method
-The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example](https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp) of a HTTPModule implementation:
+The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example] of a HTTPModule implementation:
 
 ```cpp
 int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy)
@@ -116,7 +116,7 @@ While [AHTTPModule] is sufficient for processing request, you may want to have m
 ### [ASharedModule]
 This class inherits directly form [AModule] and dispose of an internal mutex to block critical part of the shared module's process method. We this module you can choose precisely each part of the process method you want to protect. 
 
-Here's an example of how a [basic logger](https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp)'s process method could be implemented :
+Here's an example of how a [basic logger]'s process method could be implemented :
 ```cpp
 xzia::Step xzia::BasicLogger::process(xzia::DataStore &dataStore) 
 {
@@ -181,8 +181,8 @@ The [ModuleManager] is notified to reload all the modules through its `void relo
 
 For any information on how to name modules and how to create a task list model, please refer to the [config.json] file provided as an example and read the documentation of the [Loader] package.
 
-[Loader]: (https://github.com/PierreBougon/ExistenZIA/tree/refactoring_modules/API/include/loader)
-[config.json]: (https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/config.json)
+[Loader]: https://github.com/PierreBougon/ExistenZIA/tree/refactoring_modules/API/include/loader
+[config.json]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/config.json
 [AModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AModule.hpp
 [AHTTPModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AHTTPModule.hpp
 [ASharedModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/ASharedModule.hpp
@@ -192,3 +192,5 @@ For any information on how to name modules and how to create a task list model, 
 [Response]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/http/Response.hpp
 [DataStore]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/DataStore.hpp
 [Step]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/Step.hpp
+[basic logger]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp
+[basic example]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp
