@@ -179,7 +179,7 @@ It also responsible for the creation of the [Task]'s execution list model that i
 
 The [ModuleManager] is notified to reload all the modules through its `void reload()` method.
 
-For any information on how to name modules and how to create a task list model, please refer to the [config,json] file provided as an example and read the documentation of the [Loader] package.
+For any information on how to name modules and how to create a task list model, please refer to the [config.json] file provided as an example and read the documentation of the [Loader] package.
 
 [Loader]: (https://github.com/PierreBougon/ExistenZIA/tree/refactoring_modules/API/include/loader)
 [config.json]: (https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/config.json)
