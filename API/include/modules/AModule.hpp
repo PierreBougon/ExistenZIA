@@ -54,6 +54,14 @@ namespace xzia
          */
         const std::string &getName() const;
 
+        /**
+        * \fn configure
+        * \brief The module configure itself using the map passed as parameter. This map is generated
+        * from the JSON configuration file
+        * @param config map containing all the necessary configuration elements
+        */
+        virtual void configure(std::map<std::string, std::string> const &config) = 0;
+
     protected:
         std::string     name;
         AModuleManager  &moduleManager;
