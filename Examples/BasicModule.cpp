@@ -17,6 +17,8 @@ int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multi
  * 6. Creating a new module from the module manager
  * 7. Adding a new module at the end of the task list
  * 8. Adding a new module just after our current module
+ * 9. Creating a new dataStore, adding data to it
+ * 10. Getting a shared module and passing a DataStore to it
  * last. Returning Continue to tell the task to proceed to the next module in its executionList
  */
 xzia::Step xzia::BasicModule::process(xzia::ATask &task)
@@ -43,6 +45,10 @@ xzia::Step xzia::BasicModule::process(xzia::ATask &task)
         (*encryptor).dataStore.addData<std::string>("mode", "md5");
         task.pushModuleNext(encryptor); // 8
     }
+
+    DataStore dataLog;
+    dataLog.addData("log", "something to log"); // 9
+    moduleManager.getSharedModule("logger").process(dataLog); // 10
 
     return xzia::Step::Continue; // last
 }
