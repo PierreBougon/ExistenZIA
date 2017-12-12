@@ -6,16 +6,13 @@
 namespace xzia {
     class BasicTask : ATask {
 
-        std::unique_ptr<ITask> clone() const override;
         std::vector<std::unique_ptr<AHTTPModule>> &getExecutionList() override;
         const Request &getRequest() const override;
         Response &getResponse() override;
         const Client &getClient() const override;
         AHTTPModule &getNextModule(std::string const &moduleName) const override;
         void pushModuleNext(std::unique_ptr<AHTTPModule> module) override;
-
         Step processModules() override;
-
         void pushModuleBack(std::unique_ptr<AHTTPModule> module) override;
     };
 }

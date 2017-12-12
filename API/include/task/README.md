@@ -1,13 +1,12 @@
 # Modules Processing
 ## The Task
-When processing modules, you need order : which modules to execute firsts, in which order ? 
+When processing modules you need order ! which modules to execute firsts ? in which order ? 
 How to add a module ? How do you process them ?
 
 To answer those questions we came with an object : the [Task].
 
 ### [ITask](Task)
 This interface ensure that a task provides the following possible features :
-* Deep copying a task, so that it can be used as a model
 * Holding an execution list (that is simply a [AHTTPModules](AHTTPModule) vector)
 * A client 
 * Holding a [Request] sent by the client and to pass through the execution list
@@ -21,19 +20,6 @@ When you retrieve tasks from the thread pool, a response must be set and can be 
 ### [ATask]
 This is the abstract implementation of the [ITask](Task) interface. It provides the basic elements
 to be compliant.
-
-## The TaskFactory
-
-### [ATaskFactory]
-The task factory is used to easily produce tasks.
-The [BasicTask] and [BasicTaskFactory] examples provided shows how simple it is to produce tasks.
-
-Factoring a task, once it's been implemented, is as simple as:
-```cpp
-std::unique_ptr<xzia::ATask> xzia::BasicTaskFactory::createTask(std::unique_ptr<xzia::Request> req, xzia::Client client) {
-    return (std::make_unique<xzia::BasicTask>(req, client, moduleManager.getExecutionListModel()));
-}
-``` 
 
 The following code snippet shows the implementation of a task `Step processModules()` method:
 ```cpp
@@ -50,7 +36,18 @@ xzia::Step xzia::BasicTask::processModules() {
 ```
 Here we are using a while loop because iterators might cause errors since the execution list can be modified during the modules processing.
 
+## The TaskFactory
 
+### [ATaskFactory]
+The task factory is used to easily produce tasks.
+The [BasicTask] and [BasicTaskFactory] examples provided shows how simple it is to produce tasks.
+
+Factoring a task, once it's been _**correctly**_ implemented, is as simple as:
+```cpp
+std::unique_ptr<xzia::ATask> xzia::BasicTaskFactory::createTask(std::unique_ptr<xzia::Request> req, xzia::Client client) {
+    return (std::make_unique<xzia::BasicTask>(req, client, moduleManager.getExecutionListModel()));
+}
+``` 
 
 [Loader]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/loader
 [config.json]: https://github.com/PierreBougon/ExistenZIA/blob/master/Examples/config.json

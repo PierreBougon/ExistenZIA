@@ -1,10 +1,5 @@
 #include "BasicTask.hpp"
 
-std::unique_ptr<xzia::ITask> xzia::BasicTask::clone() const {
-    // TODO implement a method that deep clone a task
-    return nullptr;
-}
-
 std::vector<std::unique_ptr<xzia::AHTTPModule>> &xzia::BasicTask::getExecutionList() {
     return executionList;
 }

@@ -35,15 +35,6 @@ namespace xzia
 
         /**
         *
-        * \fn clone
-        * \brief Clone the current task
-        * @return Return a pointer of a clone from the current task.
-        *
-        */
-        virtual std::unique_ptr<ITask>                      clone() const = 0;
-
-        /**
-        *
         * \fn getExecutionList
         * \brief Get the current list of module
         * @return Return a vector containing the modules
