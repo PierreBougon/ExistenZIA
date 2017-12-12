@@ -9,6 +9,8 @@
 #include <vector>
 #include "modules/Step.hpp"
 #include "modules/AHTTPModule.hpp"
+#include "http/Request.hpp"
+#include "http/Response.hpp"
 
 /**
  * \file ITask.hpp
