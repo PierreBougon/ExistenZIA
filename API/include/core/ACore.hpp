@@ -17,7 +17,7 @@
 
 /**
  * \file ACore.hpp
- * \brief Kernel of the API, ACore is the class linked to all other classes
+ * \brief Kernel of the API, ACore is the class linking all other classes
  * \author Edouard.P
  * \version 0.1
  * \date 17 novembre 2017
@@ -33,8 +33,8 @@ namespace xzia
         /**
          *
          * \fn ACore
-         * \brief Constructor of the class ACore. We set a configuration representing by a string
-         * @param config Configuration of the core
+         * \brief Constructor of the class ACore.
+         * @param config Configuration file path
          *
          */
         explicit ACore(std::string const &config);
