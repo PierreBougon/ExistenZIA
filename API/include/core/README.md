@@ -10,7 +10,7 @@ Since the implementation of a [ICore] should be common to everyone, we provide y
 
 It has a unique pointer to all the components and take a path to the configuration file so it can configure itself through the loader
 
-The following code snippet shows a basic implementation of the [ICore] run method :
+The following code snippet shows a **really** basic implementation of the [ICore] run method :
 ```cpp
 void xzia::BasicCore::run()
 {
@@ -60,6 +60,8 @@ void xzia::BasicCore::run()
 4. Getting all [ATask] done processing
 5. Sending each [Response] back to the client
 6. Notifying the [ALoader] the versions that are not used anymore in the [AThreadPool]
+
+**Don't forget to initialize all your unique pointers !** 
 
 [ATaskFactory]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/task/ATaskFactory.hpp
 [ATask]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/task/ATask.hpp
