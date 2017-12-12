@@ -2,6 +2,12 @@
 // Created by Pierre Bougon on 14/11/17.
 //
 
+#ifdef __linux__
+# include <dlfcn.h>
+#elif _WIN32
+# include <windows.h>
+#endif
+
 #include "modules/AModule.hpp"
 
 xzia::AModule::AModule(std::string const &name, AModuleManager &moduleManager)
@@ -14,15 +20,21 @@ const std::string &xzia::AModule::getName() const
     return name;
 }
 
-xzia::AModule::Type xzia::AModule::getType() const {
-    return type;
+#ifdef __linux__
+void xzia::AModule::setHandle(void *dlHandle)
+#elif _WIN32
+void xzia::AModule::setHandle(HINSTANCE dlHandle)
+#endif
+{
+    this->dlHandle = dlHandle;
 }
 
-void xzia::AModule::setVersion(std::uint32_t version) {
-    this->version = version;
-}
 
-std::uint32_t xzia::AModule::getVersion() const {
-    return version;
+xzia::AModule::~AModule() {
+#ifdef __linux__
+    dlclose(dlHandle);
+#elif _WIN32
+    FreeLibrary(dlHandle);
+#endif
 }
 

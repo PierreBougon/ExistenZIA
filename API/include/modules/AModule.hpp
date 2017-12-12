@@ -3,11 +3,16 @@
 //
 
 #ifndef EXISTENZIA_AMODULE_HPP
-#define EXISTENZIA_AMODULE_HPP
+# define EXISTENZIA_AMODULE_HPP
 
-#include <mutex>
-#include <memory>
-#include "DataStore.hpp"
+# include <mutex>
+# include <memory>
+
+# ifdef _WIN32
+#  include <windows.h>
+# endif
+
+# include "DataStore.hpp"
 
 /**
  * @file
@@ -33,7 +38,7 @@ namespace xzia
          */
         AModule() = delete;
 
-        virtual ~AModule() = default;
+        virtual ~AModule();
 
         /**
          * \fn AModule
@@ -63,25 +68,27 @@ namespace xzia
         virtual void configure(std::map<std::string, std::string> const &config) = 0;
 
         /**
-         * \fn setVersion
-         * \brief Set the version of the module, used by the Loader to know when it can close a loaded library
-         * \param version value
+         * \fn setHandle
+         * \brief This function sets the handle loaded from the config loader. this handle is autmatically closed
+         * inside the AModule destructor
+         * @param dlHandle handle to set
          */
-        void setVersion(std::uint32_t version);
-
-        /**
-         * \fn getVersion
-         * \brief version getter
-         * @return the module version
-         */
-        std::uint32_t getVersion() const;
+        #ifdef __linux__
+            void setHandle(void *dlHandle);
+        #elif _WIN32
+            void setHandle(HINSTANCE dlHandle);
+        #endif
 
     protected:
         std::string     name;
         AModuleManager  &moduleManager;
-        std::uint32_t   version;
 
     private:
+        #ifdef __linux__
+            void *dlHandle;
+        #elif _WIN32
+            HINSTANCE dlHandle;
+        #endif
         friend class AHTTPModule;
         friend class ASharedModule;
     };
