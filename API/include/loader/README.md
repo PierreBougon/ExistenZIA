@@ -81,15 +81,7 @@ Vocabulary :
 The [ALoader] load libraries, configure and return a handle to them as [AModule] unique pointer. **Only one version of that unique pointer should be stored in the [ModuleManager].** 
 
 When calling the `reload()` method, the [ALoader] shall creates new handles for
-the modified libraries, and replace the modules in the [ModuleManager].
-
-The [ALoader] shall keep track of the library version and increment them as they are reloaded.
-
-**But beware for [AHTTPModules](AHTTPModule)** ! It shall conserve the old library loaded and not close them until either one of the following situations arise :
-* the method `reload` has been called and a module version that is no more used has been notified through the `versionOutOfUse` method
-* the [ALoader] is destroyed
-
-For the [ASharedModules](ASharedModule) it shall **block** the access to them using a **mutex**, and replace them.
+the modified libraries, and replace the modules in the [ModuleManager]. For the [ASharedModules](ASharedModule) it shall **block** the access to them using a **mutex**, replace them and release the mutex.
  
  Otherwise you might encounter some memory errors when old version modules are still running in the [ThreadPool].
 
