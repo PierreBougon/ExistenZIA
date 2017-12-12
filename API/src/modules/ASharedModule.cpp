@@ -5,12 +5,7 @@
 #include "modules/ASharedModule.hpp"
 
 xzia::ASharedModule::ASharedModule(std::string const &name, xzia::AModuleManager &manager)
-    : AModule(name, manager, AModule::Type::SHARED)
+    : AModule(name, manager)
 {
 
-}
-
-xzia::ASharedModule::ASharedModule(std::string const &name, xzia::AModuleManager &manager, xzia::AModule::Type type)
-        : AModule(name, manager, type)
-{
 }

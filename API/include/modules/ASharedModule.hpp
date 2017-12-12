@@ -30,9 +30,6 @@ namespace xzia
     {
     public:
         explicit ASharedModule(std::string const &name, AModuleManager &manager);
-        explicit ASharedModule(std::string const &name, AModuleManager &manager, AModule::Type
-        type);
-
         virtual ~ASharedModule() = default;
 
         /**

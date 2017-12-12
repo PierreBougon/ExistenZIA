@@ -41,7 +41,7 @@ namespace xzia
          * @return Return True if the message has a body, else false
          *
          */
-        bool hasBody();
+        bool hasBody() const;
     };
 }
 

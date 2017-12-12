@@ -15,7 +15,7 @@ xzia::Step xzia::AProtectedModule::process(xzia::DataStore &dataStore)
 }
 
 xzia::AProtectedModule::AProtectedModule(std::string const &name, xzia::AModuleManager &moduleManager) :
-    ASharedModule(name, moduleManager, AModule::Type::PROTECTED)
+    ASharedModule(name, moduleManager)
 {
 
 }
