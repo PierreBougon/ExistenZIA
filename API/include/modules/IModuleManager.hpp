@@ -35,7 +35,7 @@ namespace xzia
          * @return A reference to the shared module
          *
          */
-        virtual ASharedModule &getSharedModule(std::string const &module) = 0;
+        virtual ASharedModule &getSharedModule(std::string const &module) const = 0;
 
         /**
          *
@@ -45,7 +45,7 @@ namespace xzia
          * @return a HTTP module copy
          *
          */
-        virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string const &module) = 0;
+        virtual std::unique_ptr<AHTTPModule> getHTTPModule(std::string const &module) const = 0;
 
         /**
          *
@@ -62,7 +62,7 @@ namespace xzia
          * @return The execution list model
          *
          */
-        virtual std::vector<AHTTPModule> getExecutionListModel() = 0;
+        virtual std::vector<AHTTPModule> getExecutionListModel() const = 0;
     };
 }
 

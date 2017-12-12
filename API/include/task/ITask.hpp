@@ -77,16 +77,6 @@ namespace xzia
         virtual Client const                                &getClient() const = 0;
 
         /**
-        *
-        * \fn getModulePosition
-        * \brief Get a module at a specific position with the module passed in parameter
-        * @param module Reference of the module we want to get
-        * @return Return the position of the module asked in parameter in the module list
-        *
-        */
-        virtual size_t                                      getModulePosition(AHTTPModule const &module) const = 0;
-
-        /**
          * \fn getNextModule
          * \brief Execution list module getter
          * @param moduleName Module name
@@ -111,6 +101,13 @@ namespace xzia
         *
         */
         virtual void                                        pushModuleBack(std::unique_ptr<AHTTPModule> module) = 0;
+
+        /**
+         * \fn process
+         * \brief Process the entire execution list and return Continue if the task completed normally
+         * @return a Step
+         */
+        virtual Step                                        processModules() = 0;
     };
 }
 
