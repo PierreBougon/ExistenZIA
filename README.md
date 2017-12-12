@@ -8,7 +8,7 @@ At ExistenZia we went the **second** way.
 
 We think **too much** freedom is actually putting the hassle of carefully threading a well designed interface on the developers. We think that establishing some mechanisms **ourselves** allows developers to **concentrate** on the most important part: **the modules**.   
 
-It also **reduces** the **variety** of bugs that may appears and help to build a more **robust** community that understand how a **specific** API shall be implemented.
+It also **reduces** the **variety** of bugs that may appears and help to build a more **robust** community around a **common** logic.
 
 ## The actual thing
 
