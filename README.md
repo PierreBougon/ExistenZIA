@@ -19,3 +19,4 @@ Nothing better than a cool schema to let you understand our vision of an HTTP se
 * [Modules](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/modules)
 * [Task](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/task)
 * [Multi-Threading](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/thread)
+* [Core](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/core)
