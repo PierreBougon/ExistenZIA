@@ -5,6 +5,7 @@
 #include <string>
 #include "core/ACore.hpp"
 
-xzia::ACore::ACore(std::string const &config) : configFile(config)
+xzia::ACore::ACore(std::string const &config) :
+        configFile(config)
 {
 }

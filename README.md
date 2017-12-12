@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# ExistenZIA
+The API that will change your existence !
 
-You can use the [editor on GitHub](https://github.com/PierreBougon/ExistenZIA/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## The idea
+When designing an API, some may want to go for freedom and let people as free as possible regarding the way to implement it. The other way is to provide a more established API with abstract classes and even methods that are already implemented for you.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+At ExistenZia we went the **second** way. 
 
-### Markdown
+We think **too much** freedom is actually putting the hassle of carefully threading a well designed interface on the developers. We think that establishing some mechanisms **ourselves** allows developers to **concentrate** on the most important part: **the modules**.   
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It also **reduces** the **variety** of bugs that may appears and help to build a more **robust** community around a **common** logic.
 
-```markdown
-Syntax highlighted code block
+## The actual thing
 
-# Header 1
-## Header 2
-### Header 3
+Nothing better than a cool schema to let you understand our vision of an HTTP server :
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PierreBougon/ExistenZIA/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Content Table
+* [Configuration](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/loader)
+* [Modules](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/modules)
+* [Task](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/task)
+* [Multi-Threading](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/thread)
+* [Core](https://github.com/PierreBougon/ExistenZIA/tree/master/API/include/core)

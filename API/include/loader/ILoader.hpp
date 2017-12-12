@@ -16,9 +16,6 @@
  * \author Edouard.P
  * \version 0.1
  * \date 13 novembre 2017
- *
- * add comment here
- *
  * \namespace xzia
  * \class ILoader ILoader.hpp ILoader.hpp
  *
@@ -35,9 +32,9 @@ namespace xzia
          * \fn reload
          * \brief This method allows the loader to reload the configuration, updating the list of available modules,
          * and their corresponding configuration
-         *
+         * @return the list of the reloaded modules that need to be replaced
          */
-        virtual void reload() = 0;
+        virtual std::vector<std::string> reload() = 0;
 
         /**
         *

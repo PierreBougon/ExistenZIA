@@ -60,7 +60,7 @@ namespace xzia
         * @param res Contain the message code response from the last request
         *
         */
-        virtual void sendResponse(std::unique_ptr<Response> res) = 0;
+        virtual void sendResponse(Response const &res) = 0;
 
         /**
         *
