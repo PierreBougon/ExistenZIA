@@ -63,12 +63,12 @@ void xzia::BasicCore::run()
 
 **Don't forget to initialize all your unique pointers !** 
 
-[ATaskFactory]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/task/ATaskFactory.hpp
-[ATask]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/task/ATask.hpp
-[INetwork]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/network/INetwork.hpp
-[Response]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/http/Response.hpp
-[Request]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/http/Request.hpp
-[ALoader]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/loader/ALoader.hpp
-[AThreadPool]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/thread/AThreadPool.hpp
-[ICore]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/core/ICore.hpp
-[ACore]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/core/ACore.hpp
+[ATaskFactory]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/task/ATaskFactory.hpp
+[ATask]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/task/ATask.hpp
+[INetwork]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/network/INetwork.hpp
+[Response]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/http/Response.hpp
+[Request]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/http/Request.hpp
+[ALoader]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/loader/ALoader.hpp
+[AThreadPool]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/thread/AThreadPool.hpp
+[ICore]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/core/ICore.hpp
+[ACore]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/core/ACore.hpp

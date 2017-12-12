@@ -181,8 +181,8 @@ The [ModuleManager] is notified to reload all the modules through its `void relo
 
 For any information on how to name modules and how to create a task list model, please refer to the [config.json] file provided as an example and read the documentation of the [Loader] package.
 
-[Loader]: https://github.com/PierreBougon/ExistenZIA/tree/refactoring_modules/API/include/loader
-[config.json]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/config.json
+[Loader]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/loader
+[config.json]: https://github.com/PierreBougon/ExistenZIA/blob/master/Examples/config.json
 [AModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AModule.hpp
 [AHTTPModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AHTTPModule.hpp
 [ASharedModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/ASharedModule.hpp
@@ -192,5 +192,5 @@ For any information on how to name modules and how to create a task list model, 
 [Response]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/http/Response.hpp
 [DataStore]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/DataStore.hpp
 [Step]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/Step.hpp
-[basic logger]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp
-[basic example]: https://github.com/PierreBougon/ExistenZIA/blob/refactoring_modules/Examples/BasicModule.cpp
+[basic logger]: https://github.com/PierreBougon/ExistenZIA/blob/master/Examples/BasicModule.cpp
+[basic example]: https://github.com/PierreBougon/ExistenZIA/blob/master/Examples/BasicModule.cpp

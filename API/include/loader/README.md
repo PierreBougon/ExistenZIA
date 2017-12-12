@@ -93,13 +93,13 @@ For the [ASharedModules](ASharedModule) it shall **block** the access to them us
  
  Otherwise you might encounter some memory errors when old version modules are still running in the [ThreadPool].
 
-[ThreadPool]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/thread/AThreadPool.hpp
-[IConfigLoader]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/loader/IConfigLoader.hpp
-[ALoader]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/loader/ALoader.hpp
-[AModule]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/modules/AModuleManager.hpp
-[ModuleManager]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/modules/AModuleManager.hpp
-[AHTTPModule]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/modules/AHTTPModule.hpp
-[ASharedModule]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/modules/ASharedModule.hpp
-[Core]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/core/ACore.hpp
-[Task]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/API/include/task/ATask.hpp
-[config.json]: https://github.com/PierreBougon/ExistenZIA/blob/Loader_documentation/example/config.json
+[ThreadPool]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/thread/AThreadPool.hpp
+[IConfigLoader]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/loader/IConfigLoader.hpp
+[ALoader]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/loader/ALoader.hpp
+[AModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AModuleManager.hpp
+[ModuleManager]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AModuleManager.hpp
+[AHTTPModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/AHTTPModule.hpp
+[ASharedModule]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/modules/ASharedModule.hpp
+[Core]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/core/ACore.hpp
+[Task]: https://github.com/PierreBougon/ExistenZIA/blob/master/API/include/task/ATask.hpp
+[config.json]: https://github.com/PierreBougon/ExistenZIA/blob/master/example/config.json
