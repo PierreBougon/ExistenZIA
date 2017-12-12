@@ -27,17 +27,6 @@ namespace xzia
     class AModule
     {
     public:
-
-        /**
-         * \enum Type of the module
-         */
-        enum class Type : unsigned char
-        {
-            HTTP = 0,
-            SHARED,
-            PROTECTED
-        };
-
         /**
          * \fn AModule
          * \brief Default constructor deleted
@@ -54,16 +43,7 @@ namespace xzia
          * or modify the task execution list
          * @param type Module type
          */
-        AModule(std::string const &name, AModuleManager &moduleManager, AModule::Type type);
-
-        /**
-         *
-         * \fn getType
-         * \brief Get the module type
-         * @return Return the module type
-         *
-         */
-        Type getType() const;
+        AModule(std::string const &name, AModuleManager &moduleManager);
 
         /**
          *
@@ -73,6 +53,14 @@ namespace xzia
          *
          */
         const std::string &getName() const;
+
+        /**
+        * \fn configure
+        * \brief The module configure itself using the map passed as parameter. This map is generated
+        * from the JSON configuration file
+        * @param config map containing all the necessary configuration elements
+        */
+        virtual void configure(std::map<std::string, std::string> const &config) = 0;
 
         /**
          * \fn setVersion
@@ -91,7 +79,6 @@ namespace xzia
     protected:
         std::string     name;
         AModuleManager  &moduleManager;
-        Type            type;
         std::uint32_t   version;
 
     private:

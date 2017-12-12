@@ -111,16 +111,6 @@ namespace xzia
         *
         */
         virtual void                                        pushModuleBack(std::unique_ptr<AHTTPModule> module) = 0;
-
-        /**
-        *
-        * \fn pushModuleAtPosition
-        * \brief Push a module int the module at a specific position
-        * @param module Module which going to be set in the module list
-        * @param pos Position where the module is going to be set
-        *
-        */
-        virtual void                                        pushModuleAtPosition(std::unique_ptr<AHTTPModule> module, size_t pos) = 0;
     };
 }
 
