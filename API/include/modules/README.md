@@ -1,8 +1,10 @@
 # [AModule]
-AModule is the base abstract module for every modules, you shall never inherit directly from it (you will receive a compiler error) but rather inherit from its subclasses :
+[AModule] is the base abstract module for every modules, you shall never inherit directly from it (you will receive a compiler error) but rather inherit from its subclasses :
 * [AHTTPModule]
 * [ASharedModule]
 * [AProtectedModule]
+
+**Warning**, [AModule] has a handle to the .dll or the .so that **needs** to be set, this handle is automatically closed when the [AModule] is destroyed.
 
 ## [AHTTPModule]
 [AHTTPModule] is a processing unit that uses a [Task] and either produces a [Response], provide data for further processing for next modules or process data passed by previous modules. If your module does neither of these, it may be going through an existential crisis...
