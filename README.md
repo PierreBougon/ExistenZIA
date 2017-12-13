@@ -13,10 +13,10 @@ It also **reduces** the **variety** of bugs that may appears and help to build a
 ## The actual thing
 
 Nothing better than a cool schema to describe our HTTP server :
-![Server schema](./images/ThreadPoolImplementation.PNG)
+![Server schema](Documentation/images/ThreadPoolImplementation.PNG)
 
 And a [Task] is roughly a module process line :
-![Server schema](./images/ModelTask.PNG)
+![Server schema](Documentation/images/ModelTask.PNG)
 
 
 ## Content Table
