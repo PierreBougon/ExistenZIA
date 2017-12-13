@@ -84,9 +84,6 @@ Inheritance diagram for xzia::ITask:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7368f69854dd9af5af668e036560226d"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classxzia_1_1ITask.html">ITask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a7368f69854dd9af5af668e036560226d">clone</a> () const =0</td></tr>
-<tr class="memdesc:a7368f69854dd9af5af668e036560226d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the current task.  <a href="#a7368f69854dd9af5af668e036560226d">More...</a><br /></td></tr>
-<tr class="separator:a7368f69854dd9af5af668e036560226d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a100285f59380ad90225231734c9a29ab"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a100285f59380ad90225231734c9a29ab">getExecutionList</a> ()=0</td></tr>
 <tr class="memdesc:a100285f59380ad90225231734c9a29ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current list of module.  <a href="#a100285f59380ad90225231734c9a29ab">More...</a><br /></td></tr>
 <tr class="separator:a100285f59380ad90225231734c9a29ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,9 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fa35ad0ca8d373c4efd6e928755b5e7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structClient.html">Client</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a2fa35ad0ca8d373c4efd6e928755b5e7">getClient</a> () const =0</td></tr>
 <tr class="memdesc:a2fa35ad0ca8d373c4efd6e928755b5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current client.  <a href="#a2fa35ad0ca8d373c4efd6e928755b5e7">More...</a><br /></td></tr>
 <tr class="separator:a2fa35ad0ca8d373c4efd6e928755b5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74496410e5dbd3c293082af3d5e7d84f"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a74496410e5dbd3c293082af3d5e7d84f">getModulePosition</a> (<a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> const &amp;module) const =0</td></tr>
-<tr class="memdesc:a74496410e5dbd3c293082af3d5e7d84f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a module at a specific position with the module passed in parameter.  <a href="#a74496410e5dbd3c293082af3d5e7d84f">More...</a><br /></td></tr>
-<tr class="separator:a74496410e5dbd3c293082af3d5e7d84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9134b2c523aa55d5f9cfe12866ed508"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#aa9134b2c523aa55d5f9cfe12866ed508">getNextModule</a> (std::string const &amp;moduleName) const =0</td></tr>
 <tr class="memdesc:aa9134b2c523aa55d5f9cfe12866ed508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution list module getter.  <a href="#aa9134b2c523aa55d5f9cfe12866ed508">More...</a><br /></td></tr>
 <tr class="separator:aa9134b2c523aa55d5f9cfe12866ed508"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,39 +105,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a742a320f905285dc8fa4510090c381"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a4a742a320f905285dc8fa4510090c381">pushModuleBack</a> (std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt; module)=0</td></tr>
 <tr class="memdesc:a4a742a320f905285dc8fa4510090c381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a module at the end of the module list.  <a href="#a4a742a320f905285dc8fa4510090c381">More...</a><br /></td></tr>
 <tr class="separator:a4a742a320f905285dc8fa4510090c381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e224e38e770108abb3518c06156094"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ITask.html#a10e224e38e770108abb3518c06156094">pushModuleAtPosition</a> (std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt; module, size_t pos)=0</td></tr>
-<tr class="memdesc:a10e224e38e770108abb3518c06156094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a module int the module at a specific position.  <a href="#a10e224e38e770108abb3518c06156094">More...</a><br /></td></tr>
-<tr class="separator:a10e224e38e770108abb3518c06156094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a321fd39e196cb6389a73803868beec"><td class="memItemLeft" align="right" valign="top"><a id="a8a321fd39e196cb6389a73803868beec"></a>
+virtual <a class="el" href="Step_8hpp.html#a58ad1bb906913f90b95697c49f198770">Step</a>&#160;</td><td class="memItemRight" valign="bottom"><b>processModules</b> ()=0</td></tr>
+<tr class="separator:a8a321fd39e196cb6389a73803868beec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7368f69854dd9af5af668e036560226d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7368f69854dd9af5af668e036560226d">&#9670;&nbsp;</a></span>clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ITask::clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Clone the current task. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return a pointer of a clone from the current task. </dd></dl>
-
-</div>
-</div>
 <a id="a2fa35ad0ca8d373c4efd6e928755b5e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fa35ad0ca8d373c4efd6e928755b5e7">&#9670;&nbsp;</a></span>getClient()</h2>
 
@@ -197,41 +163,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the current list of module. </p>
 <dl class="section return"><dt>Returns</dt><dd>Return a vector containing the modules </dd></dl>
-
-</div>
-</div>
-<a id="a74496410e5dbd3c293082af3d5e7d84f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74496410e5dbd3c293082af3d5e7d84f">&#9670;&nbsp;</a></span>getModulePosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ITask::getModulePosition </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> const &amp;&#160;</td>
-          <td class="paramname"><em>module</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a module at a specific position with the module passed in parameter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">module</td><td>Reference of the module we want to get </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return the position of the module asked in parameter in the module list </dd></dl>
 
 </div>
 </div>
@@ -323,51 +254,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the current <a class="el" href="structxzia_1_1Response.html">Response</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Return a reference on the current <a class="el" href="structxzia_1_1Response.html">Response</a> </dd></dl>
-
-</div>
-</div>
-<a id="a10e224e38e770108abb3518c06156094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10e224e38e770108abb3518c06156094">&#9670;&nbsp;</a></span>pushModuleAtPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ITask::pushModuleAtPosition </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt;&#160;</td>
-          <td class="paramname"><em>module</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Push a module int the module at a specific position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">module</td><td>Module which going to be set in the module list </td></tr>
-    <tr><td class="paramname">pos</td><td>Position where the module is going to be set </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

@@ -85,9 +85,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a0a209aa9651aafb551504d6522c20809"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="structxzia_1_1Request.html">Request</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1INetwork.html#a0a209aa9651aafb551504d6522c20809">getAllRequests</a> ()=0</td></tr>
 <tr class="memdesc:a0a209aa9651aafb551504d6522c20809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take all the last request in the queue, then prepare to apply them.  <a href="#a0a209aa9651aafb551504d6522c20809">More...</a><br /></td></tr>
 <tr class="separator:a0a209aa9651aafb551504d6522c20809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2089720daf1863762e53bfda6ad08c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1INetwork.html#a3d2089720daf1863762e53bfda6ad08c">sendResponse</a> (std::unique_ptr&lt; <a class="el" href="structxzia_1_1Response.html">Response</a> &gt; res)=0</td></tr>
-<tr class="memdesc:a3d2089720daf1863762e53bfda6ad08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Following the handling of a request , send the message response to the client.  <a href="#a3d2089720daf1863762e53bfda6ad08c">More...</a><br /></td></tr>
-<tr class="separator:a3d2089720daf1863762e53bfda6ad08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0e05ecedee0dcff6df8d7fe1f9c61f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1INetwork.html#a4a0e05ecedee0dcff6df8d7fe1f9c61f">sendResponse</a> (<a class="el" href="structxzia_1_1Response.html">Response</a> const &amp;res)=0</td></tr>
+<tr class="memdesc:a4a0e05ecedee0dcff6df8d7fe1f9c61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Following the handling of a request , send the message response to the client.  <a href="#a4a0e05ecedee0dcff6df8d7fe1f9c61f">More...</a><br /></td></tr>
+<tr class="separator:a4a0e05ecedee0dcff6df8d7fe1f9c61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96edde2fedeca124c08a31d4164a1a87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1INetwork.html#a96edde2fedeca124c08a31d4164a1a87">sendAllResponses</a> (std::vector&lt; std::unique_ptr&lt; <a class="el" href="structxzia_1_1Response.html">Response</a> &gt;&gt; &amp;&amp;listRes)=0</td></tr>
 <tr class="memdesc:a96edde2fedeca124c08a31d4164a1a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Following the handling of all the last request , send the messages response to the client.  <a href="#a96edde2fedeca124c08a31d4164a1a87">More...</a><br /></td></tr>
 <tr class="separator:a96edde2fedeca124c08a31d4164a1a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,8 +183,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a3d2089720daf1863762e53bfda6ad08c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d2089720daf1863762e53bfda6ad08c">&#9670;&nbsp;</a></span>sendResponse()</h2>
+<a id="a4a0e05ecedee0dcff6df8d7fe1f9c61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0e05ecedee0dcff6df8d7fe1f9c61f">&#9670;&nbsp;</a></span>sendResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +195,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">INetwork::sendResponse </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="structxzia_1_1Response.html">Response</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="structxzia_1_1Response.html">Response</a> const &amp;&#160;</td>
           <td class="paramname"><em>res</em></td><td>)</td>
           <td></td>
         </tr>

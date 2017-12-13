@@ -2,5 +2,5 @@ var searchData=
 [
   ['client',['Client',['../structClient.html',1,'']]],
   ['client_2ehpp',['Client.hpp',['../Client_8hpp.html',1,'']]],
-  ['clone',['clone',['../classxzia_1_1ITask.html#a7368f69854dd9af5af668e036560226d',1,'xzia::ITask']]]
+  ['configure',['configure',['../classxzia_1_1AModule.html#a1204b4894051ce7d0ecfb548938af9bc',1,'xzia::AModule']]]
 ];

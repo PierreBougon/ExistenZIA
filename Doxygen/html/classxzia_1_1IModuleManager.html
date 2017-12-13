@@ -84,23 +84,23 @@ Inheritance diagram for xzia::IModuleManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a56addcdec0c0b32595807672705b414b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classxzia_1_1ASharedModule.html">ASharedModule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1IModuleManager.html#a56addcdec0c0b32595807672705b414b">getSharedModule</a> (std::string const &amp;module)=0</td></tr>
-<tr class="memdesc:a56addcdec0c0b32595807672705b414b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared module getter.  <a href="#a56addcdec0c0b32595807672705b414b">More...</a><br /></td></tr>
-<tr class="separator:a56addcdec0c0b32595807672705b414b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa255ae4721e3575c3e0a83c2bcc1549b"><td class="memItemLeft" align="right" valign="top"><a id="aa255ae4721e3575c3e0a83c2bcc1549b"></a>
-virtual std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getHTTPModule</b> (std::string const &amp;module)=0</td></tr>
-<tr class="separator:aa255ae4721e3575c3e0a83c2bcc1549b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc74ac8b97150a803163b3f6f86691df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classxzia_1_1ASharedModule.html">ASharedModule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1IModuleManager.html#abc74ac8b97150a803163b3f6f86691df">getSharedModule</a> (std::string const &amp;module) const =0</td></tr>
+<tr class="memdesc:abc74ac8b97150a803163b3f6f86691df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared module getter.  <a href="#abc74ac8b97150a803163b3f6f86691df">More...</a><br /></td></tr>
+<tr class="separator:abc74ac8b97150a803163b3f6f86691df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7dd29db9902f7170f6f12b8a18ffd97"><td class="memItemLeft" align="right" valign="top"><a id="af7dd29db9902f7170f6f12b8a18ffd97"></a>
+virtual std::unique_ptr&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getHTTPModule</b> (std::string const &amp;module) const =0</td></tr>
+<tr class="separator:af7dd29db9902f7170f6f12b8a18ffd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0edf1a81440b0f76ef6b6f66cc046fe1"><td class="memItemLeft" align="right" valign="top"><a id="a0edf1a81440b0f76ef6b6f66cc046fe1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1IModuleManager.html#a0edf1a81440b0f76ef6b6f66cc046fe1">reload</a> ()=0</td></tr>
 <tr class="memdesc:a0edf1a81440b0f76ef6b6f66cc046fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the module manager that modules must be reloaded. <br /></td></tr>
 <tr class="separator:a0edf1a81440b0f76ef6b6f66cc046fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8416910511a3434b6a140b45dd1bab13"><td class="memItemLeft" align="right" valign="top"><a id="a8416910511a3434b6a140b45dd1bab13"></a>
-virtual std::vector&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getExecutionListModel</b> ()=0</td></tr>
-<tr class="separator:a8416910511a3434b6a140b45dd1bab13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3536b15d4a28df58d18a78fefd350f"><td class="memItemLeft" align="right" valign="top"><a id="adc3536b15d4a28df58d18a78fefd350f"></a>
+virtual std::vector&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTPModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getExecutionListModel</b> () const =0</td></tr>
+<tr class="separator:adc3536b15d4a28df58d18a78fefd350f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a56addcdec0c0b32595807672705b414b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56addcdec0c0b32595807672705b414b">&#9670;&nbsp;</a></span>getSharedModule()</h2>
+<a id="abc74ac8b97150a803163b3f6f86691df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc74ac8b97150a803163b3f6f86691df">&#9670;&nbsp;</a></span>getSharedModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +113,7 @@ virtual std::vector&lt; <a class="el" href="classxzia_1_1AHTTPModule.html">AHTTP
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
