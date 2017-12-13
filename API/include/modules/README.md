@@ -4,7 +4,7 @@
 * [ASharedModule]
 * [AProtectedModule]
 
-**Warning**, [AModule] has a handle to the .dll or the .so that **needs** to be set, this handle is automatically closed when the [AModule] is destroyed.
+**Warning**, [AModule] has a handle to the .dll or the .so that **needs** to be set, this handle is automatically closed when the [AModule] is destroyed. It has been made runnable on either Windows or Linux (cross platform yay!) 
 
 ## [AHTTPModule]
 [AHTTPModule] is a processing unit that uses a [Task] and either produces a [Response], provide data for further processing for next modules or process data passed by previous modules. If your module does neither of these, it may be going through an existential crisis...
