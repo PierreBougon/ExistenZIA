@@ -35,14 +35,6 @@ namespace xzia
 
         /**
         *
-        * \fn stop
-        * \brief Stop the thread
-        *
-        */
-        virtual void    stop()= 0;
-
-        /**
-        *
         * \fn getTaskDone
         * \brief Get the task done, when it's finished
         * @return Return all task done or an empty vector if no task was finished
