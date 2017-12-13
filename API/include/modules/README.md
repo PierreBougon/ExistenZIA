@@ -4,7 +4,7 @@
 * [ASharedModule]
 * [AProtectedModule]
 
-**Warning**, [AModule] has a handle to the .dll or the .so that **needs** to be set, this handle is automatically closed when the [AModule] is destroyed.
+**Warning**, [AModule] has a handle to the .dll or the .so that **needs** to be set, this handle is automatically closed when the [AModule] is destroyed. It has been made runnable on either Windows or Linux (cross platform yay!) 
 
 ## [AHTTPModule]
 [AHTTPModule] is a processing unit that uses a [Task] and either produces a [Response], provide data for further processing for next modules or process data passed by previous modules. If your module does neither of these, it may be going through an existential crisis...
@@ -31,7 +31,7 @@ While adding data is easly done like this :
 
 
 ### The Process Method
-The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example] of a HTTPModule implementation:
+The method `Step process(ATask &task)` that the subclass must implement is where the process logic shall be coded. The following code snippet shows a [basic example] of a [AHTTPModule] implementation:
 
 ```cpp
 int xzia::BasicModule::do_some_operation(const xzia::Message &message, int multiplyBy)
@@ -171,7 +171,7 @@ xzia::Step xzia::BasicLogger::safeProcess(xzia::DataStore &dataStore)
 }
 ```
 
-See? We made it simple for you :)
+You can call any shared module from any http module.
 
 # [ModuleManager]
 A [ModuleManager] shall the class responsible for storing all the modules of the HTTP server. It shall produce copies of [AHTTPModules]
