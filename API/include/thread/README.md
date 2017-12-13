@@ -20,12 +20,14 @@ even thinking about them. The only thing you have to do is to give a **task todo
 Since the implementation of a [IThreadPool] should be common to everyone, we provide you
  an abstract implementation to spare you some time: [AThreadPool].
 
-###Thread loop
+### Thread loop
 ```cpp 
 virtual void threadWorkflow(unsigned int id) = 0;
 ```
 This is the infinite loop for the thread. The workers wait to have some work to do, get
  a task from the todo queue and then proceed it. Finally you add this back task when its done processing to the done queue to let the core get this task.
+
+### Example
 
 We provide you a basic implementation of this class as an [example].
 
