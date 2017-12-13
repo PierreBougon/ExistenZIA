@@ -1,5 +1,6 @@
 # ExistenZIA
 The API that will change your existence !
+![Main logo](Documentation/images/ExistenziaLogo.JPG)
 
 ## The idea
 When designing an API, some may want to go for **freedom** and let people as free as possible regarding the implementation. The other way is to provide a more **structured** API with abstract classes and even methods that are **already** implemented for you.
