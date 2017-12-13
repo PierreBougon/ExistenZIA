@@ -66,13 +66,12 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classxzia_1_1AModule-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">xzia::AModule Class Reference</div>  </div>
+<div class="title">xzia::AModule Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -87,28 +86,20 @@ Inheritance diagram for xzia::AModule:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a73967be2c863fcfdff0eef4a701df1e0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1AModule.html#a73967be2c863fcfdff0eef4a701df1e0">Type</a> : unsigned char { <b>HTTP</b> = 0, 
-<b>SHARED</b>, 
-<b>PROTECTED</b>
- }</td></tr>
-<tr class="separator:a73967be2c863fcfdff0eef4a701df1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f9a69c543cb4d04be0a6d246ad0287d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1AModule.html#a1f9a69c543cb4d04be0a6d246ad0287d">AModule</a> ()=delete</td></tr>
 <tr class="memdesc:a1f9a69c543cb4d04be0a6d246ad0287d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor deleted.  <a href="#a1f9a69c543cb4d04be0a6d246ad0287d">More...</a><br /></td></tr>
 <tr class="separator:a1f9a69c543cb4d04be0a6d246ad0287d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97df74e40876c19008735c741c84078"><td class="memItemLeft" align="right" valign="top"><a id="aa97df74e40876c19008735c741c84078"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AModule</b> (std::string const &amp;name, <a class="el" href="classxzia_1_1AModuleManager.html">AModuleManager</a> &amp;moduleManager, <a class="el" href="classxzia_1_1AModule.html#a73967be2c863fcfdff0eef4a701df1e0">AModule::Type</a> type)</td></tr>
-<tr class="separator:aa97df74e40876c19008735c741c84078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae07019977cab27aebdc34c98de35a3c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxzia_1_1AModule.html#a73967be2c863fcfdff0eef4a701df1e0">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1AModule.html#ae07019977cab27aebdc34c98de35a3c8">getType</a> () const</td></tr>
-<tr class="memdesc:ae07019977cab27aebdc34c98de35a3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module type.  <a href="#ae07019977cab27aebdc34c98de35a3c8">More...</a><br /></td></tr>
-<tr class="separator:ae07019977cab27aebdc34c98de35a3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880f9e04771080d224b3fb10a9276eea"><td class="memItemLeft" align="right" valign="top"><a id="a880f9e04771080d224b3fb10a9276eea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AModule</b> (std::string const &amp;name, <a class="el" href="classxzia_1_1AModuleManager.html">AModuleManager</a> &amp;moduleManager)</td></tr>
+<tr class="separator:a880f9e04771080d224b3fb10a9276eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad948424683268c572aba3a410288ca22"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1AModule.html#ad948424683268c572aba3a410288ca22">getName</a> () const</td></tr>
 <tr class="memdesc:ad948424683268c572aba3a410288ca22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module name.  <a href="#ad948424683268c572aba3a410288ca22">More...</a><br /></td></tr>
 <tr class="separator:ad948424683268c572aba3a410288ca22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1204b4894051ce7d0ecfb548938af9bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1AModule.html#a1204b4894051ce7d0ecfb548938af9bc">configure</a> (std::map&lt; std::string, std::string &gt; const &amp;config)=0</td></tr>
+<tr class="memdesc:a1204b4894051ce7d0ecfb548938af9bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The module configure itself using the map passed as parameter. This map is generated from the JSON configuration file.  <a href="#a1204b4894051ce7d0ecfb548938af9bc">More...</a><br /></td></tr>
+<tr class="separator:a1204b4894051ce7d0ecfb548938af9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -118,9 +109,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <tr class="memitem:af621d54793ce30445f164c5787acd541"><td class="memItemLeft" align="right" valign="top"><a id="af621d54793ce30445f164c5787acd541"></a>
 <a class="el" href="classxzia_1_1AModuleManager.html">AModuleManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>moduleManager</b></td></tr>
 <tr class="separator:af621d54793ce30445f164c5787acd541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331fe5174181857d396fe02e7e945b30"><td class="memItemLeft" align="right" valign="top"><a id="a331fe5174181857d396fe02e7e945b30"></a>
-<a class="el" href="classxzia_1_1AModule.html#a73967be2c863fcfdff0eef4a701df1e0">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
-<tr class="separator:a331fe5174181857d396fe02e7e945b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -131,30 +119,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AHTTPModule</b></td>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>ASharedModule</b></td></tr>
 <tr class="separator:a4be1d2f00a5bbd45249ec22d62f1ff45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a73967be2c863fcfdff0eef4a701df1e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73967be2c863fcfdff0eef4a701df1e0">&#9670;&nbsp;</a></span>Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classxzia_1_1AModule.html#a73967be2c863fcfdff0eef4a701df1e0">xzia::AModule::Type</a> : unsigned char</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>of the module </p>
-
-</div>
-</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1f9a69c543cb4d04be0a6d246ad0287d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f9a69c543cb4d04be0a6d246ad0287d">&#9670;&nbsp;</a></span>AModule()</h2>
@@ -192,7 +156,66 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ASharedModule</b></t
 
 </div>
 </div>
+<a id="a6d024a0ecec95816a5aebcf4f76e6037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d024a0ecec95816a5aebcf4f76e6037">&#9670;&nbsp;</a></span>~AModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AModule::~AModule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    this-&gt;dlHandle = dlHandle</div></div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1204b4894051ce7d0ecfb548938af9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1204b4894051ce7d0ecfb548938af9bc">&#9670;&nbsp;</a></span>configure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AModule::configure </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, std::string &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The module configure itself using the map passed as parameter. This map is generated from the JSON configuration file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>map containing all the necessary configuration elements </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad948424683268c572aba3a410288ca22"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad948424683268c572aba3a410288ca22">&#9670;&nbsp;</a></span>getName()</h2>
 
@@ -210,26 +233,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ASharedModule</b></t
 
 <p>Get the module name. </p>
 <dl class="section return"><dt>Returns</dt><dd>Return the module name </dd></dl>
-
-</div>
-</div>
-<a id="ae07019977cab27aebdc34c98de35a3c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae07019977cab27aebdc34c98de35a3c8">&#9670;&nbsp;</a></span>getType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AModule::getType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the module type. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return the module type </dd></dl>
 
 </div>
 </div>

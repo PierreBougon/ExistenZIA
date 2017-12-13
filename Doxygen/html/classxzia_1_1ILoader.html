@@ -84,9 +84,8 @@ Inheritance diagram for xzia::ILoader:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8662be66536e6414c223d7f4d861e7d9"><td class="memItemLeft" align="right" valign="top"><a id="a8662be66536e6414c223d7f4d861e7d9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ILoader.html#a8662be66536e6414c223d7f4d861e7d9">reload</a> ()=0</td></tr>
-<tr class="memdesc:a8662be66536e6414c223d7f4d861e7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows the loader to reload the configuration, updating the list of available modules, and their corresponding configuration. <br /></td></tr>
+<tr class="memitem:a8662be66536e6414c223d7f4d861e7d9"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ILoader.html#a8662be66536e6414c223d7f4d861e7d9">reload</a> ()=0</td></tr>
+<tr class="memdesc:a8662be66536e6414c223d7f4d861e7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows the loader to reload the configuration, updating the list of available modules, and their corresponding configuration.  <a href="#a8662be66536e6414c223d7f4d861e7d9">More...</a><br /></td></tr>
 <tr class="separator:a8662be66536e6414c223d7f4d861e7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aad71496e1ebfa29aebe1c351a1e871"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classxzia_1_1AModule.html">AModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxzia_1_1ILoader.html#a6aad71496e1ebfa29aebe1c351a1e871">loadModule</a> (std::string const &amp;module)=0</td></tr>
 <tr class="memdesc:a6aad71496e1ebfa29aebe1c351a1e871"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method loads a module.  <a href="#a6aad71496e1ebfa29aebe1c351a1e871">More...</a><br /></td></tr>
@@ -124,6 +123,34 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8662be66536e6414c223d7f4d861e7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8662be66536e6414c223d7f4d861e7d9">&#9670;&nbsp;</a></span>reload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ILoader::reload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method allows the loader to reload the configuration, updating the list of available modules, and their corresponding configuration. </p>
+<dl class="section return"><dt>Returns</dt><dd>the list of the reloaded modules that need to be replaced </dd></dl>
 
 </div>
 </div>
