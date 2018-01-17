@@ -28,8 +28,7 @@ namespace xzia
     public:
         virtual ~ITaskFactory() = default;
 
-        virtual std::unique_ptr<ATask> createTask(std::unique_ptr<Request> req, Client
-                                                  client) = 0;
+        virtual std::unique_ptr<ATask> createTask(std::unique_ptr<zia::api::HttpDuplex> req) = 0;
     };
 }
 

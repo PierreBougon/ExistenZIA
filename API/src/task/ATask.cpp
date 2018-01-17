@@ -4,9 +4,9 @@
 
 #include "task/ATask.hpp"
 
-xzia::ATask::ATask(std::unique_ptr<Request> req, xzia::Client &client,
+xzia::ATask::ATask(std::unique_ptr<zia::api::HttpDuplex> req,
                    std::vector<std::unique_ptr<xzia::AHTTPModule>> executionList)
-        : client(client), executionList(std::move(executionList)), res(client)
+        : executionList(std::move(executionList))
 {
     this->req = std::move(req);
 }

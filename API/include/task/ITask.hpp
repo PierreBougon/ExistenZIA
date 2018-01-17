@@ -7,10 +7,9 @@
 
 #include <memory>
 #include <vector>
+#include "sza/api/http.h"
 #include "modules/Step.hpp"
 #include "modules/AHTTPModule.hpp"
-#include "http/Request.hpp"
-#include "http/Response.hpp"
 
 /**
  * \file ITask.hpp
@@ -44,30 +43,12 @@ namespace xzia
 
         /**
         *
-        * \fn getRequest
-        * \brief Get the current Request
-        * @return Return a reference on the the current Request
+        * \fn getDuplex
+        * \brief Get the current HttpDuplex
+        * @return Return a reference on the the current HttpDuplex
         *
         */
-        virtual Request const                               &getRequest() const = 0;
-
-        /**
-        *
-        * \fn getResponse
-        * \brief Get the current Response
-        * @return Return a reference on the current Response
-        *
-        */
-        virtual Response                                    &getResponse() = 0;
-
-        /**
-        *
-        * \fn getClient
-        * \brief Get the current client
-        * @return Return the current Client id
-        *
-        */
-        virtual Client const                                &getClient() const = 0;
+        virtual zia::api::HttpDuplex const                               &getDuplex() const = 0;
 
         /**
          * \fn getNextModule

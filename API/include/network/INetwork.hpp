@@ -5,10 +5,9 @@
 #ifndef ZIA_INETWORK_HPP_
 #define ZIA_INETWORK_HPP_
 
-#include <http/Request.hpp>
 #include <bits/unique_ptr.h>
 #include <vector>
-#include <http/Response.hpp>
+#include "sza/api/http.h"
 
 /**
  * \file INetwork.hpp
@@ -42,7 +41,7 @@ namespace xzia
         * @return Return a Message of type request from the queue of request.
         *
         */
-        virtual std::unique_ptr<Request> popRequest() = 0;
+        virtual std::unique_ptr<zia::api::HttpDuplex> popRequest() = 0;
 
         /**
         *
@@ -51,7 +50,7 @@ namespace xzia
         * @return Return all the last request from the queue of request
         *
         */
-        virtual std::vector<std::unique_ptr<Request>> getAllRequests() = 0;
+        virtual std::vector<std::unique_ptr<zia::api::HttpDuplex>> getAllRequests() = 0;
 
         /**
         *
@@ -60,7 +59,7 @@ namespace xzia
         * @param res Contain the message code response from the last request
         *
         */
-        virtual void sendResponse(Response const &res) = 0;
+        virtual void sendResponse(zia::api::HttpDuplex const &res) = 0;
 
         /**
         *
@@ -69,7 +68,7 @@ namespace xzia
         * @param listRes Contain respectively all the response codes from the queue of request
         *
         */
-        virtual void sendAllResponses(std::vector<std::unique_ptr<Response>> &&listRes) = 0;
+        virtual void sendAllResponses(std::vector<std::unique_ptr<zia::api::HttpDuplex>> &&listRes) = 0;
     };
 }
 

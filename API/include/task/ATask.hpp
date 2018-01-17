@@ -7,10 +7,8 @@
 
 #include <string>
 #include <vector>
-#include "client/Client.hpp"
+#include "sza/api/http.h"
 #include "modules/AHTTPModule.hpp"
-#include "http/Request.hpp"
-#include "http/Response.hpp"
 #include "modules/Step.hpp"
 #include "ITask.hpp"
 
@@ -30,16 +28,14 @@ namespace xzia
     {
     public:
         ATask() = delete;
-        ATask(std::unique_ptr<Request> req, Client &client,
+        ATask(std::unique_ptr<zia::api::HttpDuplex> req,
               std::vector<std::unique_ptr<AHTTPModule>> executionList);
 
         virtual ~ATask() = default;
 
     protected:
-        std::unique_ptr<Request>                    req;
-        Client const                                client;
+        std::unique_ptr<zia::api::HttpDuplex> req;
         std::vector<std::unique_ptr<AHTTPModule>>   executionList;
-        Response                                    res;
     };
 }
 
