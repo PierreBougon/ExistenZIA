@@ -7,6 +7,7 @@
 
 #include <bits/unique_ptr.h>
 #include <vector>
+#include "sza/api/net.h"
 #include "sza/api/http.h"
 
 /**
@@ -21,18 +22,21 @@
  */
 namespace xzia
 {
-    class INetwork
+    class INetwork: zia::api::Net
     {
-    public:
-        virtual ~INetwork() = default;
-
-        /**
+     private:
+      /**
         *
-        * \fn start
-        * \brief Launch the link between the core and the client
+        * \fn  callBackFunction
+        * \brief Activate when client send raw data, store them as Duplex
+        * in queue
+        * @param data The raw data get by client
+        * @param info From which and when the data are received
         *
         */
-        virtual void start() = 0;
+      virtual void callBackFunction(Raw data, zia::api::NetInfo info) = 0;
+    public:
+        virtual ~INetwork() = default;
 
         /**
         *
@@ -51,24 +55,6 @@ namespace xzia
         *
         */
         virtual std::vector<std::unique_ptr<zia::api::HttpDuplex>> getAllRequests() = 0;
-
-        /**
-        *
-        * \fn sendResponse
-        * \brief Following the handling of a request , send the message response to the client.
-        * @param res Contain the message code response from the last request
-        *
-        */
-        virtual void sendResponse(zia::api::HttpDuplex const &res) = 0;
-
-        /**
-        *
-        * \fn sendAllResponses
-        * \brief Following the handling of all the last request , send the messages response to the client.
-        * @param listRes Contain respectively all the response codes from the queue of request
-        *
-        */
-        virtual void sendAllResponses(std::vector<std::unique_ptr<zia::api::HttpDuplex>> &&listRes) = 0;
     };
 }
 
