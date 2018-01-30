@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include "sza/api/conf.h"
 
 /**
  * \file IConfigLoader.hpp
@@ -37,7 +38,7 @@ namespace xzia
          * @return the configuration of the module as a map
          *
          */
-        virtual std::map<std::string, std::string> getModuleConfig(std::string const &module) = 0;
+        virtual zia::api::Conf getModuleConfig(std::string const &module) = 0;
 
         /**
          *
