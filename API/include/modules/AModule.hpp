@@ -7,6 +7,7 @@
 
 # include <mutex>
 # include <memory>
+#include <sza/api/module.h>
 # include "DataStore.hpp"
 
 # ifdef _WIN32
@@ -28,7 +29,7 @@ namespace xzia
 {
     class AModuleManager;
 
-    class AModule
+    class AModule : public zia::api::Module
     {
     public:
         /**
@@ -58,20 +59,18 @@ namespace xzia
          */
         const std::string &getName() const;
 
-        /**
-        * \fn configure
-        * \brief The module configure itself using the map passed as parameter. This map is generated
-        * from the JSON configuration file
-        * @param config map containing all the necessary configuration elements
+      /**
+        * Called on HTTP request.
+        * \return true on success, otherwise false.
         */
-        virtual void configure(std::map<std::string, std::string> const &config) = 0;
+        bool exec(zia::api::HttpDuplex& http) override {return true;}
 
-        /**
-         * \fn setHandle
-         * \brief This function sets the handle loaded from the config loader. this handle is autmatically closed
-         * inside the AModule destructor
-         * @param dlHandle handle to set
-         */
+      /**
+       * \fn setHandle
+       * \brief This function sets the handle loaded from the config loader. this handle is autmatically closed
+       * inside the AModule destructor
+       * @param dlHandle handle to set
+       */
         #ifdef __linux__
             void setHandle(void *dlHandle);
         #elif _WIN32

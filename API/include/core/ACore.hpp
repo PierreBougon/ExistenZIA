@@ -12,7 +12,6 @@
 #include "network/INetwork.hpp"
 #include "modules/AModuleManager.hpp"
 #include "loader/ILoader.hpp"
-#include "client/Client.hpp"
 #include "ICore.hpp"
 
 /**

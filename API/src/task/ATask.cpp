@@ -10,3 +10,8 @@ xzia::ATask::ATask(std::unique_ptr<zia::api::HttpDuplex> req,
 {
     this->req = std::move(req);
 }
+
+const zia::api::HttpDuplex &xzia::ATask::getDuplex() const
+{
+  return *req;
+}

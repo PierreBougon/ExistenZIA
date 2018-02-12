@@ -33,7 +33,9 @@ namespace xzia
 
         virtual ~ATask() = default;
 
-    protected:
+      	const zia::api::HttpDuplex &getDuplex() const override;
+
+     protected:
         std::unique_ptr<zia::api::HttpDuplex> req;
         std::vector<std::unique_ptr<AHTTPModule>>   executionList;
     };
